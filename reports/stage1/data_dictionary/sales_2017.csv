@@ -1,0 +1,20 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropType,text,4840,0.0,5,0.0,Residential (3703); Condominium (800); Commercial (171),Lg Apartment; Residential; Condominium
+Taxkey,integer,4840,0.0,4813,0.0,(redacted),(redacted)
+Address,text,4840,0.0,4396,0.0,(redacted),(redacted)
+CondoProject,text,4840,0.8072,224,0.0,4: 2-Br (49); LANDMARK ON THE LAKE (30); RIVERBRIDGE (29),"CITYSIDE PLAZA; 6: 1-Br ,24: 2-Br ,7: 3-Br ,6: 3-Br ,43:...; LYON STREET"
+District,integer,4840,0.0,15,0.0,5 (623); 11 (618); 3 (501),2; 7; 9
+Nbhd,integer,4840,0.0,427,0.0,2100 (140); 2080 (132); 4240 (111),5715; 2820; 1850
+Style,text,4840,0.0,137,0.0,Ranch (1033); Cape Cod (772); APARTMENT (471),Apartment: 12: 1-Br  Units; Duplex O/S; School
+Extwall,text,4840,0.2351,9,0.0,Aluminum / Vinyl (2188); Brick (804); Frame (342),Prem Wood; Brick; Frame
+Stories,float,4840,0.0,10,0.0,1 (2923); 2 (1234); 1.5 (568),2; 12; 0
+Year_Built,integer,4840,0.0,148,0.0,1953 (178); 1950 (155); 1954 (153),1893; 1936; 1927
+Nr_of_rms,integer,4840,0.0,10,0.0,0 (4062); 4 (301); 5 (221),4; 1; 6
+Fin_sqft,integer,4840,0.0,1916,0.0,0 (34); 864 (23); 1056 (21),5088; 872; 1645
+Units,integer,4840,0.0,5,0.0,1 (4040); 2 (740); 3 (46),3; 1; 2
+Bdrms,integer,4840,0.0,11,0.0,3 (1915); 2 (959); 4 (902),6; 8; 5
+Fbath,integer,4840,0.0,6,0.0,1 (2517); 2 (1784); 0 (342),5; 3; 1
+Hbath,integer,4840,0.0,4,0.0,0 (3422); 1 (1328); 2 (86),2; 3; 1
+Lotsize,integer,4840,0.0,1303,0.0,0 (832); 4800 (281); 3600 (193),6110; 7189; 9612
+Sale_date,date,4840,0.0,12,0.0,2017-06 (549); 2017-08 (518); 2017-05 (492),2017-07; 2017-12; 2017-05
+Sale_price,integer,4840,0.0,1205,0.0,125000 (53); 140000 (51); 135000 (50),137400; 35000; 435000

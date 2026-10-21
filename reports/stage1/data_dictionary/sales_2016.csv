@@ -1,0 +1,20 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropType,text,4422,0.0,5,0.0,Residential (3311); Condominium (770); Commercial (173),Lg Apartment; Residential; Condominium
+Taxkey,integer,4422,0.0,4407,0.0,(redacted),(redacted)
+Address,text,4422,0.0,4001,0.0,(redacted),(redacted)
+CondoProject,text,4422,0.7944,230,0.0,4: 2-Br (43); LANDMARK ON THE LAKE (32); RIVERBRIDGE (26),"PARNELL WOODS; WOODSTOCK CONDOMINIUM; 4: 1-Br ,4: 2-Br"
+District,integer,4422,0.0,15,0.0,11 (580); 5 (578); 13 (453),2; 8; 10
+Nbhd,integer,4422,0.0,422,0.0,2080 (116); 2100 (112); 4420 (105),5913; 5880; 1470
+Style,text,4422,0.0007,135,0.0,Ranch (1041); Cape Cod (696); APARTMENT (449),"Apartment: 2: 1-Br ,2: 2-Br  Units; Used Car Sale; Apartment: 1: 2-Br ,1: 3-Br ,1: 1-Br ,3:..."
+Extwall,text,4422,0.2512,9,0.0,Aluminum / Vinyl (1864); Brick (749); Frame (336),Prem Wood; Frame; Stucco
+Stories,float,4422,0.0,14,0.0,1 (2780); 2 (1044); 1.5 (463),2.5; 4; 3
+Year_Built,integer,4422,0.0,147,0.0,1953 (149); 1955 (149); 1950 (133),1961; 1903; 1893
+Nr_of_rms,integer,4422,0.0,12,0.0,0 (3676); 4 (286); 5 (212),7; 11; 2
+Fin_sqft,integer,4422,0.0,1842,0.0,0 (34); 975 (18); 1200 (17),1546; 1063; 4618
+Units,integer,4422,0.0,5,0.0,1 (3796); 2 (578); 3 (37),3; 1; 2
+Bdrms,integer,4422,0.0,10,0.0,3 (1823); 2 (851); 4 (755),2; 0; 5
+Fbath,integer,4422,0.0,7,0.0,1 (2311); 2 (1580); 0 (350),6; 3; 1
+Hbath,integer,4422,0.0,4,0.0,0 (3128); 1 (1209); 2 (81),2; 3; 1
+Lotsize,integer,4422,0.0,1230,0.0,0 (800); 4800 (243); 3600 (160),0; 26738; 2989
+Sale_date,date,4422,0.0,12,0.0,2016-06 (551); 2016-07 (485); 2016-08 (465),2016-07; 2016-12; 2016-05
+Sale_price,integer,4422,0.0,1163,0.0,125000 (56); 115000 (51); 120000 (46),130300; 111900; 99000

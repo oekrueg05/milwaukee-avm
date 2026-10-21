@@ -1,0 +1,22 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropertyID,integer,5690,0.0,5583,0.0,189538 (2); 199824 (2); 200523 (2),226030; 235990; 209009
+PropType,text,5690,0.0,6,0.0,Residential (4600); Condominium (741); Commercial (170),Manufacturing; Residential; Commercial
+taxkey,integer,5690,0.0,5583,0.0,(redacted),(redacted)
+Address,text,5690,0.0,5583,0.0,(redacted),(redacted)
+CondoProject,text,5690,0.8707,174,0.0,WOODLANDS (28); MILL VALLEY (26); VILLA DU COURS (ELEVATOR) (22),UNIVERSITY CLUB TOWER CONDOS; MARSHALL STREET; STORY HILL CONDOMINIUM
+District,integer,5690,0.0,15,0.0,5 (597); 7 (470); 10 (437),2; 4; 12
+nbhd,integer,5690,0.0,419,0.0,2100 (111); 4520 (98); 2080 (97),6780; 5316; 5963
+Style,text,5690,0.0018,75,0.0,Ranch (1117); Cape Cod (728); Duplex O/S (518),Used Car Sale; Modern Single Story; AP2 (Conventional Apt with 7-11 Units)
+Extwall,text,5690,0.1337,17,0.0,Aluminum/Vinyl (2811); Brick (1047); Wood (256),Brick; Other; Precast Masonary
+Stories,float,5690,0.0033,10,0.0,1 (2782); 2 (1645); 1.5 (1152),5; 40; 3
+Year_Built,integer,5690,0.0009,151,0.0,1953 (175); 1955 (170); 1952 (164),1873; 1978; 1981
+Rooms,integer,5690,0.0559,33,0.0,5 (1337); 6 (882); 4 (648),0; 15; 27
+FinishedSqft,integer,5690,0.0018,2123,0.0,1056 (41); 864 (33); 936 (27),1776; 981; 4321
+SoldAsVacantLand,text,5690,0.0,2,0.0,N (5679); Y (11),Y; N
+Units,integer,5690,0.0,35,0.0,1 (4057); 2 (1282); 4 (134),39; 35; 12
+Bdrms,integer,5690,0.0559,21,0.0,3 (1988); 4 (1193); 2 (1041),12; 16; 13
+Fbath,integer,5690,0.0,7,0.0,1 (2608); 2 (2426); 0 (357),6; 0; 1
+Hbath,integer,5690,0.0,4,0.0,0 (4103); 1 (1456); 2 (125),3; 2; 0
+Lotsize,integer,5690,0.0,1359,0.0,1 (394); 0 (378); 4800 (352),9024; 6625; 9405
+Sale_date,date,5690,0.0,297,0.0,6/28/2024 (49); 3/29/2024 (49); 4/26/2024 (45),8/22/2024; 1/26/2024; 11/20/2024
+Sale_price,integer,5690,0.0,1145,0.0,250000 (100); 220000 (87); 200000 (77),40000; 218500; 271000

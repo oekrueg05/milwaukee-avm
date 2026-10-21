@@ -1,0 +1,20 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropType,text,277,0.0072,4,0.0,Commercial (243); Lg Apartment (16); Vacant Land (13),Vacant Land; Residential; Commercial
+Taxkey,integer,277,0.0,271,0.0,(redacted),(redacted)
+Address,text,277,0.0,271,0.0,(redacted),(redacted)
+CondoProject,text,277,0.9495,13,0.0,"10: 1-Br ,8: 2-Br ,3: 3-Br (2); 26: 2-Br (1); 26: 2-Br ,4: 3-Br ,6: 3-Br (1)","12: 1-Br ,24: 2-Br; 1: 1-Br ,24: 2-Br ,5: 2-Br; 32: 2-Br"
+District,integer,277,0.0,15,0.0,12 (33); 10 (25); 8 (25),2; 14; 6
+Nbhd,integer,277,0.0,64,0.0,6278 (21); 6281 (14); 6250 (12),6208; 6264; 6453
+Style,text,277,0.0,60,0.0,"Store Bldg - Multi Story (Store & Apt, S... (74); Warehouse Building - 1 Story (22); Billboard (18)",Office Building - Multi Story ( Ofc & Ap...; Store Building - Multiple Tenants; Trucking Terminal
+Extwall,text,277,0.9892,2,0.0,Frame (2); Aluminum / Vinyl (1),Aluminum / Vinyl; Frame
+Stories,float,277,0.0,12,0.0,2 (110); 1 (109); 0 (40),10; 2.5; 1.5
+Year_Built,integer,277,0.0,95,0.0,0 (36); 1890 (11); 1969 (9),1970; 2004; 1998
+Nr_of_rms,integer,277,0.0,1,0.0,0 (277),0
+Fin_sqft,integer,277,0.0,228,0.0,0 (39); 3795 (2); 2900 (2),35830; 1728; 3380
+Units,integer,277,0.0,3,0.0,1 (275); 8 (1); 4 (1),4; 8; 1
+Bdrms,integer,277,0.0,4,0.0,0 (274); 1 (1); 2 (1),2; 6; 1
+Fbath,integer,277,0.0,3,0.0,0 (274); 1 (2); 2 (1),1; 2; 0
+Hbath,integer,277,0.0,1,0.0,0 (277),0
+Lotsize,integer,277,0.0,216,0.0,0 (12); 4800 (10); 6000 (5),46086; 2370; 14640
+Sale_date,date,277,0.0,12,0.0,2004-11 (33); 2004-07 (30); 2004-06 (29),2004-07; 2004-12; 2004-05
+Sale_price,integer,277,0.0,181,0.0,50000 (6); 60000 (6); 70000 (6),26500; 50000; 162000

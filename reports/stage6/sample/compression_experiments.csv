@@ -1,0 +1,6 @@
+variant,experiment,CV mdape_ln,CV cod,CV median_ratio,CV prd,CV prb,CV mki,CV prb_tier_abs,2025 mdape_ln,2025 cod,2025 median_ratio,2025 prd,2025 prb,2025 mki,2025 prb_tier_abs
+independent,all groups (reference),0.1269,17.7706,0.9987,1.0313,-0.05,0.9248,0.1617,0.1204,16.5604,1.0013,1.0218,-0.0331,0.9533,0.1428
+independent,nbhd-relative target,0.1413,19.2754,0.9928,1.0291,-0.0315,0.9414,0.1024,0.1401,18.5149,0.9931,1.0211,-0.0172,0.962,0.1004
+assessment_informed,all groups (reference),0.1256,17.4641,1.0685,1.0294,-0.0454,0.9295,0.1471,0.1198,16.4439,1.1286,1.022,-0.0301,0.9493,0.1032
+assessment_informed,nbhd-relative target,0.1425,19.3972,0.9931,1.0319,-0.0413,0.9287,0.1132,0.1404,18.707,0.9865,1.0255,-0.033,0.9452,0.1123
+assessment_informed,prior value relative to nbhd median,0.1284,17.6016,1.0035,1.0297,-0.0458,0.9302,0.1444,0.1219,16.6507,1.0048,1.0204,-0.0296,0.9616,0.1244

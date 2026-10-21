@@ -1,0 +1,20 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropType,text,1922,0.0,5,0.0,Residential (1513); Condominium (286); Commercial (92),Lg Apartment; Residential; Condominium
+Taxkey,integer,1922,0.0,1904,0.0,(redacted),(redacted)
+Address,text,1922,0.0,1790,0.0,(redacted),(redacted)
+CondoProject,text,1922,0.8434,125,0.0,POINT ON THE RIVER CONDOS (16); LANDMARK ON THE LAKE (11); HARBOR FRONT (10),"18: 1-Br ,6: 2-Br; MCCORMICK ON FARWELL; CITY VIEW/SKYLINE CONDOS"
+District,integer,1922,0.0,15,0.0,5 (261); 11 (226); 14 (187),3; 10; 12
+Nbhd,integer,1922,0.0,305,0.0,2080 (52); 2100 (48); 4520 (46),2810; 1200; 1470
+Style,text,1922,0.0005,74,0.0,Ranch (474); Cape Cod (298); Residence O/S (183),"Apartment: 11: 1-Br ,1: 1-Br ,10: 2-Br  ...; Bi-Level; Apartment: 8: 1-Br ,6: 1-Br ,2: 2-Br  Un..."
+Extwall,text,1922,0.2133,9,0.0,Aluminum / Vinyl (824); Brick (347); Frame (178),Block; Aluminum / Vinyl; Brick
+Stories,float,1922,0.0,8,0.0,1 (1254); 2 (398); 1.5 (193),4; 1.5; 2
+Year_Built,integer,1922,0.0,134,0.0,1953 (77); 1955 (72); 1956 (70),1990; 2009; 1954
+Nr_of_rms,integer,1922,0.0,10,0.0,0 (1644); 4 (113); 5 (86),3; 1; 6
+Fin_sqft,integer,1922,0.0,1111,0.0,0 (28); 1188 (9); 912 (8),1059; 1392; 1833
+Units,integer,1922,0.0,4,0.0,1 (1673); 2 (229); 0 (14),3; 0; 2
+Bdrms,integer,1922,0.0,10,0.0,3 (833); 2 (367); 4 (348),7; 0; 4
+Fbath,integer,1922,0.0,6,0.0,1 (1094); 2 (647); 0 (129),0; 4; 1
+Hbath,integer,1922,0.0,3,0.0,0 (1332); 1 (562); 2 (28),2; 1; 0
+Lotsize,integer,1922,0.0,672,0.0,0 (292); 4800 (120); 3600 (81),8514; 6950; 3750
+Sale_date,date,1922,0.0,12,0.0,2010-04 (274); 2010-05 (261); 2010-06 (247),2010-07; 2010-12; 2010-05
+Sale_price,integer,1922,0.0,702,0.0,110000 (33); 120000 (30); 130000 (30),345000; 1000; 690000

@@ -1,0 +1,5 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+OBJECTID,integer,142,0.0,142,0.0,145 (1); 146 (1); 147 (1),190; 213; 161
+NBHD,integer,142,0.0,141,0.0,3060 (2); 0040 (1); 0240 (1),2660; 2910; 0780
+RES_LAND_N,integer,142,0.0,16,0.0,9 (17); 8 (14); 3 (13),2; 9; 10
+RES_LAND_1,text,142,0.0,18,0.0,Central and Near North (17); West Central (14); Lincoln Park/Thurston Woods/McGovern Par... (13),Far Northwest Side ; Sherman Park; Central and Near North

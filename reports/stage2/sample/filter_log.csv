@@ -1,0 +1,25 @@
+code,filter,sale_year,rows_in,removed,rows_out
+F0,loaded (blank rows already dropped),2024,5690,0,5690
+F0,loaded (blank rows already dropped),2025,5685,105,5580
+F1,sale date outside file year,2024,5690,0,5690
+F1,sale date outside file year,2025,5580,0,5580
+F2,exact duplicate row,2024,5690,0,5690
+F2,exact duplicate row,2025,5580,0,5580
+F3,"missing tax key, date or price",2024,5690,0,5690
+F3,"missing tax key, date or price",2025,5580,0,5580
+F4,"price < $10,000",2024,5690,0,5690
+F4,"price < $10,000",2025,5580,2,5578
+F5,property type not Residential,2024,5690,1090,4600
+F5,property type not Residential,2025,5578,1050,4528
+F6,no roll Y-1 record,2024,4600,2,4598
+F6,no roll Y-1 record,2025,4528,6,4522
+F7,roll Y-1 land use not SF/duplex,2024,4598,83,4515
+F7,roll Y-1 land use not SF/duplex,2025,4522,97,4425
+F8,new construction or no building in roll Y-1,2024,4515,0,4515
+F8,new construction or no building in roll Y-1,2025,4425,0,4425
+F9,"multi-parcel sale (same date and price, all parcels within 200 m)",2024,4515,9,4506
+F9,"multi-parcel sale (same date and price, all parcels within 200 m)",2025,4425,8,4417
+F10,resale < 12 months (flip),2024,4506,282,4224
+F10,resale < 12 months (flip),2025,4417,185,4232
+F11,two sales of one parcel in the same day/month,2024,4224,2,4222
+F11,two sales of one parcel in the same day/month,2025,4232,0,4232

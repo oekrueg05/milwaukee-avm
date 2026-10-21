@@ -1,0 +1,17 @@
+{
+  "net_rate_per_1000": 20.8,
+  "status": "CONFIRMED (Owen, 2026-10-20) from the Milwaukee County comparative rate table",
+  "rate_used": "net",
+  "assessment_year": 2025,
+  "tax_bill": "December 2025 (budget year 2026)",
+  "gross_rate_per_1000": 22.42,
+  "prior_year_net_rate_per_1000": 22.93,
+  "prior_year_note": "22.93 is the City of Milwaukee's 2024 rate in the same county table, not a 2025 figure",
+  "sources": [
+    "Milwaukee County Treasurer's Office, Comparative Total Property Tax Rates for Milwaukee County Municipalities 2016-2025, 'dollar rate per $1,000.00 of assessed value to determine individual real estate taxes due per property', dated 2/18/2026 (franklinwi.gov copy; manifest key tax_rates_county_2016_2025): City of Milwaukee 2024 $22.93, 2025 $20.80",
+    "City of Milwaukee Assessor, Tax Rate Chart (TAXRATECHART.pdf): assessment year 2025 gross 22.42 (read via a search-engine extract; the city site blocks automated access; the gross rate is shown for context only)"
+  ],
+  "school_levy_credit": "included through the net rate: it reduces each bill in proportion to assessed value (Wis. Stat. 79.10), so the net rate is the marginal tax per assessed dollar",
+  "excluded": "the first dollar credit (every improved parcel) and the lottery and gaming credit (owner-occupied principal dwellings only); both are computed on value only up to a statutory cap (Wis. Stat. 79.10(9)(bm), (9)(bn), (11)), so above the cap they do not grow with the assessment",
+  "statute": "https://docs.legis.wisconsin.gov/statutes/statutes/79/ii/10"
+}

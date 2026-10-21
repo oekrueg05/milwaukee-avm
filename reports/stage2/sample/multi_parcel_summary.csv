@@ -1,0 +1,17 @@
+sale_year,date_precision,rule,groups,rows,residential_rows
+2024,day,a_same_date_price,316,661,547
+2024,day,b_within_200m,8,19,9
+2024,day,c_3plus_parcels,27,83,66
+2024,day,c_3plus_nonround_price,2,6,5
+2024,day,flag_3plus_not_1000_kept,2,6,5
+2024,day,dropped,8,19,9
+2024,day,a_only_kept_as_coincidence,308,642,538
+2024,day,a_distance_unknown_not_3plus,0,0,0
+2025,day,a_same_date_price,285,609,508
+2025,day,b_within_200m,13,36,10
+2025,day,c_3plus_parcels,31,101,74
+2025,day,c_3plus_nonround_price,2,6,3
+2025,day,flag_3plus_not_1000_kept,1,3,3
+2025,day,dropped,13,36,10
+2025,day,a_only_kept_as_coincidence,272,573,498
+2025,day,a_distance_unknown_not_3plus,0,0,0

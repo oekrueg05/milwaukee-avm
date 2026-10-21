@@ -1,0 +1,20 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropType,text,1996,0.0,5,0.0,Residential (1471); Condominium (379); Commercial (74),Lg Apartment; Residential; Condominium
+Taxkey,integer,1996,0.0,1988,0.0,(redacted),(redacted)
+Address,text,1996,0.0,1799,0.0,(redacted),(redacted)
+CondoProject,text,1996,0.7831,138,0.0,LANDMARK ON THE LAKE (26); 4: 2-Br (23); HARBOR FRONT (20),"WATER STREET LOFTS CONDOMINIUM; 4: 1-Br ,8: 2-Br; WOODLANDS"
+District,integer,1996,0.0,15,0.0,5 (277); 11 (232); 14 (213),2; 8; 10
+Nbhd,integer,1996,0.0,314,0.0,2100 (60); 2080 (57); 4340 (51),1500; 6296; 2300
+Style,text,1996,0.0005,91,0.0,Ranch (419); Cape Cod (313); APARTMENT (231),Colonial; APARTMENT; Split Level
+Extwall,text,1996,0.264,9,0.0,Aluminum / Vinyl (805); Brick (352); Frame (147),Prem Wood; Masonry / Frame; Brick
+Stories,float,1996,0.0,10,0.0,1 (1253); 2 (461); 1.5 (199),1.5; 4; 0
+Year_Built,integer,1996,0.0,137,0.0,1950 (66); 1952 (65); 1953 (63),1927; 1948; 1945
+Nr_of_rms,integer,1996,0.0,10,0.0,0 (1637); 4 (139); 5 (99),3; 1; 2
+Fin_sqft,integer,1996,0.0,1158,0.0,0 (21); 996 (15); 1174 (9),711; 751; 1105
+Units,integer,1996,0.0,5,0.0,1 (1761); 2 (215); 0 (11),3; 1; 2
+Bdrms,integer,1996,0.0,11,0.0,3 (823); 2 (390); 4 (368),5; 13; 4
+Fbath,integer,1996,0.0,6,0.0,1 (1027); 2 (745); 0 (151),5; 4; 2
+Hbath,integer,1996,0.0,4,0.0,0 (1377); 1 (586); 2 (31),2; 3; 1
+Lotsize,integer,1996,0.0,710,0.0,0 (386); 4800 (113); 3600 (62),7398; 2820; 10452
+Sale_date,date,1996,0.0,12,0.0,2012-06 (239); 2012-07 (224); 2012-04 (201),2012-07; 2012-12; 2012-05
+Sale_price,integer,1996,0.0,713,0.0,150000 (24); 80000 (24); 115000 (23),101600; 291000; 284000

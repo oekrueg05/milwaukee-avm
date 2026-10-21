@@ -1,0 +1,21 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropertyID,integer,5831,0.0,5716,0.0,119688 (3); 98692 (2); 99589 (2),142591; 258509; 143635
+PropType,text,5831,0.0,5,0.0,Residential (4672); Condominium (783); Lg Apartment (185),Condominium; Commercial; Residential
+taxkey,integer,5831,0.0,5716,0.0,(redacted),(redacted)
+Address,text,5831,0.0,5716,0.0,(redacted),(redacted)
+CondoProject,text,5831,0.8659,183,0.0,WOODLANDS (31); VILLA DU COURS (ELEVATOR) (22); RIVERBRIDGE (21),WINDSOR PLACE COACH HOUSE CONDO; ARBOR RIDGE; GEORGETOWN
+District,integer,5831,0.0,15,0.0,5 (580); 7 (474); 14 (454),1; 10; 15
+nbhd,integer,5831,0.0,428,0.0,2100 (119); 1140 (106); 4240 (94),5662; 1870; 6620
+Style,text,5831,0.0033,72,0.0,Ranch (1206); Cape Cod (785); Duplex O/S (474),Res O/S A & 1/2; AP4 (Conv Apt with 21 or more Units); Laundromat
+Extwall,text,5831,0.1403,18,0.0,Aluminum/Vinyl (2905); Brick (1058); Asphalt/Other (265),Aluminum/Vinyl; Wood; Asphalt/Other
+Stories,float,5831,0.0069,14,0.0,1 (3104); 2.0 (1538); 1.5 (1029),6; 0.0; 1.5
+Year_Built,integer,5831,0.0033,157,0.0,1955 (203); 1953 (180); 1952 (161),1975; 1956; 1905
+Rooms,integer,5831,0.0616,32,0.0,5 (1403); 6 (979); 4 (653),0; 21; 14
+FinishedSqft,integer,5831,0.0045,2110,0.0,1054 (34); 1056 (32); 864 (32),2802; 2356; 2087
+Units,integer,5831,0.0,45,0.0,1 (4222); 2 (1244); 4 (125),28; 48; 19
+Bdrms,integer,5831,0.0616,20,0.0,3 (2125); 4 (1169); 2 (1027),14; 3; 15
+Fbath,integer,5831,0.0,8,0.0,1 (2796); 2 (2368); 0 (395),5; 2; 1
+Hbath,integer,5831,0.0,4,0.0,0 (4222); 1 (1488); 2 (116),2; 3; 1
+Lotsize,integer,5831,0.0,1405,0.0,1 (432); 0 (390); 4800 (361),7068; 9792; 9393
+Sale_date,date,5831,0.0,314,0.0,2023-06-30 (53); 2023-11-30 (51); 2023-05-26 (50),2023-08-03; 2023-03-05; 2023-12-29
+Sale_price,integer,5831,0.0,1165,0.0,250000.00 (106); 200000.00 (83); 150000.00 (77),246800.00; 438000.00; 190000.00

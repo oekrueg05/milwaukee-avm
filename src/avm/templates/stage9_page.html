@@ -1,0 +1,523 @@
+<meta charset="utf-8">
+<title><!--portfolio-->Milwaukee Assessment Check<!--/portfolio--><!--private-->Milwaukee Assessment Review<!--/private--></title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+:root {
+  --bg: #f5f6f3; --surface: #ffffff; --sunk: #eceee9; --fg: #1a2329; --fg2: #46525b; --muted: #6a757d;
+  --rule: #d5d9d4; --rule-strong: #b6bcb6; --accent: #1d5c86; --accent-soft: #d9e6ef; --focus: #1d5c86;
+  --warn-bg: #f7efdc; --warn-fg: #6b4a07; --warn-rule: #e0c98f;
+  --d1: #24577f; --d2: #5f8fb7; --d3: #acc6dc; --d4: #d9dad5; --d5: #e7b49f; --d6: #c96d4d; --d7: #9a3a20;
+  --nodata: #eef0ec; --band: #c9dbe8; --point: #1a2329;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11171b; --surface: #182026; --sunk: #0d1215; --fg: #e3e8ea; --fg2: #b4bec4; --muted: #8b979e;
+  --rule: #2b353c; --rule-strong: #3e4a52; --accent: #7fb6de; --accent-soft: #1d3446; --focus: #7fb6de;
+  --warn-bg: #2b2414; --warn-fg: #e9cf8f; --warn-rule: #5a4a22;
+  --d1: #8fc0e8; --d2: #5a8db8; --d3: #34536d; --d4: #3a4045; --d5: #6e4433; --d6: #b8653f; --d7: #f0956c;
+  --nodata: #1c2328; --band: #284459; --point: #e3e8ea; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11171b; --surface: #182026; --sunk: #0d1215; --fg: #e3e8ea; --fg2: #b4bec4; --muted: #8b979e;
+  --rule: #2b353c; --rule-strong: #3e4a52; --accent: #7fb6de; --accent-soft: #1d3446; --focus: #7fb6de;
+  --warn-bg: #2b2414; --warn-fg: #e9cf8f; --warn-rule: #5a4a22;
+  --d1: #8fc0e8; --d2: #5a8db8; --d3: #34536d; --d4: #3a4045; --d5: #6e4433; --d6: #b8653f; --d7: #f0956c;
+  --nodata: #1c2328; --band: #284459; --point: #e3e8ea; color-scheme: dark }
+
+* { box-sizing: border-box }
+[hidden] { display: none !important }
+body { background: var(--bg); color: var(--fg); font: 400 15px/1.55 "Public Sans", "Segoe UI", system-ui, sans-serif;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 1120px; margin: 0 auto; padding-block: 28px 64px; display: grid; gap: 40px }
+h1, h2, h3 { font-family: "Archivo Narrow", "Arial Narrow", "Roboto Condensed", sans-serif; text-wrap: balance; margin: 0; letter-spacing: 0.005em }
+h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.02 }
+h2 { font-size: 1.6rem; font-weight: 600; line-height: 1.1 }
+h3 { font-size: 1.1rem; font-weight: 600 }
+p { margin: 0; max-width: 68ch }
+.num, .mono { font-family: "IBM Plex Mono", ui-monospace, Consolas, monospace; font-feature-settings: "tnum" 1 }
+.eyebrow { font: 600 0.72rem/1.2 "Public Sans", system-ui, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted) }
+.lede { font-size: 1.05rem; color: var(--fg2) }
+.muted { color: var(--muted) }
+section { display: grid; gap: 16px; min-width: 0 }
+.sec-head { display: grid; gap: 6px; border-top: 2px solid var(--fg); padding-top: 12px }
+
+header.top { display: grid; gap: 14px }
+.stamp { display: inline-flex; gap: 8px; align-items: center; font: 500 0.72rem/1 "IBM Plex Mono", monospace; color: var(--fg2);
+  border: 1px solid var(--rule-strong); padding: 5px 8px; border-radius: 3px; width: fit-content; text-transform: uppercase; letter-spacing: 0.06em }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule) }
+.stat { background: var(--surface); padding: 14px 16px; display: grid; gap: 4px; align-content: start }
+.stat .v { font: 500 1.6rem/1.1 "IBM Plex Mono", monospace; letter-spacing: -0.01em }
+.stat .k { font-size: 0.82rem; color: var(--fg2); line-height: 1.35 }
+.note { background: var(--warn-bg); color: var(--warn-fg); border: 1px solid var(--warn-rule); border-left-width: 4px; padding: 12px 14px; border-radius: 3px; display: grid; gap: 6px }
+.note p { max-width: none }
+.note strong { font-weight: 600 }
+
+.mapgrid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 24px; align-items: start }
+@media (max-width: 820px) { .mapgrid { grid-template-columns: minmax(0, 1fr) } }
+.mapbox { position: relative; background: var(--surface); border: 1px solid var(--rule); padding: 8px; min-width: 0 }
+.mapbox svg { display: block; width: 100%; height: auto; max-height: 78vh }
+.mapbox path { stroke: var(--surface); stroke-width: 0.6; vector-effect: non-scaling-stroke; cursor: pointer }
+.mapbox path:hover, .mapbox path.on { stroke: var(--fg); stroke-width: 1.6 }
+.lake { font: italic 400 11px "Public Sans", sans-serif; fill: var(--muted); letter-spacing: 0.2em }
+.legend { display: grid; gap: 8px }
+.swatches { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px }
+.swatches span { height: 14px; border-radius: 2px }
+.ticks { display: grid; grid-template-columns: repeat(7, 1fr); font: 400 0.7rem "IBM Plex Mono", monospace; color: var(--muted); text-align: center }
+.legend-ends { display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--fg2); gap: 12px }
+.tip { position: absolute; pointer-events: none; background: var(--surface); color: var(--fg); border: 1px solid var(--rule-strong);
+  box-shadow: 0 4px 14px rgb(0 0 0 / 0.14); padding: 8px 10px; font-size: 0.8rem; border-radius: 4px; min-width: 190px; display: grid; gap: 2px; z-index: 5 }
+.tip b { font-weight: 600 }
+
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center }
+.controls input[type=search] { flex: 1 1 240px; min-width: 0; font: inherit; padding: 8px 10px; border: 1px solid var(--rule-strong); background: var(--surface); color: var(--fg); border-radius: 4px }
+.seg { display: inline-flex; border: 1px solid var(--rule-strong); border-radius: 4px; overflow: hidden }
+.seg button { font: 500 0.82rem "Public Sans", sans-serif; padding: 7px 11px; border: 0; background: var(--surface); color: var(--fg2); cursor: pointer }
+.seg button + button { border-left: 1px solid var(--rule-strong) }
+.seg button[aria-pressed=true] { background: var(--fg); color: var(--bg) }
+select { font: inherit; font-size: 0.85rem; padding: 7px 8px; border: 1px solid var(--rule-strong); background: var(--surface); color: var(--fg); border-radius: 4px }
+label.chk { display: inline-flex; gap: 6px; align-items: center; font-size: 0.85rem; color: var(--fg2) }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px }
+
+.tablebox { overflow-x: auto; border: 1px solid var(--rule); background: var(--surface) }
+table { border-collapse: collapse; width: 100%; font-size: 0.86rem }
+th { text-align: left; font: 600 0.7rem/1.2 "Public Sans", sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+  padding: 10px 10px 8px; border-bottom: 1px solid var(--rule-strong); background: var(--sunk); white-space: nowrap; vertical-align: bottom }
+td { padding: 9px 10px; border-bottom: 1px solid var(--rule); vertical-align: top }
+td.r, th.r { text-align: right }
+tr.row { cursor: pointer }
+tr.row:hover td { background: var(--sunk) }
+tr.row td:first-child { white-space: nowrap }
+.addr { font-weight: 600 }
+.sub { font-size: 0.76rem; color: var(--muted) }
+.tag { display: inline-block; font: 500 0.68rem/1 "Public Sans", sans-serif; padding: 3px 5px; border-radius: 3px; background: var(--warn-bg); color: var(--warn-fg); border: 1px solid var(--warn-rule); white-space: nowrap }
+.dir { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap }
+.dir i { width: 9px; height: 9px; border-radius: 2px; display: inline-block }
+.est { font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted) }
+tr.detail td { background: var(--sunk); padding: 16px }
+.dgrid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 20px }
+@media (max-width: 760px) { .dgrid { grid-template-columns: minmax(0, 1fr) } }
+.dgrid dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; margin: 0; font-size: 0.85rem }
+.dgrid dt { color: var(--muted) }
+.dgrid dd { margin: 0 }
+.rangebar svg { width: 100%; height: auto; display: block; overflow: visible }
+.rangebar text { font: 400 10.5px "IBM Plex Mono", monospace; fill: var(--fg2) }
+.keyrow { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.76rem; color: var(--fg2) }
+.keyrow span { display: inline-flex; align-items: center; gap: 6px }
+@media (max-width: 600px) { .c-type { display: none } }
+.rules { margin: 0; padding-left: 1.1em; display: grid; gap: 4px; font-size: 0.88rem; color: var(--fg2) }
+.rules b { color: var(--fg) }
+.pager { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; font-size: 0.85rem; color: var(--fg2) }
+.pager button { font: inherit; padding: 6px 12px; border: 1px solid var(--rule-strong); background: var(--surface); color: var(--fg); border-radius: 4px; cursor: pointer }
+.pager button:disabled { opacity: 0.4; cursor: default }
+
+.verdict { font-weight: 600 }
+.verdict.none { font-weight: 400; color: var(--fg2) }
+.ivl svg { width: 100%; min-width: 170px; height: 34px; display: block }
+.ivl text { font: 400 9.5px "IBM Plex Mono", monospace; fill: var(--muted) }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 20px }
+.card { background: var(--surface); border: 1px solid var(--rule); padding: 16px 18px; display: grid; gap: 10px; align-content: start; min-width: 0; overflow-wrap: anywhere }
+.card table { overflow-wrap: normal }
+.card ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px }
+.card li { max-width: 70ch }
+footer { font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 14px; display: grid; gap: 6px }
+</style>
+
+<div class="wrap">
+<header class="top">
+  <span class="stamp">Independent research &middot; not a City of Milwaukee product<!--private--> &middot; private review copy<!--/private--></span>
+  <div class="eyebrow">Milwaukee, Wisconsin &middot; single-family and duplex homes &middot; valuation date January 1, 2025</div>
+  <h1>Milwaukee Assessment Check</h1>
+  <p class="lede">The city's 2025 assessment roll, compared parcel by parcel with an independent valuation model built only from public sales and property records. <!--private-->Where the assessment sits well outside the model's 80% range, and nearby comparable sales point the same way, the parcel is listed below.<!--/private--><!--portfolio-->This version shows citywide and neighborhood-level results only; it lists no individual parcels.<!--/portfolio--></p>
+  <div class="stats" id="stats"></div>
+  <div class="note" role="note">
+    <p><!--private--><strong>Every parcel figure on this page is a model estimate, not an appraisal.</strong> Each value is shown with its 80% range: for about one home in five, the true market value falls outside it. A listed parcel is a place to look, not a finding that its assessment is wrong.<!--/private--><!--portfolio--><strong>Every result on this page is built from model estimates, not appraisals.</strong> Each home's estimate carries an 80% range: for about one home in five, the true market value falls outside it. A home outside its range is a place to look, not a finding that its assessment is wrong.<!--/portfolio--> The model cannot see interior condition, vacancy, recent damage, or legal restrictions on value.</p>
+    <p id="taxnote"></p>
+  </div>
+</header>
+
+<section id="map">
+  <div class="sec-head">
+    <div class="eyebrow">1 &middot; Geography</div>
+    <h2>Assessment relative to the model, by census tract</h2>
+    <p class="muted">Median across each tract's homes of (assessed &divide; model estimate), divided by the citywide median, so the assessor's overall level is removed. Gray means in line with the city as a whole.</p>
+  </div>
+  <div class="mapgrid">
+    <div class="mapbox" id="mapbox"><div class="tip" id="tip" hidden></div></div>
+    <div class="legend card">
+      <h3>Reading the map</h3>
+      <div class="swatches" id="swatches"></div>
+      <div class="ticks" id="ticks"></div>
+      <div class="legend-ends"><span>Assessed below model (pays less than its share)</span><span style="text-align:right">Assessed above model (pays more)</span></div>
+      <p class="muted" id="mapnote" style="font-size:0.82rem"></p>
+      <p style="font-size:0.85rem">Tract patterns mix two things: real differences in how the assessor values homes, and the model's own errors, which also vary by area. Section 3 separates them as far as the data allow.</p>
+    </div>
+  </div>
+</section>
+
+<!--private-->
+<section id="list">
+  <div class="sec-head">
+    <div class="eyebrow">2 &middot; Divergence list</div>
+    <h2>The 1,000 largest relative gaps</h2>
+    <p class="muted">Ranked by relative gap (assessed versus model, after the citywide level), not by dollars. Listed only if the assessment is outside the model's 80% range <em>and</em> the median of five comparable recent sales (time-adjusted, not model-adjusted) points the same way. Parcels that look like a special valuation or a data issue are in their own section below and are not ranked here. Select a row for its detail.</p>
+  </div>
+  <div class="plist" id="L-main"></div>
+</section>
+
+<section id="special">
+  <div class="sec-head">
+    <div class="eyebrow">2b &middot; Set aside</div>
+    <h2>Likely special valuation or data issue</h2>
+    <p class="muted">These parcels also meet the listing rule, but something in the roll suggests the gap comes from a value or a record the model cannot judge. They are kept out of the main ranking and stay in the tax totals.</p>
+  </div>
+  <ul class="rules" id="rules"></ul>
+  <div class="plist" id="L-special"></div>
+</section>
+<!--/private-->
+<!--portfolio-->
+<section id="list">
+  <div class="sec-head">
+    <div class="eyebrow">2 &middot; Divergence</div>
+    <h2>How many homes sit far from the model</h2>
+    <p class="muted">A home counts if its assessment is outside the model's 80% range <em>and</em> the median of five comparable recent sales (time-adjusted, not model-adjusted) points the same way. The parcel-level list is kept in a private review copy.</p>
+  </div>
+  <div class="stats" id="pstats"></div>
+  <ul class="rules" id="rules"></ul>
+</section>
+<!--/portfolio-->
+
+<section id="groups">
+  <div class="sec-head">
+    <div class="eyebrow">3 &middot; Groups, with a guardrail</div>
+    <h2>Do tax shifts differ by neighborhood group?</h2>
+    <p class="muted">Groups are census tracts by majority race or ethnicity and by median household income quintile (ACS 2019-2023), used only to summarize. No value is adjusted using demographics.</p>
+  </div>
+  <div class="card" style="gap:8px">
+    <p><strong>Why a guardrail.</strong> The tax shift is measured against the model, so a model that under-values a group's homes makes that group look over-assessed by the same amount. Each shift is therefore corrected by the model's own measured bias for that group (cross-validation on 2021-2024 sales), with a bootstrap interval. A group is called over- or under-assessed only if (a) the corrected shift's 95% interval excludes zero, (b) the assessor's own ratio on 2025 sales, which uses no model, points the same way with an interval excluding zero, and (c) both still hold when prices are time-adjusted separately for low-, mid- and high-value homes. A result that fails only (c) is consistent with assessments lagging faster appreciation in some areas, not a valuation pattern.</p>
+  </div>
+  <div class="tablebox">
+    <table>
+      <thead><tr><th>Group</th><th class="r">Homes</th><th class="r">Tax shift<br>[95% CI]</th><th class="r">Model bias<br>[95% CI]</th><th class="r">Corrected shift<br>[95% CI]</th><th style="min-width:180px">Corrected vs sales check</th><th class="r">Assessor ratio on<br>2025 sales vs city</th><th>Claim</th><th class="r">Total shift / yr<br><span style="text-transform:none;letter-spacing:0">(uncorrected)</span></th></tr></thead>
+      <tbody id="gbody"></tbody>
+    </table>
+  </div>
+  <div class="keyrow"><span><svg width="26" height="10"><line x1="1" y1="5" x2="25" y2="5" stroke="var(--fg)" stroke-width="2"/><circle cx="13" cy="5" r="3.5" fill="var(--fg)"/></svg>corrected shift, 95% CI</span><span><svg width="26" height="10"><rect x="1" y="1" width="24" height="8" rx="2" fill="var(--band)"/></svg>assessor ratio on 2025 sales vs city, 95% CI</span><span>Axis in percent; 0 = pays its market-value share</span></div>
+  <div class="card" id="gpass" style="gap:6px"></div>
+  <p class="muted" id="gnote" style="font-size:0.85rem"></p>
+</section>
+
+<section id="yields">
+  <div class="sec-head">
+    <div class="eyebrow">4 &middot; Duplexes</div>
+    <h2>Duplex gross rental yields</h2>
+  </div>
+  <div id="ybody"></div>
+</section>
+
+<section id="method">
+  <div class="sec-head">
+    <div class="eyebrow">5 &middot; Method and limits</div>
+    <h2>How the numbers were made</h2>
+  </div>
+  <div class="two">
+    <div class="card">
+      <h3>Model and comparison</h3>
+      <ul>
+        <li>Gradient-boosted trees on the logarithm of time-adjusted sale prices, 2014-2024 sales from the city's sales files that pass this project's cleaning filters, with property features from the prior year's assessment roll, location, and nearby sale prices. The model was frozen before this comparison; it uses no assessed values.</li>
+        <li>Each home is valued at January 1, 2025, the roll's valuation date, with an 80% range calibrated on 2022-2024 sales (conformal quantile regression).</li>
+        <li>On 2025 sales, which the model never trained on, its median absolute error with the overall level removed was <span class="num" id="mdape"></span>; the assessor's was <span class="num" id="mdape_a"></span> on the same sales.</li>
+        <li>Relative gap = (assessed &divide; model estimate) &divide; the citywide median of that ratio (<span class="num" id="lvl"></span>). Implied market value = assessed &divide; the citywide level.</li>
+        <li>Comparable sales: same property type, searched within 0.5, 1 and 1.25 mi over the 12 months before the valuation date, then over 24 months, stopping at the first step with at least 3 sales; quick-flip purchases and outlier sales are excluded. Up to 5 are kept, ranked by similarity weighted by the model's feature importance, and time-adjusted to the valuation date only (no model adjustment). Each parcel's detail shows the radius and window used.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Tax dollars</h3>
+      <ul id="taxlist"></ul>
+      <h3>Excluded from the list and the tax pool</h3>
+      <div class="tablebox" style="border:0"><table id="excl"></table></div>
+      <h3>Held-flat assessments</h3>
+      <p>Citywide, the median single-family or duplex assessment rose <span class="num" id="chg"></span> from 2024 to 2025 and only <span class="num" id="unch"></span> of homes kept exactly the same value. A value held flat often signals a special valuation (for example a condition-based or legally restricted value) that the model cannot see, so those homes are set aside rather than ranked.</p>
+      <!--private--><h3>Context flags (shown, not set aside)</h3>
+      <ul><li><b>Student-rental area.</b> Within 0.75 mi of the Marquette or UW-Milwaukee main campus (Census TIGER 2023 campus outlines). See Known limits.</li>
+        <li><b>Several homes in the tract share this exact assessment.</b> Five or more homes in one tract with an identical total usually means a development valued as a group.</li></ul><!--/private-->
+    </div>
+  </div>
+  <div class="card">
+    <h3>Known limits</h3>
+    <ul>
+      <li>Public data only. No interior inspections, condition grades, vacancy or code-violation records; no listings or appraisals.</li>
+      <li><b>Student-rental areas.</b> Income-producing student rentals near Marquette and UW-Milwaukee carry value the model's features cannot see (rental income, leases by the bedroom). Divergence there may reflect the model rather than the assessor; this is untested, and for listed homes the comparable sales point the same way as the model. <span id="student"></span></li>
+      <li>Even after setting aside held-flat values and record mismatches, very low assessments outnumber very high ones among the largest gaps. Some of these likely reflect condition the public data cannot show.</li>
+      <li>Sale prices used in training exclude quick resales (flips) and other sales that fail the cleaning filters, which are more common in some neighborhoods; homes like those are valued from the cleaner sales around them.</li>
+      <li>The 2026 roll will be checked against an out-of-time test: values for Jan 1 2026, fit only on data through 2025 and committed with a hash before the city released its 2026 sales file. It is not a pre-registration; it was committed well after the valuation date.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div>Sources: City of Milwaukee open data (Master Property File 2008-2025, property sales 2002-2025, parcel outlines, Master Address Index, building permits, residential assessment neighborhoods); US Census Bureau TIGER/Line 2023 and ACS 2019-2023 5-year estimates; Milwaukee County Transit System GTFS. <!--private-->Addresses only; no owner names are shown.<!--/private--><!--portfolio-->No parcel addresses, tax keys or owner names are shown.<!--/portfolio--></div>
+  <div>Prepared by Owen Krueger. Model estimates, not appraisals or legal advice.</div>
+</footer>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const usd = v => v == null ? "n/a" : (v < 0 ? "-$" : "$") + Math.abs(Math.round(v)).toLocaleString("en-US");
+const usdk = v => v >= 1e6 ? "$" + (v / 1e6).toFixed(2) + "M" : "$" + Math.round(v / 1000) + "k";
+const pct = (v, d = 1) => (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toFixed(d) + "%";
+const S = DATA.stats;
+const EDGES = [0.88, 0.94, 0.98, 1.02, 1.06, 1.12];
+const bin = r => { let i = 0; while (i < EDGES.length && r >= EDGES[i]) i++; return i; };
+const BINVAR = i => `var(--d${i + 1})`;
+
+// ---- header stats
+$("#stats").innerHTML = [
+  [S.parcels_scored.toLocaleString("en-US"), "homes compared (single-family and duplex, taxable, features match both rolls)"],
+  [S.citywide_assessment_level.toFixed(3), "citywide level: median of assessed ÷ model estimate"],
+  [S.outside_80pct_range.toLocaleString("en-US"), "assessments outside the model's 80% range, after the citywide level"],
+  [S.listable_outside_and_comps_agree.toLocaleString("en-US"), "of those, comparable sales point the same way"],
+  [S.listed.toLocaleString("en-US"), `largest gaps ranked: ${S.listed_under_assessed} assessed below the model, ${S.listed_over_assessed} above; ${S.special_listable.toLocaleString("en-US")} more set aside`],
+].map(([v, k]) => `<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");
+const T = DATA.tax;
+const RATE = T[T.rate_used + "_rate_per_1000"];
+$("#taxnote").innerHTML = `Tax dollars use the ${T.assessment_year} ${T.rate_used} rate of <span class="num">$${RATE.toFixed(2)}</span> per $1,000 of assessed value (after the school levy credit, the tax each extra assessed dollar actually costs)` +
+  ` (Milwaukee County comparative rate table; $${T.prior_year_net_rate_per_1000.toFixed(2)} was the 2024 rate)` +
+  `. A shift is the difference between the tax on the assessment and the tax on a market-value share of the same total levy, so shifts across all homes sum to zero.`;
+
+// ---- map
+(function map() {
+  const M = DATA.map, box = $("#mapbox"), tip = $("#tip");
+  const ns = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", `-4 -4 ${M.w + 8} ${M.h + 8}`);
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", "Map of Milwaukee census tracts colored by median relative assessment");
+  for (const t of DATA.tracts) {
+    const p = document.createElementNS(ns, "path");
+    p.setAttribute("d", t.d);
+    p.setAttribute("fill-rule", "evenodd");
+    p.style.fill = t.n < M.min_parcels ? "var(--nodata)" : BINVAR(bin(t.rel));
+    p.addEventListener("pointerenter", e => show(t, p, e));
+    p.addEventListener("pointermove", e => place(e));
+    p.addEventListener("pointerleave", () => { tip.hidden = true; p.classList.remove("on"); });
+    svg.appendChild(p);
+  }
+  const lab = document.createElementNS(ns, "text");
+  lab.setAttribute("class", "lake"); lab.textContent = "LAKE MICHIGAN";
+  lab.setAttribute("transform", `translate(${M.w - 6} ${M.h * 0.42}) rotate(90)`);
+  svg.appendChild(lab);
+  box.appendChild(svg);
+  function show(t, p, e) {
+    p.classList.add("on");
+    const tr = t.id.slice(5, 9).replace(/^0+/, "") + "." + t.id.slice(9);
+    tip.innerHTML = t.n < M.min_parcels
+      ? `<b>Tract ${esc(tr)}</b><span>${t.n} homes: too few to map</span>`
+      : `<b>Tract ${esc(tr)}</b><span>${t.n.toLocaleString("en-US")} homes</span>` +
+        `<span>Median relative assessment <span class="num">${t.rel.toFixed(3)}</span> (${pct((t.rel - 1) * 100)})</span>` +
+        `<span>Median model estimate <span class="num">${usd(t.mv)}</span></span>` +
+        `<span>Net tax shift <span class="num">${usd(t.usd)}</span> / yr</span>`;
+    tip.hidden = false; place(e);
+  }
+  function place(e) {
+    const r = box.getBoundingClientRect();
+    let x = e.clientX - r.left + 14, y = e.clientY - r.top + 14;
+    if (x + 210 > r.width) x = e.clientX - r.left - 214;
+    if (y + 110 > r.height) y = e.clientY - r.top - 110;
+    tip.style.left = Math.max(4, x) + "px"; tip.style.top = Math.max(4, y) + "px";
+  }
+  $("#swatches").innerHTML = [0,1,2,3,4,5,6].map(i => `<span style="background:${BINVAR(i)}"></span>`).join("");
+  const labs = ["<0.88", "0.88", "0.94", "0.98–1.02", "1.06", "1.12", ">1.12"];
+  $("#ticks").innerHTML = labs.map(l => `<span>${l}</span>`).join("");
+  $("#mapnote").textContent = `${M.tracts_drawn} tracts drawn; ${M.tracts_small} with fewer than ${M.min_parcels} homes are left pale.`;
+})();
+
+/*<!--private-->*/
+// ---- parcel lists (private copy only; the portfolio copy carries no parcel rows)
+const PER = 25;
+function rangeSvg(r) {
+  const vals = [r.lo, r.hi, r.mv, r.im, r.cv].filter(v => v != null);
+  const lo = Math.min(...vals) * 0.9, hi = Math.max(...vals) * 1.06, W = 520, x = v => 10 + (v - lo) / (hi - lo) * (W - 20);
+  const mk = r.rel > 1 ? "var(--d6)" : "var(--d2)";
+  return `<svg viewBox="0 0 ${W} 70" role="img" aria-label="Model estimate ${usd(r.mv)}, 80% range ${usd(r.lo)} to ${usd(r.hi)}; assessor-implied market value ${usd(r.im)}">
+    <line x1="10" y1="30" x2="${W - 10}" y2="30" stroke="var(--rule-strong)" stroke-width="1"/>
+    <rect x="${x(r.lo)}" y="22" width="${x(r.hi) - x(r.lo)}" height="16" rx="3" fill="var(--band)"/>
+    <line x1="${x(r.mv)}" y1="18" x2="${x(r.mv)}" y2="42" stroke="var(--point)" stroke-width="2"/>
+    ${r.cv != null ? `<rect x="${x(r.cv) - 5}" y="25" width="10" height="10" fill="none" stroke="var(--fg2)" stroke-width="1.6"/>` : ""}
+    <path d="M${x(r.im)} 22 l7 8 l-7 8 l-7 -8z" fill="${mk}" stroke="var(--surface)" stroke-width="2"/>
+    <text x="${x(r.lo)}" y="56" text-anchor="middle">${usdk(r.lo)}</text>
+    <text x="${x(r.hi)}" y="56" text-anchor="middle">${usdk(r.hi)}</text>
+    <text x="${x(r.mv)}" y="12" text-anchor="middle">${usdk(r.mv)}</text>
+  </svg>`;
+}
+function detail(r) {
+  const gap = (r.rel - 1) * 100;
+  return `<tr class="detail"><td colspan="6"><div class="dgrid">
+    <div style="display:grid;gap:10px;min-width:0;align-content:start">
+      <div class="rangebar">${rangeSvg(r)}</div>
+      <div class="keyrow">
+        <span><svg width="22" height="12"><rect x="1" y="2" width="20" height="8" rx="2" fill="var(--band)"/></svg>model's 80% range</span>
+        <span><svg width="10" height="14"><line x1="5" y1="0" x2="5" y2="14" stroke="var(--point)" stroke-width="2"/></svg>model estimate</span>
+        <span><svg width="14" height="14"><path d="M7 1 l6 6 l-6 6 l-6 -6z" fill="${r.rel > 1 ? "var(--d6)" : "var(--d2)"}"/></svg>assessment &divide; citywide level</span>
+        <span><svg width="12" height="12"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="var(--fg2)" stroke-width="1.6"/></svg>comparable sales (median)</span>
+      </div>
+      ${r.reason ? `<div><span class="tag">Set aside</span> <span style="font-size:0.85rem">${esc(r.reason)}</span></div>` : ""}
+      ${r.flags ? `<div><span class="tag">Context flag</span> <span style="font-size:0.85rem">${esc(r.flags)}</span></div>` : ""}
+    </div>
+    <dl>
+      <dt>Model estimate</dt><dd><span class="num">${usd(r.mv)}</span> <span class="muted">(80% range ${usd(r.lo)} to ${usd(r.hi)})</span></dd>
+      <dt>Assessed 2025</dt><dd><span class="num">${usd(r.as)}</span> <span class="muted">(2024: ${r.a24 != null ? usd(r.a24) : "n/a"})</span></dd>
+      <dt>Implied market</dt><dd><span class="num">${usd(r.im)}</span> <span class="muted">assessed &divide; ${S.citywide_assessment_level.toFixed(3)}</span></dd>
+      <dt>Comparable sales</dt><dd>${r.cv != null ? `<span class="num">${usd(r.cv)}</span> <span class="muted">median of ${r.nc}, time-adjusted; found within ${r.crad} mi and ${r.cwin} months</span>` : "none found"}</dd>
+      <dt>Relative gap</dt><dd><span class="num">${pct(gap)}</span> <span class="muted">model estimate</span></dd>
+      <dt>Tax shift</dt><dd><span class="num">${usd(r.usd)}</span> per year <span class="muted">model estimate, gross rate</span></dd>
+      <dt>Main drivers</dt><dd>${r.drv.map(esc).join("<br>")}<div class="sub">largest feature effects on this model estimate, versus an average home</div></dd>
+      <dt>Tax key</dt><dd class="mono">${esc(r.tk)}</dd>
+    </dl>
+  </div></td></tr>`;
+}
+function makeList(root, data, opts) {
+  const ROWS = data.map((r, i) => ({...r, rank: i + 1, flags: r.flags || "", reason: r.reason || ""}));
+  const st = {q: "", dir: "all", sort: "gap", hide: false, why: "", page: 0, open: null};
+  const reasons = opts.reasons || [];
+  root.innerHTML = `<div class="controls">
+      <input type="search" class="q" placeholder="Search address, ZIP or tax key" aria-label="Search address, ZIP or tax key">
+      <div class="seg" role="group" aria-label="Direction">
+        <button data-dir="all" aria-pressed="true">All</button><button data-dir="below" aria-pressed="false">Assessed below model</button><button data-dir="above" aria-pressed="false">Assessed above model</button>
+      </div>
+      <select class="sort" aria-label="Sort"><option value="gap">Sort: relative gap</option><option value="usd">Sort: tax dollars (size)</option></select>
+      ${reasons.length ? `<select class="why" aria-label="Reason"><option value="">All reasons</option>${reasons.map(x => `<option>${esc(x)}</option>`).join("")}</select>`
+        : ROWS.some(r => r.flags) ? `<label class="chk"><input type="checkbox" class="hide"> Hide parcels with a context flag</label>` : ""}
+    </div>
+    <div class="tablebox"><table>
+      <thead><tr><th>Address</th><th class="c-type">Type</th><th class="r">Assessed 2025</th><th class="r">Model estimate<br><span style="text-transform:none;letter-spacing:0">(80% range)</span></th><th>Relative gap</th><th class="r">Tax shift / yr<br><span style="text-transform:none;letter-spacing:0">model estimate</span></th></tr></thead>
+      <tbody></tbody></table></div>
+    <div class="pager"><span class="count"></span><span style="display:flex;gap:8px"><button class="prev">Previous</button><button class="next">Next</button></span></div>`;
+  const tbody = $("tbody", root);
+  function filtered() {
+    const q = st.q.trim().toLowerCase();
+    let out = ROWS.filter(r => (st.dir === "all" || (st.dir === "below" ? r.rel < 1 : r.rel > 1)) &&
+      (!st.hide || !r.flags) && (!st.why || r.reason.includes(st.why)) &&
+      (!q || r.addr.toLowerCase().includes(q) || r.tk.includes(q) || r.zip.includes(q)));
+    if (st.sort === "usd") out = out.slice().sort((a, b) => Math.abs(b.usd) - Math.abs(a.usd));
+    return out;
+  }
+  function render() {
+    const rows = filtered(), pages = Math.max(1, Math.ceil(rows.length / PER));
+    st.page = Math.min(st.page, pages - 1);
+    tbody.innerHTML = rows.slice(st.page * PER, (st.page + 1) * PER).map(r => {
+      const gap = (r.rel - 1) * 100, c = r.rel > 1 ? "var(--d6)" : "var(--d2)";
+      const tag = r.reason ? ` &middot; <span class="tag">${esc(r.reason.includes("; ") ? "several reasons" : r.reason)}</span>`
+        : r.flags ? ` &middot; <span class="tag">${r.flags.includes("student-rental") ? "student-rental area" : "flag"}</span>` : "";
+      const tr = `<tr class="row" tabindex="0" data-tk="${esc(r.tk)}" aria-expanded="${st.open === r.tk}">
+        <td><div class="addr">${esc(r.addr)}</div><div class="sub">${esc(r.zip)} &middot; <span class="mono">${esc(r.tk)}</span> &middot; rank ${r.rank}${tag}</div></td>
+        <td class="c-type">${r.type}</td>
+        <td class="r num">${usd(r.as)}</td>
+        <td class="r"><div class="num">${usd(r.mv)}</div><div class="sub num">${usdk(r.lo)}–${usdk(r.hi)}</div></td>
+        <td><span class="dir"><i style="background:${c}"></i><span class="num">${pct(gap, 0)}</span></span><div class="sub">${r.rel > 1 ? "above" : "below"} model</div></td>
+        <td class="r"><div class="num">${usd(r.usd)}</div><div class="est">estimate</div></td></tr>`;
+      return st.open === r.tk ? tr + detail(r) : tr;
+    }).join("") || `<tr><td colspan="6" class="muted">No parcel matches.</td></tr>`;
+    $(".count", root).textContent = rows.length ? `Showing ${st.page * PER + 1}–${Math.min(rows.length, (st.page + 1) * PER)} of ${rows.length.toLocaleString("en-US")}` : "0 parcels";
+    $(".prev", root).disabled = st.page === 0; $(".next", root).disabled = st.page >= pages - 1;
+  }
+  const reset = () => { st.page = 0; render(); };
+  tbody.addEventListener("click", e => { const tr = e.target.closest("tr.row"); if (!tr) return; st.open = st.open === tr.dataset.tk ? null : tr.dataset.tk; render(); });
+  tbody.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.matches("tr.row")) { e.preventDefault(); e.target.click(); } });
+  $(".q", root).addEventListener("input", e => { st.q = e.target.value; reset(); });
+  root.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => {
+    root.querySelectorAll(".seg button").forEach(x => x.setAttribute("aria-pressed", x === b)); st.dir = b.dataset.dir; reset(); }));
+  $(".sort", root).addEventListener("change", e => { st.sort = e.target.value; reset(); });
+  if ($(".hide", root)) $(".hide", root).addEventListener("change", e => { st.hide = e.target.checked; reset(); });
+  if ($(".why", root)) $(".why", root).addEventListener("change", e => { st.why = e.target.value; reset(); });
+  $(".prev", root).addEventListener("click", () => { st.page--; render(); });
+  $(".next", root).addEventListener("click", () => { st.page++; render(); });
+  render();
+}
+/*<!--/private-->*/
+const SR = DATA.special_rules;
+$("#rules").innerHTML = SR.map(r => `<li><b>${esc(r.rule)}</b>: ${esc(r.definition)} <span class="num">(${r.n.toLocaleString("en-US")})</span></li>`).join("");
+/*<!--private-->*/
+makeList($("#L-main"), DATA.rows, {});
+makeList($("#L-special"), DATA.special, {reasons: SR.map(r => r.rule)});
+/*<!--/private-->*/
+/*<!--portfolio-->*/
+{
+  $("#pstats").innerHTML = [
+    [S.listable_outside_and_comps_agree.toLocaleString("en-US"), "homes outside the 80% range with comparable sales pointing the same way"],
+    [S.special_listable.toLocaleString("en-US"), "of those set aside as a likely special valuation or data issue"],
+    [S.listed.toLocaleString("en-US"), `largest remaining gaps reviewed: ${S.listed_under_assessed} assessed below the model, ${S.listed_over_assessed} above`],
+  ].map(([v, k]) => `<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");
+}
+/*<!--/portfolio-->*/
+
+// ---- groups
+(function groups() {
+  const G = DATA.groups, all = G.flatMap(g => [g.clo, g.chi, g.srlo, g.srhi]).filter(v => v != null);
+  const ext = Math.max(4, Math.ceil(Math.max(...all.map(Math.abs)) + 0.5)), W = 240, x = v => 6 + (v + ext) / (2 * ext) * (W - 12);
+  const ivl = g => `<svg viewBox="0 0 ${W} 34" role="img" aria-label="corrected shift ${pct(g.c)}, sales check ${g.sr == null ? "n/a" : pct(g.sr)}">
+    <line x1="${x(0)}" y1="2" x2="${x(0)}" y2="24" stroke="var(--rule-strong)" stroke-dasharray="2 2"/>
+    ${g.sr != null ? `<rect x="${x(g.srlo)}" y="7" width="${Math.max(1, x(g.srhi) - x(g.srlo))}" height="10" rx="2" fill="var(--band)"/>` : ""}
+    <line x1="${x(g.clo)}" y1="12" x2="${x(g.chi)}" y2="12" stroke="var(--fg)" stroke-width="2"/>
+    <circle cx="${x(g.c)}" cy="12" r="3.5" fill="var(--fg)"/>
+    <text x="${x(-ext) + 2}" y="32">${-ext}%</text><text x="${x(0)}" y="32" text-anchor="middle">0</text><text x="${x(ext) - 2}" y="32" text-anchor="end">+${ext}%</text>
+  </svg>`;
+  let html = "", last = "";
+  for (const g of G) {
+    if (g.grouping !== last) { html += `<tr><td colspan="9" style="background:var(--sunk);font-weight:600;font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--fg2)">${g.grouping === "race_group" ? "Tract majority race or ethnicity" : "Tract median household income quintile"}</td></tr>`; last = g.grouping; }
+    const claim = g.verdict.startsWith("consistent with") ? "no claim: consistent with assessments lagging faster appreciation in some areas" : g.verdict;
+    const mark = ok => ok ? "pass" : "fail";
+    html += `<tr><td>${esc(g.group)}</td><td class="r num">${g.n.toLocaleString("en-US")}</td>
+      <td class="r num">${pct(g.s)}<div class="sub">[${pct(g.slo)}, ${pct(g.shi)}]</div></td>
+      <td class="r num">${g.b == null ? "n/a" : pct(g.b)}<div class="sub">${g.b == null ? "" : `[${pct(g.blo)}, ${pct(g.bhi)}]`}</div></td>
+      <td class="r num">${pct(g.c)}<div class="sub">[${pct(g.clo)}, ${pct(g.chi)}]</div></td>
+      <td class="ivl">${ivl(g)}</td>
+      <td class="r num">${g.sr == null ? "n/a" : pct(g.sr)}<div class="sub">${g.sr == null ? "" : `[${pct(g.srlo)}, ${pct(g.srhi)}]; n=${g.sn.toLocaleString("en-US")}`}</div></td>
+      <td style="min-width:170px"><div class="verdict ${claim.startsWith("no claim") ? "none" : ""}">${esc(claim)}</div><div class="sub">(a) ${mark(g.ok_a)}, (b) ${mark(g.ok_b)}, (c) ${mark(g.ok_c)}; tercile-adjusted: corrected ${pct(g.ct)}, sales ${g.srt == null ? "n/a" : pct(g.srt)}</div></td>
+      <td class="r num">${usd(g.usd)}</td></tr>`;
+  }
+  $("#gbody").innerHTML = html;
+  const P = G.filter(g => g.verdict.endsWith("vs market share"));
+  $("#gpass").innerHTML = P.length ? `<h3>Groups that pass all three checks</h3>` + P.map(g => {
+    const less = g.usd_home < 0;
+    return `<p><b>${esc(g.group)}</b>: ${esc(g.verdict.replace(" vs market share", ""))}; ${g.persist === "persistent" ? "persistent" : "a 2025 result"} (the tier-adjusted sales check holds in ${g.yrs} of the 4 earlier rolls). A typical home (median assessment ${usd(g.med_as)}) pays about <span class="num">${usd(Math.abs(g.usd_home))}</span> a year ${less ? "less" : "more"} than its market-value share at the 2025 net rate; <span class="num">${usd(Math.abs(g.usd_group))}</span> across the group's ${g.n.toLocaleString("en-US")} homes. The levy is fixed, so the other ${g.n_other.toLocaleString("en-US")} homes pay about <span class="num">${usd(Math.abs(g.usd_other))}</span> a year ${less ? "more" : "less"} each.</p>`;
+  }).join("") + (P.length > 1 ? `<p class="muted" style="font-size:0.85rem">The groups overlap (tract groupings by race and by income), so the amounts do not add.</p>` : "") : `<p>No group passes all three checks.</p>`;
+  const excl = (lo, hi, at) => lo > at || hi < at;
+  const C = G.filter(g => g.sr != null && excl(g.clo, g.chi, 0) && excl(g.srlo, g.srhi, 0) && Math.sign(g.c) !== Math.sign(g.sr));
+  $("#gpass").innerHTML += C.map(g => `<p><b>${esc(g.group)}</b>: the two checks conflict. The bias-corrected shift (<span class="num">${pct(g.c)}</span> [${pct(g.clo)}, ${pct(g.chi)}]) says ${g.c > 0 ? "over" : "under"}-assessed; the 2025 sales check (<span class="num">${pct(g.sr)}</span> [${pct(g.srlo)}, ${pct(g.srhi)}]) says ${g.sr > 0 ? "over" : "under"}-assessed. Both intervals exclude zero, so no claim is made.</p>`).join("");
+  $("#gnote").innerHTML = `Shift: median over the group's homes of assessed ÷ market-value share, in percent; positive means the group pays more than its share. Model bias: the model's mean log error for the group minus its citywide mean, cross-validated on 2021-2024; corrected shift = shift plus that bias. Assessor ratio on 2025 sales: the group's median sales ratio relative to the citywide median (<span class="num">${DATA.groups[0].city_ratio.toFixed(3)}</span>) on the same city sales; it uses sale prices only, so model bias cannot produce it.`;
+})();
+
+// ---- yields
+(function yields() {
+  const Y = DATA.yields;
+  if (Y == null) {  // no HUD rent file yet (issue #1, optional): hide the section, keep the code
+    $("#yields").hidden = true;
+    $("#method .eyebrow").textContent = "4 · Method and limits";
+    return;
+  }
+  $("#ybody").innerHTML = Y == null
+    ? `<div class="note"><p><strong>Pending.</strong> Duplex yields use HUD Small Area Fair Market Rents by ZIP code (fiscal year 2025), not the metro-wide rent. The HUD file could not be downloaded automatically and has not been added yet, so no yields are shown. Fair Market Rent is a 40th-percentile rent, so yields computed from it are conservative.</p></div>`
+    : `<p>Gross yield = 12 months &times; 2 units &times; HUD Small Area Fair Market Rent for the ZIP and bedrooms per unit, &divide; the model estimate. Fair Market Rent is a 40th-percentile rent, so these yields are conservative.</p><div class="tablebox"><table><thead><tr><th>Group</th><th class="r">Duplexes</th><th class="r">10th</th><th class="r">25th</th><th class="r">Median</th><th class="r">75th</th><th class="r">90th</th></tr></thead><tbody>` +
+      Y.map(y => `<tr><td>${esc(y.group)}</td><td class="r num">${y.n.toLocaleString("en-US")}</td>${["p10","p25","p50","p75","p90"].map(k => `<td class="r num">${(y[k] * 100).toFixed(1)}%</td>`).join("")}</tr>`).join("") + `</tbody></table></div>`;
+})();
+
+// ---- method numbers
+$("#lvl").textContent = S.citywide_assessment_level.toFixed(3);
+$("#student").innerHTML = `Of the ${S.listed.toLocaleString("en-US")} largest gaps, <span class="num">${S.listed_student_area}</span> are within 0.75 mi of either main campus (${S.listed_student_area_above_model} above the model, ${S.listed_student_area_below_model} below); they are flagged, not set aside. The concentration is lopsided: those areas hold <span class="num">${(S.all_student_area / S.parcels_scored * 100).toFixed(1)}%</span> of the homes compared but <span class="num">${S.listed_student_area_above_model}</span> of the <span class="num">${S.listed_over_assessed}</span> listings assessed above the model.`;
+$("#mdape").textContent = (DATA.accuracy.model * 100).toFixed(1) + "%";
+$("#mdape_a").textContent = (DATA.accuracy.assessor * 100).toFixed(1) + "%";
+$("#chg").textContent = pct((S.all_change_2024_to_2025_median - 1) * 100);
+$("#unch").textContent = (S.all_share_unchanged_from_2024 * 100).toFixed(1) + "%";
+$("#taxlist").innerHTML = [
+  `Rate used: <span class="num">$${RATE.toFixed(2)}</span> per $1,000, ${T.rate_used}, ${T.assessment_year} assessments (${esc(T.tax_bill)}); gross rate <span class="num">$${T.gross_rate_per_1000.toFixed(2)}</span>. School levy credit: ${esc(T.school_levy_credit)}.` ,
+  `Note: ${esc(T.prior_year_note)}.`,
+  `Not included: ${esc(T.excluded)}.`,
+  `Market-value share: each home's model estimate &times; (total assessed ÷ total model estimate) over the homes compared, so the total levy is unchanged.`,
+  ...T.sources.map(s => `Source: ${esc(s)}`),
+].map(s => `<li>${s}</li>`).join("");
+$("#excl").innerHTML = `<thead><tr><th>Reason</th><th class="r">Homes</th></tr></thead><tbody>` +
+  DATA.exclusions.filter(e => e.excluded_reason !== "(included)").map(e => `<tr><td>${esc(e.excluded_reason)}</td><td class="r num">${e.parcels.toLocaleString("en-US")}</td></tr>`).join("") + `</tbody>`;
+</script>

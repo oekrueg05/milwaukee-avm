@@ -1,0 +1,20 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropType,text,2754,0.0,5,0.0,Residential (2004); Condominium (539); Commercial (120),Lg Apartment; Residential; Condominium
+Taxkey,integer,2754,0.0,2730,0.0,(redacted),(redacted)
+Address,text,2754,0.0,2439,0.0,(redacted),(redacted)
+CondoProject,text,2754,0.7767,172,0.0,LANDMARK ON THE LAKE (36); 4: 2-Br (32); RIVER RENAISSANCE (21),VILLA DU COURS (ELEVATOR); PARK VIEW CONDOMINIUMS; KANE COMMONS
+District,integer,2754,0.0,15,0.0,5 (384); 11 (334); 3 (284),2; 8; 10
+Nbhd,integer,2754,0.0,366,0.0,2100 (89); 2080 (75); 4340 (70),5825; 1680; 4620
+Style,text,2754,0.0,106,0.0,Ranch (606); Cape Cod (407); APARTMENT (325),hi-rise; Split Level; Duplex
+Extwall,text,2754,0.2723,9,0.0,Aluminum / Vinyl (1120); Brick (483); Frame (198),Prem Wood; Frame; Aluminum / Vinyl
+Stories,float,2754,0.0,9,0.0,1 (1759); 2 (623); 1.5 (276),5; 1.5; 2
+Year_Built,integer,2754,0.0,140,0.0,1955 (84); 1953 (75); 1950 (75),1939; 1983; 1899
+Nr_of_rms,integer,2754,0.0,10,0.0,0 (2248); 4 (219); 5 (137),4; 7; 6
+Fin_sqft,integer,2754,0.0,1418,0.0,0 (27); 996 (15); 864 (15),1267; 1285; 2062
+Units,integer,2754,0.0,4,0.0,1 (2400); 2 (332); 3 (18),2; 0; 3
+Bdrms,integer,2754,0.0,12,0.0,3 (1095); 2 (586); 4 (478),1; 12; 7
+Fbath,integer,2754,0.0,7,0.0,1 (1432); 2 (980); 0 (220),10; 3; 1
+Hbath,integer,2754,0.0,4,0.0,0 (1972); 1 (746); 2 (33),2; 3; 1
+Lotsize,integer,2754,0.0,867,0.0,0 (553); 4800 (142); 3600 (90),7080; 3510; 5880
+Sale_date,date,2754,0.0,12,0.0,2013-07 (326); 2013-08 (320); 2013-06 (287),2013-07; 2013-12; 2013-05
+Sale_price,integer,2754,0.0,918,0.0,120000 (28); 135000 (26); 105000 (26),153850; 54900; 67000

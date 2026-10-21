@@ -1,0 +1,409 @@
+pair,subset,concept,col_a,col_b,excluded,n_common_parcels,n_both_present,present_rate_a,present_rate_b,compare_as,exact_agree,within_5pct,accept_metric,accept_value,status
+2008-2009,all,year_built,YR_BUILT,YR_BUILT,,160579,140961,0.8787,0.8785,number,0.9993,1.0,exact_agree,0.9993,pass
+2008-2009,all,bldg_area,BLDG_AREA,BLDG_AREA,,160579,148524,0.9261,0.9259,number,0.996,0.9968,exact_agree,0.996,pass
+2008-2009,all,bedrooms,BEDROOMS,BEDROOMS,,160579,140898,0.8784,0.8782,number,0.9963,0.9963,exact_agree,0.9963,pass
+2008-2009,all,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",160579,0,0.0,0.0,text,,,exact_agree,,excluded
+2008-2009,all,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",160579,0,0.0,0.0,text,,,exact_agree,,excluded
+2008-2009,all,rooms,NR_ROOMS,NR_ROOMS,,160579,0,0.0,0.0,text,,,exact_agree,,no data
+2008-2009,all,nr_stories,NR_STORIES,NR_STORIES,,160579,148389,0.9252,0.925,number,0.9997,0.9997,exact_agree,0.9997,pass
+2008-2009,all,nr_units,NR_UNITS,NR_UNITS,,160579,160579,1.0,1.0,number,0.9889,0.989,exact_agree,0.9889,pass
+2008-2009,all,lot_area,LOT_AREA,LOT_AREA,,160579,148763,0.9265,0.9265,number,0.9967,0.9997,within_5pct,0.9997,pass
+2008-2009,all,land_use,LAND_USE,LAND_USE,,160579,160578,1.0,1.0,number,0.9952,0.9977,exact_agree,0.9952,pass
+2008-2009,all,bldg_type,BLDG_TYPE,BLDG_TYPE,,160579,141021,0.8792,0.8794,text,0.9989,0.9989,exact_agree,0.9989,pass
+2008-2009,all,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,160579,160579,1.0,1.0,number,0.9991,0.9997,exact_agree,0.9991,pass
+2008-2009,sf_duplex,year_built,YR_BUILT,YR_BUILT,,124373,123575,0.9945,0.9941,number,0.9999,1.0,exact_agree,0.9999,pass
+2008-2009,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,,124373,123634,0.9949,0.9946,number,0.9963,0.997,exact_agree,0.9963,pass
+2008-2009,sf_duplex,bedrooms,BEDROOMS,BEDROOMS,,124373,123553,0.9943,0.994,number,0.9964,0.9964,exact_agree,0.9964,pass
+2008-2009,sf_duplex,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",124373,0,0.0,0.0,text,,,exact_agree,,excluded
+2008-2009,sf_duplex,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",124373,0,0.0,0.0,text,,,exact_agree,,excluded
+2008-2009,sf_duplex,rooms,NR_ROOMS,NR_ROOMS,,124373,0,0.0,0.0,text,,,exact_agree,,no data
+2008-2009,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,,124373,123635,0.9949,0.9946,number,0.9997,0.9997,exact_agree,0.9997,pass
+2008-2009,sf_duplex,nr_units,NR_UNITS,NR_UNITS,,124373,124373,1.0,1.0,number,0.9907,0.9907,exact_agree,0.9907,pass
+2008-2009,sf_duplex,lot_area,LOT_AREA,LOT_AREA,,124373,124279,0.9992,0.9993,number,0.9973,0.9998,within_5pct,0.9998,pass
+2008-2009,sf_duplex,land_use,LAND_USE,LAND_USE,,124373,124373,1.0,1.0,number,0.9987,0.9998,exact_agree,0.9987,pass
+2008-2009,sf_duplex,bldg_type,BLDG_TYPE,BLDG_TYPE,,124373,123581,0.9945,0.9942,number,0.9989,0.9989,exact_agree,0.9989,pass
+2008-2009,sf_duplex,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,124373,124373,1.0,1.0,number,0.9999,0.9999,exact_agree,0.9999,pass
+2009-2010,all,year_built,YR_BUILT,YR_BUILT,,161797,141121,0.874,0.8729,number,0.9999,1.0,exact_agree,0.9999,pass
+2009-2010,all,bldg_area,BLDG_AREA,BLDG_AREA,,161797,148663,0.921,0.9233,number,0.9958,0.9966,exact_agree,0.9958,pass
+2009-2010,all,bedrooms,BEDROOMS,BEDROOMS,,161797,141062,0.8737,0.8726,number,0.9964,0.9964,exact_agree,0.9964,pass
+2009-2010,all,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",161797,0,0.0,0.0,text,,,exact_agree,,excluded
+2009-2010,all,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",161797,0,0.0,0.0,text,,,exact_agree,,excluded
+2009-2010,all,rooms,NR_ROOMS,NR_ROOMS,,161797,0,0.0,0.0,text,,,exact_agree,,no data
+2009-2010,all,nr_stories,NR_STORIES,NR_STORIES,,161797,148527,0.9201,0.9224,number,0.9997,0.9997,exact_agree,0.9997,pass
+2009-2010,all,nr_units,NR_UNITS,NR_UNITS,,161797,161797,1.0,1.0,number,0.9652,0.9665,exact_agree,0.9652,FAIL
+2009-2010,all,lot_area,LOT_AREA,LOT_AREA,,161797,149558,0.9244,0.9248,number,0.9463,0.9502,within_5pct,0.9502,FAIL
+2009-2010,all,land_use,LAND_USE,LAND_USE,,161797,161797,1.0,1.0,number,0.9961,0.9988,exact_agree,0.9961,pass
+2009-2010,all,bldg_type,BLDG_TYPE,BLDG_TYPE,,161797,141032,0.8737,0.8728,text,0.9971,0.9971,exact_agree,0.9971,pass
+2009-2010,all,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,161797,161797,1.0,1.0,number,0.9995,0.9998,exact_agree,0.9995,pass
+2009-2010,sf_duplex,year_built,YR_BUILT,YR_BUILT,,124369,123414,0.9943,0.9929,number,1.0,1.0,exact_agree,1.0,pass
+2009-2010,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,,124369,123474,0.9948,0.9933,number,0.9959,0.9967,exact_agree,0.9959,pass
+2009-2010,sf_duplex,bedrooms,BEDROOMS,BEDROOMS,,124369,123395,0.9942,0.9927,number,0.9964,0.9964,exact_agree,0.9964,pass
+2009-2010,sf_duplex,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",124369,0,0.0,0.0,text,,,exact_agree,,excluded
+2009-2010,sf_duplex,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",124369,0,0.0,0.0,text,,,exact_agree,,excluded
+2009-2010,sf_duplex,rooms,NR_ROOMS,NR_ROOMS,,124369,0,0.0,0.0,text,,,exact_agree,,no data
+2009-2010,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,,124369,123473,0.9948,0.9933,number,0.9997,0.9997,exact_agree,0.9997,pass
+2009-2010,sf_duplex,nr_units,NR_UNITS,NR_UNITS,,124369,124369,1.0,1.0,number,0.9783,0.9783,exact_agree,0.9783,FAIL
+2009-2010,sf_duplex,lot_area,LOT_AREA,LOT_AREA,,124369,124262,0.9992,0.9992,number,0.9935,0.9947,within_5pct,0.9947,pass
+2009-2010,sf_duplex,land_use,LAND_USE,LAND_USE,,124369,124369,1.0,1.0,number,0.9985,1.0,exact_agree,0.9985,pass
+2009-2010,sf_duplex,bldg_type,BLDG_TYPE,BLDG_TYPE,,124369,123423,0.9944,0.9929,number,0.9972,0.9972,exact_agree,0.9972,pass
+2009-2010,sf_duplex,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,124369,124369,1.0,1.0,number,0.9999,1.0,exact_agree,0.9999,pass
+2010-2011,all,year_built,YR_BUILT,YR_BUILT,,161947,140862,0.8733,0.8707,number,0.9999,1.0,exact_agree,0.9999,pass
+2010-2011,all,bldg_area,BLDG_AREA,BLDG_AREA,,161947,148945,0.9235,0.9208,number,0.9958,0.9973,exact_agree,0.9958,pass
+2010-2011,all,bedrooms,BEDROOMS,BEDROOMS,,161947,140793,0.873,0.8703,number,0.9971,0.9971,exact_agree,0.9971,pass
+2010-2011,all,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",161947,0,0.0,0.0,text,,,exact_agree,,excluded
+2010-2011,all,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",161947,0,0.0,0.0,text,,,exact_agree,,excluded
+2010-2011,all,rooms,NR_ROOMS,NR_ROOMS,,161947,0,0.0,0.0,text,,,exact_agree,,no data
+2010-2011,all,nr_stories,NR_STORIES,NR_STORIES,,161947,148826,0.9228,0.9201,number,0.9997,0.9997,exact_agree,0.9997,pass
+2010-2011,all,nr_units,NR_UNITS,NR_UNITS,,161947,161947,1.0,1.0,number,0.9925,0.9927,exact_agree,0.9925,pass
+2010-2011,all,lot_area,LOT_AREA,LOT_AREA,,161947,149541,0.9235,0.9236,number,0.9946,0.9957,within_5pct,0.9957,pass
+2010-2011,all,land_use,LAND_USE,LAND_USE,,161947,161947,1.0,1.0,number,0.9961,0.9994,exact_agree,0.9961,pass
+2010-2011,all,bldg_type,BLDG_TYPE,BLDG_TYPE,,161947,140841,0.8732,0.8706,text,0.9991,0.9991,exact_agree,0.9991,pass
+2010-2011,all,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,161947,161946,1.0,1.0,number,0.9992,0.9996,exact_agree,0.9992,pass
+2010-2011,sf_duplex,year_built,YR_BUILT,YR_BUILT,,124401,123116,0.9934,0.9904,number,0.9999,1.0,exact_agree,0.9999,pass
+2010-2011,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,,124401,123181,0.9939,0.9908,number,0.9966,0.9974,exact_agree,0.9966,pass
+2010-2011,sf_duplex,bedrooms,BEDROOMS,BEDROOMS,,124401,123084,0.9933,0.9901,number,0.9971,0.9971,exact_agree,0.9971,pass
+2010-2011,sf_duplex,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",124401,0,0.0,0.0,text,,,exact_agree,,excluded
+2010-2011,sf_duplex,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",124401,0,0.0,0.0,text,,,exact_agree,,excluded
+2010-2011,sf_duplex,rooms,NR_ROOMS,NR_ROOMS,,124401,0,0.0,0.0,text,,,exact_agree,,no data
+2010-2011,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,,124401,123181,0.9939,0.9909,number,0.9997,0.9997,exact_agree,0.9997,pass
+2010-2011,sf_duplex,nr_units,NR_UNITS,NR_UNITS,,124401,124401,1.0,1.0,number,0.9945,0.9945,exact_agree,0.9945,pass
+2010-2011,sf_duplex,lot_area,LOT_AREA,LOT_AREA,,124401,124269,0.999,0.9991,number,0.9956,0.9967,within_5pct,0.9967,pass
+2010-2011,sf_duplex,land_use,LAND_USE,LAND_USE,,124401,124401,1.0,1.0,number,0.9975,1.0,exact_agree,0.9975,pass
+2010-2011,sf_duplex,bldg_type,BLDG_TYPE,BLDG_TYPE,,124401,123119,0.9934,0.9904,number,0.9991,0.9991,exact_agree,0.9991,pass
+2010-2011,sf_duplex,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,124401,124401,1.0,1.0,number,0.9998,0.9999,exact_agree,0.9998,pass
+2011-2012,all,year_built,YR_BUILT,YR_BUILT,,162187,140638,0.8699,0.8684,number,0.9999,1.0,exact_agree,0.9999,pass
+2011-2012,all,bldg_area,BLDG_AREA,BLDG_AREA,,162187,148716,0.9201,0.9185,number,0.9953,0.9964,exact_agree,0.9953,pass
+2011-2012,all,bedrooms,BEDROOMS,BEDROOMS,,162187,140555,0.8695,0.868,number,0.9958,0.9958,exact_agree,0.9958,pass
+2011-2012,all,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",162187,0,0.0,0.0,text,,,exact_agree,,excluded
+2011-2012,all,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",162187,0,0.0,0.0,text,,,exact_agree,,excluded
+2011-2012,all,rooms,NR_ROOMS,NR_ROOMS,,162187,0,0.0,0.0,text,,,exact_agree,,no data
+2011-2012,all,nr_stories,NR_STORIES,NR_STORIES,,162187,148608,0.9194,0.9179,number,0.9996,0.9996,exact_agree,0.9996,pass
+2011-2012,all,nr_units,NR_UNITS,NR_UNITS,,162187,162187,1.0,1.0,number,0.9832,0.9833,exact_agree,0.9832,FAIL
+2011-2012,all,lot_area,LOT_AREA,LOT_AREA,,162187,149605,0.9224,1.0,number,0.9451,0.9491,within_5pct,0.9491,FAIL
+2011-2012,all,land_use,LAND_USE,LAND_USE,,162187,162186,1.0,1.0,number,0.9957,0.9989,exact_agree,0.9957,pass
+2011-2012,all,bldg_type,BLDG_TYPE,BLDG_TYPE,,162187,140621,0.8698,0.8683,text,0.9988,0.9988,exact_agree,0.9988,pass
+2011-2012,all,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,162187,162179,1.0,1.0,number,0.9978,0.9998,exact_agree,0.9978,pass
+2011-2012,sf_duplex,year_built,YR_BUILT,YR_BUILT,,124349,122836,0.9911,0.9891,number,0.9999,1.0,exact_agree,0.9999,pass
+2011-2012,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,,124349,122890,0.9915,0.9895,number,0.9951,0.9962,exact_agree,0.9951,pass
+2011-2012,sf_duplex,bedrooms,BEDROOMS,BEDROOMS,,124349,122788,0.9908,0.9887,number,0.9956,0.9956,exact_agree,0.9956,pass
+2011-2012,sf_duplex,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",124349,0,0.0,0.0,text,,,exact_agree,,excluded
+2011-2012,sf_duplex,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",124349,0,0.0,0.0,text,,,exact_agree,,excluded
+2011-2012,sf_duplex,rooms,NR_ROOMS,NR_ROOMS,,124349,0,0.0,0.0,text,,,exact_agree,,no data
+2011-2012,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,,124349,122895,0.9915,0.9896,number,0.9996,0.9996,exact_agree,0.9996,pass
+2011-2012,sf_duplex,nr_units,NR_UNITS,NR_UNITS,,124349,124349,1.0,1.0,number,0.9912,0.9912,exact_agree,0.9912,pass
+2011-2012,sf_duplex,lot_area,LOT_AREA,LOT_AREA,,124349,124180,0.9986,1.0,number,0.9892,0.9927,within_5pct,0.9927,pass
+2011-2012,sf_duplex,land_use,LAND_USE,LAND_USE,,124349,124349,1.0,1.0,number,0.9978,1.0,exact_agree,0.9978,pass
+2011-2012,sf_duplex,bldg_type,BLDG_TYPE,BLDG_TYPE,,124349,122838,0.9911,0.9891,number,0.9988,0.9988,exact_agree,0.9988,pass
+2011-2012,sf_duplex,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,124349,124348,1.0,1.0,number,0.9999,1.0,exact_agree,0.9999,pass
+2012-2013,all,year_built,YR_BUILT,YR_BUILT,,161954,139917,0.8686,0.8655,number,1.0,1.0,exact_agree,1.0,pass
+2012-2013,all,bldg_area,BLDG_AREA,BLDG_AREA,,161954,147955,0.9189,0.9154,number,0.9959,0.9969,exact_agree,0.9959,pass
+2012-2013,all,bedrooms,BEDROOMS,BEDROOMS,,161954,139831,0.8681,0.865,number,0.9964,0.9964,exact_agree,0.9964,pass
+2012-2013,all,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",161954,0,0.0,0.0,text,,,exact_agree,,excluded
+2012-2013,all,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",161954,0,0.0,0.0,text,,,exact_agree,,excluded
+2012-2013,all,rooms,NR_ROOMS,NR_ROOMS,,161954,0,0.0,0.0,text,,,exact_agree,,no data
+2012-2013,all,nr_stories,NR_STORIES,NR_STORIES,,161954,147852,0.9182,0.9147,number,0.9997,0.9997,exact_agree,0.9997,pass
+2012-2013,all,nr_units,NR_UNITS,NR_UNITS,,161954,161954,1.0,1.0,number,0.997,0.9971,exact_agree,0.997,pass
+2012-2013,all,lot_area,LOT_AREA,LOT_AREA,,161954,161944,1.0,1.0,number,0.9887,0.999,within_5pct,0.999,pass
+2012-2013,all,land_use,LAND_USE,LAND_USE,,161954,161954,1.0,1.0,number,0.9968,0.9993,exact_agree,0.9968,pass
+2012-2013,all,bldg_type,BLDG_TYPE,BLDG_TYPE,,161954,139902,0.8685,0.8654,text,0.9989,0.9989,exact_agree,0.9989,pass
+2012-2013,all,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,161954,161946,1.0,1.0,number,0.999,0.9998,exact_agree,0.999,pass
+2012-2013,sf_duplex,year_built,YR_BUILT,YR_BUILT,,124178,122294,0.9904,0.9866,number,1.0,1.0,exact_agree,1.0,pass
+2012-2013,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,,124178,122346,0.9908,0.987,number,0.9958,0.9967,exact_agree,0.9958,pass
+2012-2013,sf_duplex,bedrooms,BEDROOMS,BEDROOMS,,124178,122240,0.99,0.9862,number,0.9963,0.9963,exact_agree,0.9963,pass
+2012-2013,sf_duplex,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",124178,0,0.0,0.0,text,,,exact_agree,,excluded
+2012-2013,sf_duplex,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",124178,0,0.0,0.0,text,,,exact_agree,,excluded
+2012-2013,sf_duplex,rooms,NR_ROOMS,NR_ROOMS,,124178,0,0.0,0.0,text,,,exact_agree,,no data
+2012-2013,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,,124178,122352,0.9908,0.987,number,0.9998,0.9998,exact_agree,0.9998,pass
+2012-2013,sf_duplex,nr_units,NR_UNITS,NR_UNITS,,124178,124178,1.0,1.0,number,0.9976,0.9976,exact_agree,0.9976,pass
+2012-2013,sf_duplex,lot_area,LOT_AREA,LOT_AREA,,124178,124178,1.0,1.0,number,0.992,0.9992,within_5pct,0.9992,pass
+2012-2013,sf_duplex,land_use,LAND_USE,LAND_USE,,124178,124178,1.0,1.0,number,0.9979,1.0,exact_agree,0.9979,pass
+2012-2013,sf_duplex,bldg_type,BLDG_TYPE,BLDG_TYPE,,124178,122301,0.9904,0.9866,number,0.9989,0.9989,exact_agree,0.9989,pass
+2012-2013,sf_duplex,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,124178,124177,1.0,1.0,number,0.9999,0.9999,exact_agree,0.9999,pass
+2013-2014,all,year_built,YR_BUILT,YR_BUILT,,160828,140115,0.8712,1.0,number,0.9951,0.9951,exact_agree,0.9951,pass
+2013-2014,all,bldg_area,BLDG_AREA,BLDG_AREA,,160828,148219,0.9216,1.0,number,0.992,0.9926,exact_agree,0.992,pass
+2013-2014,all,bedrooms,BEDROOMS,BEDROOMS,,160828,140039,0.8707,1.0,number,0.9926,0.9926,exact_agree,0.9926,pass
+2013-2014,all,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",160828,0,0.0,0.0,text,,,exact_agree,,excluded
+2013-2014,all,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",160828,0,0.0,0.0,text,,,exact_agree,,excluded
+2013-2014,all,rooms,NR_ROOMS,NR_ROOMS,,160828,0,0.0,1.0,text,,,exact_agree,,no data
+2013-2014,all,nr_stories,NR_STORIES,NR_STORIES,,160828,148099,0.9209,1.0,number,0.9947,0.9947,exact_agree,0.9947,pass
+2013-2014,all,nr_units,NR_UNITS,NR_UNITS,,160828,160828,1.0,1.0,number,0.9964,0.9964,exact_agree,0.9964,pass
+2013-2014,all,lot_area,LOT_AREA,LOT_AREA,,160828,160820,1.0,1.0,number,0.9766,0.9971,within_5pct,0.9971,pass
+2013-2014,all,land_use,LAND_USE,LAND_USE,,160828,160828,1.0,1.0,number,0.9955,0.9986,exact_agree,0.9955,pass
+2013-2014,all,bldg_type,BLDG_TYPE,BLDG_TYPE,,160828,139407,0.8711,0.869,text,0.9992,0.9992,exact_agree,0.9992,pass
+2013-2014,all,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,160828,160820,1.0,1.0,number,0.9962,0.9998,exact_agree,0.9962,pass
+2013-2014,sf_duplex,year_built,YR_BUILT,YR_BUILT,,124062,122570,0.988,1.0,number,0.995,0.995,exact_agree,0.995,pass
+2013-2014,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,,124062,122625,0.9884,1.0,number,0.9923,0.9928,exact_agree,0.9923,pass
+2013-2014,sf_duplex,bedrooms,BEDROOMS,BEDROOMS,,124062,122529,0.9876,1.0,number,0.9923,0.9923,exact_agree,0.9923,pass
+2013-2014,sf_duplex,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",124062,0,0.0,0.0,text,,,exact_agree,,excluded
+2013-2014,sf_duplex,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",124062,0,0.0,0.0,text,,,exact_agree,,excluded
+2013-2014,sf_duplex,rooms,NR_ROOMS,NR_ROOMS,,124062,0,0.0,1.0,text,,,exact_agree,,no data
+2013-2014,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,,124062,122626,0.9884,1.0,number,0.9948,0.9948,exact_agree,0.9948,pass
+2013-2014,sf_duplex,nr_units,NR_UNITS,NR_UNITS,,124062,124062,1.0,1.0,number,0.9967,0.9967,exact_agree,0.9967,pass
+2013-2014,sf_duplex,lot_area,LOT_AREA,LOT_AREA,,124062,124062,1.0,1.0,number,0.9913,0.9992,within_5pct,0.9992,pass
+2013-2014,sf_duplex,land_use,LAND_USE,LAND_USE,,124062,124062,1.0,1.0,number,0.9971,1.0,exact_agree,0.9971,pass
+2013-2014,sf_duplex,bldg_type,BLDG_TYPE,BLDG_TYPE,,124062,121965,0.988,0.9855,number,0.9993,0.9993,exact_agree,0.9993,pass
+2013-2014,sf_duplex,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,124062,124062,1.0,1.0,number,1.0,1.0,exact_agree,1.0,pass
+2014-2015,all,year_built,YR_BUILT,YR_BUILT,,160621,139599,1.0,0.8691,number,0.9965,0.9966,exact_agree,0.9965,pass
+2014-2015,all,bldg_area,BLDG_AREA,BLDG_AREA,,160621,147691,1.0,0.9195,number,0.9926,0.9932,exact_agree,0.9926,pass
+2014-2015,all,bedrooms,BEDROOMS,BEDROOMS,,160621,139514,1.0,0.8686,number,0.9929,0.9929,exact_agree,0.9929,pass
+2014-2015,all,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",160621,0,0.0,0.0,text,,,exact_agree,,excluded
+2014-2015,all,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",160621,0,0.0,0.0,text,,,exact_agree,,excluded
+2014-2015,all,rooms,NR_ROOMS,NR_ROOMS,,160621,0,1.0,0.0,text,,,exact_agree,,no data
+2014-2015,all,nr_stories,NR_STORIES,NR_STORIES,,160621,147578,1.0,0.9188,number,0.996,0.996,exact_agree,0.996,pass
+2014-2015,all,nr_units,NR_UNITS,NR_UNITS,,160621,160621,1.0,1.0,number,0.996,0.9961,exact_agree,0.996,pass
+2014-2015,all,lot_area,LOT_AREA,LOT_AREA,,160621,160621,1.0,1.0,number,0.9633,0.9977,within_5pct,0.9977,pass
+2014-2015,all,land_use,LAND_USE,LAND_USE,,160621,160621,1.0,1.0,number,0.9957,0.9984,exact_agree,0.9957,pass
+2014-2015,all,bldg_type,BLDG_TYPE,BLDG_TYPE,,160621,139099,0.8696,0.869,text,0.9991,0.9991,exact_agree,0.9991,pass
+2014-2015,all,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,160621,160620,1.0,1.0,number,0.9971,0.9997,exact_agree,0.9971,pass
+2014-2015,sf_duplex,year_built,YR_BUILT,YR_BUILT,,123726,122116,1.0,0.987,number,0.9965,0.9965,exact_agree,0.9965,pass
+2014-2015,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,,123726,122170,1.0,0.9874,number,0.9929,0.9934,exact_agree,0.9929,pass
+2014-2015,sf_duplex,bedrooms,BEDROOMS,BEDROOMS,,123726,122067,1.0,0.9866,number,0.9926,0.9926,exact_agree,0.9926,pass
+2014-2015,sf_duplex,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",123726,0,0.0,0.0,text,,,exact_agree,,excluded
+2014-2015,sf_duplex,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",123726,0,0.0,0.0,text,,,exact_agree,,excluded
+2014-2015,sf_duplex,rooms,NR_ROOMS,NR_ROOMS,,123726,0,1.0,0.0,text,,,exact_agree,,no data
+2014-2015,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,,123726,122170,1.0,0.9874,number,0.9964,0.9964,exact_agree,0.9964,pass
+2014-2015,sf_duplex,nr_units,NR_UNITS,NR_UNITS,,123726,123726,1.0,1.0,number,0.9969,0.9969,exact_agree,0.9969,pass
+2014-2015,sf_duplex,lot_area,LOT_AREA,LOT_AREA,,123726,123726,1.0,1.0,number,0.9911,0.9993,within_5pct,0.9993,pass
+2014-2015,sf_duplex,land_use,LAND_USE,LAND_USE,,123726,123726,1.0,1.0,number,0.9977,1.0,exact_agree,0.9977,pass
+2014-2015,sf_duplex,bldg_type,BLDG_TYPE,BLDG_TYPE,,123726,121699,0.9874,0.987,number,0.9991,0.9991,exact_agree,0.9991,pass
+2014-2015,sf_duplex,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,123726,123726,1.0,1.0,number,0.9999,0.9999,exact_agree,0.9999,pass
+2015-2016,all,year_built,YR_BUILT,YR_BUILT,,161277,108508,0.8646,0.6754,number,1.0,1.0,exact_agree,1.0,pass
+2015-2016,all,bldg_area,BLDG_AREA,BLDG_AREA,,161277,108512,0.9146,0.6753,number,0.9971,0.9975,exact_agree,0.9971,pass
+2015-2016,all,bedrooms,BEDROOMS,BEDROOMS,,161277,108419,0.864,0.6749,number,0.9963,0.9963,exact_agree,0.9963,pass
+2015-2016,all,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",161277,0,0.0,0.0,text,,,exact_agree,,excluded
+2015-2016,all,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",161277,0,0.0,0.0,text,,,exact_agree,,excluded
+2015-2016,all,rooms,NR_ROOMS,NR_ROOMS,,161277,0,0.0,0.0,text,,,exact_agree,,no data
+2015-2016,all,nr_stories,NR_STORIES,NR_STORIES,,161277,108512,0.9139,0.6753,number,0.9999,0.9999,exact_agree,0.9999,pass
+2015-2016,all,nr_units,NR_UNITS,NR_UNITS,,161277,161277,1.0,1.0,number,0.9979,0.998,exact_agree,0.9979,pass
+2015-2016,all,lot_area,LOT_AREA,LOT_AREA,,161277,160225,0.9935,0.9935,number,0.826,0.9852,within_5pct,0.9852,pass
+2015-2016,all,land_use,LAND_USE,LAND_USE,,161277,161277,1.0,1.0,number,0.9971,0.999,exact_agree,0.9971,pass
+2015-2016,all,bldg_type,BLDG_TYPE,BLDG_TYPE,,161277,108634,0.8645,0.6761,number,0.9991,0.9991,exact_agree,0.9991,pass
+2015-2016,all,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,161277,161277,1.0,1.0,number,0.9982,0.9996,exact_agree,0.9982,pass
+2015-2016,sf_duplex,year_built,YR_BUILT,YR_BUILT,,123423,103050,0.9885,0.838,number,1.0,1.0,exact_agree,1.0,pass
+2015-2016,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,,123423,103054,0.9889,0.838,number,0.9971,0.9975,exact_agree,0.9971,pass
+2015-2016,sf_duplex,bedrooms,BEDROOMS,BEDROOMS,,123423,102995,0.9881,0.8377,number,0.9965,0.9965,exact_agree,0.9965,pass
+2015-2016,sf_duplex,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",123423,0,0.0,0.0,text,,,exact_agree,,excluded
+2015-2016,sf_duplex,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",123423,0,0.0,0.0,text,,,exact_agree,,excluded
+2015-2016,sf_duplex,rooms,NR_ROOMS,NR_ROOMS,,123423,0,0.0,0.0,text,,,exact_agree,,no data
+2015-2016,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,,123423,103055,0.9889,0.838,number,0.9998,0.9998,exact_agree,0.9998,pass
+2015-2016,sf_duplex,nr_units,NR_UNITS,NR_UNITS,,123423,123423,1.0,1.0,number,0.9985,0.9985,exact_agree,0.9985,pass
+2015-2016,sf_duplex,lot_area,LOT_AREA,LOT_AREA,,123423,123423,1.0,1.0,number,0.8564,0.9912,within_5pct,0.9912,pass
+2015-2016,sf_duplex,land_use,LAND_USE,LAND_USE,,123423,123423,1.0,1.0,number,0.9986,1.0,exact_agree,0.9986,pass
+2015-2016,sf_duplex,bldg_type,BLDG_TYPE,BLDG_TYPE,,123423,103055,0.9885,0.838,number,0.9991,0.9991,exact_agree,0.9991,pass
+2015-2016,sf_duplex,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,123423,123423,1.0,1.0,number,0.9999,0.9999,exact_agree,0.9999,pass
+2016-2017,all,year_built,YR_BUILT,YR_BUILT,,160127,109049,0.681,1.0,number,0.9596,0.9597,exact_agree,0.9596,FAIL
+2016-2017,all,bldg_area,BLDG_AREA,BLDG_AREA,,160127,109046,0.681,1.0,number,0.9912,0.9915,exact_agree,0.9912,pass
+2016-2017,all,bedrooms,BEDROOMS,BEDROOMS,,160127,108968,0.6805,1.0,number,0.9564,0.9564,exact_agree,0.9564,FAIL
+2016-2017,all,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",160127,0,0.0,0.0,text,,,exact_agree,,excluded
+2016-2017,all,half_baths,POWDER_ROOMS,POWDER_ROO,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",160127,0,0.0,0.0,text,,,exact_agree,,excluded
+2016-2017,all,rooms,NR_ROOMS,NR_ROOMS,,160127,0,0.0,1.0,text,,,exact_agree,,no data
+2016-2017,all,nr_stories,NR_STORIES,NR_STORIES,,160127,109046,0.681,1.0,number,0.9932,0.9932,exact_agree,0.9932,pass
+2016-2017,all,nr_units,NR_UNITS,NR_UNITS,,160127,160127,1.0,1.0,number,0.9977,0.9977,exact_agree,0.9977,pass
+2016-2017,all,lot_area,LOT_AREA,LOT_AREA,,160127,160116,1.0,1.0,number,0.8237,0.9848,within_5pct,0.9848,FAIL
+2016-2017,all,land_use,LAND_USE,LAND_USE,,160127,160125,1.0,1.0,number,0.9966,0.9984,exact_agree,0.9966,pass
+2016-2017,all,bldg_type,BLDG_TYPE,BLDG_TYPE,,160127,104768,0.6818,0.7727,number,0.9993,0.9993,exact_agree,0.9993,pass
+2016-2017,all,neighborhood,NEIGHBORHOOD,NEIGHBORHO,,160127,160121,1.0,1.0,number,0.9989,0.9995,exact_agree,0.9989,pass
+2016-2017,sf_duplex,year_built,YR_BUILT,YR_BUILT,,123444,103565,0.839,1.0,number,0.9939,0.9939,exact_agree,0.9939,pass
+2016-2017,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,,123444,103563,0.8389,1.0,number,0.9913,0.9916,exact_agree,0.9913,pass
+2016-2017,sf_duplex,bedrooms,BEDROOMS,BEDROOMS,,123444,103518,0.8386,1.0,number,0.9904,0.9904,exact_agree,0.9904,pass
+2016-2017,sf_duplex,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",123444,0,0.0,0.0,text,,,exact_agree,,excluded
+2016-2017,sf_duplex,half_baths,POWDER_ROOMS,POWDER_ROO,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",123444,0,0.0,0.0,text,,,exact_agree,,excluded
+2016-2017,sf_duplex,rooms,NR_ROOMS,NR_ROOMS,,123444,0,0.0,1.0,text,,,exact_agree,,no data
+2016-2017,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,,123444,103564,0.839,1.0,number,0.9937,0.9937,exact_agree,0.9937,pass
+2016-2017,sf_duplex,nr_units,NR_UNITS,NR_UNITS,,123444,123444,1.0,1.0,number,0.9984,0.9984,exact_agree,0.9984,pass
+2016-2017,sf_duplex,lot_area,LOT_AREA,LOT_AREA,,123444,123443,1.0,1.0,number,0.8567,0.9912,within_5pct,0.9912,pass
+2016-2017,sf_duplex,land_use,LAND_USE,LAND_USE,,123444,123444,1.0,1.0,number,0.9984,0.9998,exact_agree,0.9984,pass
+2016-2017,sf_duplex,bldg_type,BLDG_TYPE,BLDG_TYPE,,123444,102940,0.839,0.9859,number,0.9994,0.9994,exact_agree,0.9994,pass
+2016-2017,sf_duplex,neighborhood,NEIGHBORHOOD,NEIGHBORHO,,123444,123442,1.0,1.0,number,1.0,1.0,exact_agree,1.0,pass
+2017-2018,all,year_built,YR_BUILT,YR_BUILT,,159894,134860,1.0,0.8434,number,0.9969,0.9969,exact_agree,0.9969,pass
+2017-2018,all,bldg_area,BLDG_AREA,BLDG_AREA,,159894,147191,1.0,0.9206,number,0.9933,0.9937,exact_agree,0.9933,pass
+2017-2018,all,bedrooms,BEDROOMS,BEDROOMS,,159894,134816,1.0,0.8432,number,0.9938,0.9938,exact_agree,0.9938,pass
+2017-2018,all,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",159894,0,0.0,0.0,text,,,exact_agree,,excluded
+2017-2018,all,half_baths,POWDER_ROO,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",159894,0,0.0,0.0,text,,,exact_agree,,excluded
+2017-2018,all,rooms,NR_ROOMS,NR_ROOMS,,159894,0,1.0,0.0,text,,,exact_agree,,no data
+2017-2018,all,nr_stories,NR_STORIES,NR_STORIES,,159894,147050,1.0,0.9197,number,0.9962,0.9962,exact_agree,0.9962,pass
+2017-2018,all,nr_units,NR_UNITS,NR_UNITS,,159894,159894,1.0,1.0,number,0.9964,0.9969,exact_agree,0.9964,pass
+2017-2018,all,lot_area,LOT_AREA,LOT_AREA,,159894,159829,0.9996,1.0,number,0.9898,0.9993,within_5pct,0.9993,pass
+2017-2018,all,land_use,LAND_USE,LAND_USE,,159894,159893,1.0,1.0,number,0.9973,0.9988,exact_agree,0.9973,pass
+2017-2018,all,bldg_type,BLDG_TYPE,BLDG_TYPE,,159894,123298,0.7737,0.7737,number,0.9992,0.9992,exact_agree,0.9992,pass
+2017-2018,all,neighborhood,NEIGHBORHO,NEIGHBORHOOD,,159894,159891,1.0,1.0,number,0.9991,0.9997,exact_agree,0.9991,pass
+2017-2018,sf_duplex,year_built,YR_BUILT,YR_BUILT,,123379,121766,1.0,0.9869,number,0.9969,0.9969,exact_agree,0.9969,pass
+2017-2018,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,,123379,121837,1.0,0.9875,number,0.9939,0.9942,exact_agree,0.9939,pass
+2017-2018,sf_duplex,bedrooms,BEDROOMS,BEDROOMS,,123379,121725,1.0,0.9866,number,0.9935,0.9935,exact_agree,0.9935,pass
+2017-2018,sf_duplex,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",123379,0,0.0,0.0,text,,,exact_agree,,excluded
+2017-2018,sf_duplex,half_baths,POWDER_ROO,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).; Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",123379,0,0.0,0.0,text,,,exact_agree,,excluded
+2017-2018,sf_duplex,rooms,NR_ROOMS,NR_ROOMS,,123379,0,1.0,0.0,text,,,exact_agree,,no data
+2017-2018,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,,123379,121840,1.0,0.9875,number,0.9966,0.9966,exact_agree,0.9966,pass
+2017-2018,sf_duplex,nr_units,NR_UNITS,NR_UNITS,,123379,123379,1.0,1.0,number,0.9985,0.9985,exact_agree,0.9985,pass
+2017-2018,sf_duplex,lot_area,LOT_AREA,LOT_AREA,,123379,123374,1.0,1.0,number,0.9941,0.9995,within_5pct,0.9995,pass
+2017-2018,sf_duplex,land_use,LAND_USE,LAND_USE,,123379,123379,1.0,1.0,number,0.9982,0.9993,exact_agree,0.9982,pass
+2017-2018,sf_duplex,bldg_type,BLDG_TYPE,BLDG_TYPE,,123379,121394,0.987,0.987,number,0.9992,0.9992,exact_agree,0.9992,pass
+2017-2018,sf_duplex,neighborhood,NEIGHBORHO,NEIGHBORHOOD,,123379,123378,1.0,1.0,number,1.0,1.0,exact_agree,1.0,pass
+2018-2019,all,year_built,YR_BUILT,YR_BUILT,,160926,134878,0.8381,1.0,number,0.9988,0.9988,exact_agree,0.9988,pass
+2018-2019,all,bldg_area,BLDG_AREA,BLDG_AREA,,160926,147233,0.9149,1.0,number,0.9918,0.9931,exact_agree,0.9918,pass
+2018-2019,all,bedrooms,BEDROOMS,BEDROOMS,,160926,134834,0.8379,1.0,number,0.9966,0.9966,exact_agree,0.9966,pass
+2018-2019,all,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",160926,0,0.0,1.0,text,,,exact_agree,,excluded
+2018-2019,all,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",160926,0,0.0,1.0,text,,,exact_agree,,excluded
+2018-2019,all,rooms,NR_ROOMS,NR_ROOMS,,160926,0,0.0,1.0,text,,,exact_agree,,no data
+2018-2019,all,nr_stories,NR_STORIES,NR_STORIES,"Stories in 2019-2020 round 1.5 up to 2: 19,349 parcels go 15->2 at 2018->2019 and 19,641 go 2->1.5 at 2020->2021, so 1.5-story homes are not identifiable.",160926,0,0.914,0.0,text,,,exact_agree,,excluded
+2018-2019,all,nr_units,NR_UNITS,NR_UNITS,,160926,160909,1.0,0.9999,number,0.9201,0.9215,exact_agree,0.9201,FAIL
+2018-2019,all,lot_area,LOT_AREA,LOT_AREA,,160926,143276,0.9935,0.8903,number,0.9524,0.9549,within_5pct,0.9549,FAIL
+2018-2019,all,land_use,LAND_USE,LAND_USE,,160926,160926,1.0,1.0,number,0.9969,0.9985,exact_agree,0.9969,pass
+2018-2019,all,bldg_type,BLDG_TYPE,BLDG_TYPE,,160926,123711,0.7689,0.8496,number,0.9994,0.9994,exact_agree,0.9994,pass
+2018-2019,all,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,160926,146139,1.0,0.9081,number,0.9996,0.9999,exact_agree,0.9996,pass
+2018-2019,sf_duplex,year_built,YR_BUILT,YR_BUILT,,123214,121699,0.9877,1.0,number,1.0,1.0,exact_agree,1.0,pass
+2018-2019,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,,123214,121772,0.9883,1.0,number,0.9982,0.9983,exact_agree,0.9982,pass
+2018-2019,sf_duplex,bedrooms,BEDROOMS,BEDROOMS,,123214,121657,0.9874,1.0,number,0.9979,0.9979,exact_agree,0.9979,pass
+2018-2019,sf_duplex,full_baths,BATHS,BATHS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",123214,0,0.0,1.0,text,,,exact_agree,,excluded
+2018-2019,sf_duplex,half_baths,POWDER_ROOMS,POWDER_ROOMS,"Bath counts were recoded at 2018->2019: on SF/duplex parcels 3,421 go 2->1 full baths and ~4,300 lose a half bath; 2019-2025 agree with each other at >=99.6%. Kept the 2019+ definition, which covers the test year's features (roll 2024).",123214,0,0.0,1.0,text,,,exact_agree,,excluded
+2018-2019,sf_duplex,rooms,NR_ROOMS,NR_ROOMS,,123214,0,0.0,1.0,text,,,exact_agree,,no data
+2018-2019,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,"Stories in 2019-2020 round 1.5 up to 2: 19,349 parcels go 15->2 at 2018->2019 and 19,641 go 2->1.5 at 2020->2021, so 1.5-story homes are not identifiable.",123214,0,0.9883,0.0,text,,,exact_agree,,excluded
+2018-2019,sf_duplex,nr_units,NR_UNITS,NR_UNITS,,123214,123214,1.0,1.0,number,0.9861,0.9861,exact_agree,0.9861,pass
+2018-2019,sf_duplex,lot_area,LOT_AREA,LOT_AREA,,123214,120903,1.0,0.9812,number,0.9974,0.9997,within_5pct,0.9997,pass
+2018-2019,sf_duplex,land_use,LAND_USE,LAND_USE,,123214,123214,1.0,1.0,number,0.9989,0.9999,exact_agree,0.9989,pass
+2018-2019,sf_duplex,bldg_type,BLDG_TYPE,BLDG_TYPE,,123214,121695,0.9877,0.9987,number,0.9995,0.9995,exact_agree,0.9995,pass
+2018-2019,sf_duplex,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,123214,121825,1.0,0.9887,number,1.0,1.0,exact_agree,1.0,pass
+2019-2020,all,year_built,YR_BUILT,YR_BUILT,,159878,159878,1.0,1.0,number,0.9979,0.9979,exact_agree,0.9979,pass
+2019-2020,all,bldg_area,BLDG_AREA,BLDG_AREA,,159878,159878,1.0,1.0,number,0.9924,0.993,exact_agree,0.9924,pass
+2019-2020,all,bedrooms,BEDROOMS,BEDROOMS,,159878,159878,1.0,1.0,number,0.9964,0.9964,exact_agree,0.9964,pass
+2019-2020,all,full_baths,BATHS,BATHS,,159878,159878,1.0,1.0,number,0.9962,0.9962,exact_agree,0.9962,pass
+2019-2020,all,half_baths,POWDER_ROOMS,POWDER_ROOMS,,159878,159878,1.0,1.0,number,0.9977,0.9977,exact_agree,0.9977,pass
+2019-2020,all,rooms,NR_ROOMS,NR_ROOMS,,159878,159878,1.0,1.0,number,0.9983,0.9983,exact_agree,0.9983,pass
+2019-2020,all,nr_stories,NR_STORIES,NR_STORIES,"Stories in 2019-2020 round 1.5 up to 2: 19,349 parcels go 15->2 at 2018->2019 and 19,641 go 2->1.5 at 2020->2021, so 1.5-story homes are not identifiable.; Stories in 2019-2020 round 1.5 up to 2: 19,349 parcels go 15->2 at 2018->2019 and 19,641 go 2->1.5 at 2020->2021, so 1.5-story homes are not identifiable.",159878,0,0.0,0.0,text,,,exact_agree,,excluded
+2019-2020,all,nr_units,NR_UNITS,NR_UNITS,,159878,159862,0.9999,0.9999,number,0.9938,0.9939,exact_agree,0.9938,pass
+2019-2020,all,lot_area,LOT_AREA,LOT_AREA,,159878,143041,0.8964,0.9065,number,1.0,1.0,within_5pct,1.0,pass
+2019-2020,all,land_use,LAND_USE,LAND_USE,,159878,159872,1.0,1.0,number,0.9972,0.9989,exact_agree,0.9972,pass
+2019-2020,all,bldg_type,BLDG_TYPE,BLDG_TYPE,,159878,136607,0.8556,0.8548,number,0.9925,0.9926,exact_agree,0.9925,pass
+2019-2020,all,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,159878,145832,0.9145,0.9474,number,0.9943,0.9958,exact_agree,0.9943,pass
+2019-2020,sf_duplex,year_built,YR_BUILT,YR_BUILT,,123204,123204,1.0,1.0,number,0.9991,0.9992,exact_agree,0.9991,pass
+2019-2020,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,,123204,123204,1.0,1.0,number,0.9975,0.9976,exact_agree,0.9975,pass
+2019-2020,sf_duplex,bedrooms,BEDROOMS,BEDROOMS,,123204,123204,1.0,1.0,number,0.9967,0.9967,exact_agree,0.9967,pass
+2019-2020,sf_duplex,full_baths,BATHS,BATHS,,123204,123204,1.0,1.0,number,0.9963,0.9963,exact_agree,0.9963,pass
+2019-2020,sf_duplex,half_baths,POWDER_ROOMS,POWDER_ROOMS,,123204,123204,1.0,1.0,number,0.998,0.998,exact_agree,0.998,pass
+2019-2020,sf_duplex,rooms,NR_ROOMS,NR_ROOMS,,123204,123204,1.0,1.0,number,0.9988,0.9988,exact_agree,0.9988,pass
+2019-2020,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,"Stories in 2019-2020 round 1.5 up to 2: 19,349 parcels go 15->2 at 2018->2019 and 19,641 go 2->1.5 at 2020->2021, so 1.5-story homes are not identifiable.; Stories in 2019-2020 round 1.5 up to 2: 19,349 parcels go 15->2 at 2018->2019 and 19,641 go 2->1.5 at 2020->2021, so 1.5-story homes are not identifiable.",123204,0,0.0,0.0,text,,,exact_agree,,excluded
+2019-2020,sf_duplex,nr_units,NR_UNITS,NR_UNITS,,123204,123204,1.0,1.0,number,0.9987,0.9987,exact_agree,0.9987,pass
+2019-2020,sf_duplex,lot_area,LOT_AREA,LOT_AREA,,123204,120800,0.9817,0.987,number,1.0,1.0,within_5pct,1.0,pass
+2019-2020,sf_duplex,land_use,LAND_USE,LAND_USE,,123204,123204,1.0,1.0,number,0.9992,1.0,exact_agree,0.9992,pass
+2019-2020,sf_duplex,bldg_type,BLDG_TYPE,BLDG_TYPE,,123204,122949,0.9987,0.9981,number,0.9937,0.9937,exact_agree,0.9937,pass
+2019-2020,sf_duplex,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,123204,121592,0.9892,0.9896,number,0.994,0.9951,exact_agree,0.994,pass
+2020-2021,all,year_built,YR_BUILT,YR_BUILT,,159778,159778,1.0,1.0,number,0.9994,0.9995,exact_agree,0.9994,pass
+2020-2021,all,bldg_area,BLDG_AREA,BLDG_AREA,,159778,159778,1.0,1.0,number,0.9953,0.9963,exact_agree,0.9953,pass
+2020-2021,all,bedrooms,BEDROOMS,BEDROOMS,,159778,159778,1.0,1.0,number,0.9992,0.9992,exact_agree,0.9992,pass
+2020-2021,all,full_baths,BATHS,BATHS,,159778,159778,1.0,1.0,number,0.9989,0.9989,exact_agree,0.9989,pass
+2020-2021,all,half_baths,POWDER_ROOMS,POWDER_ROOMS,,159778,159778,1.0,1.0,number,0.9993,0.9993,exact_agree,0.9993,pass
+2020-2021,all,rooms,NR_ROOMS,NR_ROOMS,,159778,159778,1.0,1.0,number,0.9996,0.9996,exact_agree,0.9996,pass
+2020-2021,all,nr_stories,NR_STORIES,NR_STORIES,"Stories in 2019-2020 round 1.5 up to 2: 19,349 parcels go 15->2 at 2018->2019 and 19,641 go 2->1.5 at 2020->2021, so 1.5-story homes are not identifiable.",159778,0,0.0,0.953,text,,,exact_agree,,excluded
+2020-2021,all,nr_units,NR_UNITS,NR_UNITS,,159778,159762,0.9999,1.0,number,0.9992,0.9992,exact_agree,0.9992,pass
+2020-2021,all,lot_area,LOT_AREA,LOT_AREA,,159778,143781,0.9066,0.9294,number,0.9775,0.9996,within_5pct,0.9996,pass
+2020-2021,all,land_use,LAND_USE,LAND_USE,,159778,159778,1.0,1.0,number,0.9972,0.9989,exact_agree,0.9972,pass
+2020-2021,all,bldg_type,BLDG_TYPE,BLDG_TYPE,,159778,136641,0.8553,0.9613,number,0.9995,0.9995,exact_agree,0.9995,pass
+2020-2021,all,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,159778,151255,0.9481,0.9478,number,0.9716,0.9718,exact_agree,0.9716,FAIL
+2020-2021,sf_duplex,year_built,YR_BUILT,YR_BUILT,,123192,123192,1.0,1.0,number,0.9998,0.9998,exact_agree,0.9998,pass
+2020-2021,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,,123192,123192,1.0,1.0,number,0.9967,0.9969,exact_agree,0.9967,pass
+2020-2021,sf_duplex,bedrooms,BEDROOMS,BEDROOMS,,123192,123192,1.0,1.0,number,0.9992,0.9992,exact_agree,0.9992,pass
+2020-2021,sf_duplex,full_baths,BATHS,BATHS,,123192,123192,1.0,1.0,number,0.9988,0.9988,exact_agree,0.9988,pass
+2020-2021,sf_duplex,half_baths,POWDER_ROOMS,POWDER_ROOMS,,123192,123192,1.0,1.0,number,0.9993,0.9993,exact_agree,0.9993,pass
+2020-2021,sf_duplex,rooms,NR_ROOMS,NR_ROOMS,,123192,123192,1.0,1.0,number,0.9996,0.9996,exact_agree,0.9996,pass
+2020-2021,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,"Stories in 2019-2020 round 1.5 up to 2: 19,349 parcels go 15->2 at 2018->2019 and 19,641 go 2->1.5 at 2020->2021, so 1.5-story homes are not identifiable.",123192,0,0.0,0.9994,text,,,exact_agree,,excluded
+2020-2021,sf_duplex,nr_units,NR_UNITS,NR_UNITS,,123192,123192,1.0,1.0,number,0.9996,0.9996,exact_agree,0.9996,pass
+2020-2021,sf_duplex,lot_area,LOT_AREA,LOT_AREA,,123192,120752,0.9868,0.9818,number,0.9813,0.9999,within_5pct,0.9999,pass
+2020-2021,sf_duplex,land_use,LAND_USE,LAND_USE,,123192,123192,1.0,1.0,number,0.9989,0.9999,exact_agree,0.9989,pass
+2020-2021,sf_duplex,bldg_type,BLDG_TYPE,BLDG_TYPE,,123192,122985,0.9983,0.9993,number,0.9995,0.9995,exact_agree,0.9995,pass
+2020-2021,sf_duplex,neighborhood,NEIGHBORHOOD,NEIGHBORHOOD,,123192,121833,0.9901,0.9899,number,0.9999,0.9999,exact_agree,0.9999,pass
+2021-2022,all,year_built,YR_BUILT,YearBuilt,,159619,159619,1.0,1.0,number,0.9987,0.9988,exact_agree,0.9987,pass
+2021-2022,all,bldg_area,BLDG_AREA,BLDG_AREA,"2022 BLDG_AREA on SF/duplex parcels is a different measure: median 1.83x the 2021 value, 0.2% equal, while 2023 equals 2021 on 99.0%. Non-residential parcels are unaffected. Use another roll's sq ft (Stage 2 decision).",159619,0,1.0,0.0,text,,,exact_agree,,excluded
+2021-2022,all,bedrooms,BEDROOMS,NumberOfBe,,159619,159619,1.0,1.0,number,0.9977,0.9977,exact_agree,0.9977,pass
+2021-2022,all,full_baths,BATHS,NumberOfFu,,159619,159619,1.0,1.0,number,0.9964,0.9964,exact_agree,0.9964,pass
+2021-2022,all,half_baths,POWDER_ROOMS,NumberOfHa,,159619,159619,1.0,1.0,number,0.9976,0.9976,exact_agree,0.9976,pass
+2021-2022,all,rooms,NR_ROOMS,NumberOfRo,,159619,159619,1.0,1.0,number,0.9987,0.9987,exact_agree,0.9987,pass
+2021-2022,all,nr_stories,NR_STORIES,NR_STORIES,,159619,152018,0.9531,0.9526,number,0.9995,0.9995,exact_agree,0.9995,pass
+2021-2022,all,nr_units,NR_UNITS,Residentia,,159619,159619,1.0,1.0,number,0.9404,0.941,exact_agree,0.9404,FAIL
+2021-2022,all,lot_area,LOT_AREA,Calculat_1,,159619,147608,0.9299,0.9348,number,0.9906,0.9991,within_5pct,0.9991,pass
+2021-2022,all,land_use,LAND_USE,FK_LandUse,,159619,159619,1.0,1.0,number,0.998,0.9993,exact_agree,0.998,pass
+2021-2022,all,bldg_type,BLDG_TYPE,BuildingTy,,159619,153374,0.9617,0.9613,text,0.9982,0.9982,exact_agree,0.9982,pass
+2021-2022,all,neighborhood,NEIGHBORHOOD,Neighborho,,159619,151198,0.9484,0.949,number,0.9945,0.9998,exact_agree,0.9945,pass
+2021-2022,sf_duplex,year_built,YR_BUILT,YearBuilt,,123112,123112,1.0,1.0,number,0.9996,0.9996,exact_agree,0.9996,pass
+2021-2022,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,"2022 BLDG_AREA on SF/duplex parcels is a different measure: median 1.83x the 2021 value, 0.2% equal, while 2023 equals 2021 on 99.0%. Non-residential parcels are unaffected. Use another roll's sq ft (Stage 2 decision).",123112,0,1.0,0.0,text,,,exact_agree,,excluded
+2021-2022,sf_duplex,bedrooms,BEDROOMS,NumberOfBe,,123112,123112,1.0,1.0,number,0.9979,0.9979,exact_agree,0.9979,pass
+2021-2022,sf_duplex,full_baths,BATHS,NumberOfFu,,123112,123112,1.0,1.0,number,0.9962,0.9962,exact_agree,0.9962,pass
+2021-2022,sf_duplex,half_baths,POWDER_ROOMS,NumberOfHa,,123112,123112,1.0,1.0,number,0.9972,0.9972,exact_agree,0.9972,pass
+2021-2022,sf_duplex,rooms,NR_ROOMS,NumberOfRo,,123112,123112,1.0,1.0,number,0.999,0.999,exact_agree,0.999,pass
+2021-2022,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,,123112,123021,0.9995,0.9993,number,0.9997,0.9997,exact_agree,0.9997,pass
+2021-2022,sf_duplex,nr_units,NR_UNITS,Residentia,,123112,123112,1.0,1.0,number,0.9984,0.9984,exact_agree,0.9984,pass
+2021-2022,sf_duplex,lot_area,LOT_AREA,Calculat_1,,123112,120517,0.982,0.9867,number,0.9912,0.9999,within_5pct,0.9999,pass
+2021-2022,sf_duplex,land_use,LAND_USE,FK_LandUse,,123112,123112,1.0,1.0,number,0.9993,0.9998,exact_agree,0.9993,pass
+2021-2022,sf_duplex,bldg_type,BLDG_TYPE,BuildingTy,,123112,122996,0.9993,0.9992,number,0.9987,0.9987,exact_agree,0.9987,pass
+2021-2022,sf_duplex,neighborhood,NEIGHBORHOOD,Neighborho,,123112,121827,0.9904,0.9913,number,0.9944,1.0,exact_agree,0.9944,pass
+2022-2023,all,year_built,YearBuilt,YearBuilt,,160063,160063,1.0,1.0,number,0.999,0.999,exact_agree,0.999,pass
+2022-2023,all,bldg_area,BLDG_AREA,BLDG_AREA,"2022 BLDG_AREA on SF/duplex parcels is a different measure: median 1.83x the 2021 value, 0.2% equal, while 2023 equals 2021 on 99.0%. Non-residential parcels are unaffected. Use another roll's sq ft (Stage 2 decision).",160063,0,0.0,1.0,text,,,exact_agree,,excluded
+2022-2023,all,bedrooms,NumberOfBe,NumberOfBe,,160063,160063,1.0,1.0,number,0.9981,0.9981,exact_agree,0.9981,pass
+2022-2023,all,full_baths,NumberOfFu,NumberOfFu,,160063,160063,1.0,1.0,number,0.997,0.997,exact_agree,0.997,pass
+2022-2023,all,half_baths,NumberOfHa,NumberOfHa,,160063,160063,1.0,1.0,number,0.9979,0.9979,exact_agree,0.9979,pass
+2022-2023,all,rooms,NumberOfRo,NumberOfRo,,160063,160063,1.0,1.0,number,0.9988,0.9988,exact_agree,0.9988,pass
+2022-2023,all,nr_stories,NR_STORIES,NR_STORIES,,160063,152035,0.9503,0.9502,number,0.9989,0.9989,exact_agree,0.9989,pass
+2022-2023,all,nr_units,Residentia,Residentia,,160063,160063,1.0,1.0,number,0.9988,0.9988,exact_agree,0.9988,pass
+2022-2023,all,lot_area,Calculat_1,Calculat_1,,160063,148910,0.9329,0.9334,number,0.9981,0.9998,within_5pct,0.9998,pass
+2022-2023,all,land_use,FK_LandUse,FK_LandUse,,160063,160063,1.0,1.0,number,0.9964,0.9983,exact_agree,0.9964,pass
+2022-2023,all,bldg_type,BuildingTy,BuildingTy,,160063,153455,0.9592,0.9592,text,0.9986,0.9986,exact_agree,0.9986,pass
+2022-2023,all,neighborhood,Neighborho,Neighborho,,160063,151272,0.947,0.9463,number,0.9713,0.9716,exact_agree,0.9713,FAIL
+2022-2023,sf_duplex,year_built,YearBuilt,YearBuilt,,123151,123151,1.0,1.0,number,0.9998,0.9999,exact_agree,0.9998,pass
+2022-2023,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,"2022 BLDG_AREA on SF/duplex parcels is a different measure: median 1.83x the 2021 value, 0.2% equal, while 2023 equals 2021 on 99.0%. Non-residential parcels are unaffected. Use another roll's sq ft (Stage 2 decision).",123151,0,0.0,1.0,text,,,exact_agree,,excluded
+2022-2023,sf_duplex,bedrooms,NumberOfBe,NumberOfBe,,123151,123151,1.0,1.0,number,0.9984,0.9984,exact_agree,0.9984,pass
+2022-2023,sf_duplex,full_baths,NumberOfFu,NumberOfFu,,123151,123151,1.0,1.0,number,0.9969,0.9969,exact_agree,0.9969,pass
+2022-2023,sf_duplex,half_baths,NumberOfHa,NumberOfHa,,123151,123151,1.0,1.0,number,0.9976,0.9976,exact_agree,0.9976,pass
+2022-2023,sf_duplex,rooms,NumberOfRo,NumberOfRo,,123151,123151,1.0,1.0,number,0.9991,0.9991,exact_agree,0.9991,pass
+2022-2023,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,,123151,123067,0.9994,0.9994,number,0.9989,0.9989,exact_agree,0.9989,pass
+2022-2023,sf_duplex,nr_units,Residentia,Residentia,,123151,123151,1.0,1.0,number,0.9994,0.9994,exact_agree,0.9994,pass
+2022-2023,sf_duplex,lot_area,Calculat_1,Calculat_1,,123151,121393,0.9867,0.9873,number,0.9993,1.0,within_5pct,1.0,pass
+2022-2023,sf_duplex,land_use,FK_LandUse,FK_LandUse,,123151,123151,1.0,1.0,number,0.9989,0.9998,exact_agree,0.9989,pass
+2022-2023,sf_duplex,bldg_type,BuildingTy,BuildingTy,,123151,123041,0.9992,0.9991,number,0.999,0.999,exact_agree,0.999,pass
+2022-2023,sf_duplex,neighborhood,Neighborho,Neighborho,,123151,121915,0.9912,0.9911,number,0.9998,0.9998,exact_agree,0.9998,pass
+2023-2024,all,year_built,YearBuilt,YearBuilt,,159926,159926,1.0,1.0,number,0.9984,0.9985,exact_agree,0.9984,pass
+2023-2024,all,bldg_area,BLDG_AREA,BLDG_AREA,,159926,159926,1.0,1.0,number,0.9943,0.9947,exact_agree,0.9943,pass
+2023-2024,all,bedrooms,NumberOfBe,NumberOfBedrooms,,159926,159926,1.0,1.0,number,0.9984,0.9984,exact_agree,0.9984,pass
+2023-2024,all,full_baths,NumberOfFu,NumberOfFullBaths,,159926,159926,1.0,1.0,number,0.9962,0.9962,exact_agree,0.9962,pass
+2023-2024,all,half_baths,NumberOfHa,NumberOfHalfBaths,,159926,159926,1.0,1.0,number,0.9974,0.9974,exact_agree,0.9974,pass
+2023-2024,all,rooms,NumberOfRo,NumberOfRooms,,159926,159926,1.0,1.0,number,0.9988,0.9988,exact_agree,0.9988,pass
+2023-2024,all,nr_stories,NR_STORIES,NR_STORIES,,159926,151834,0.9503,0.9499,number,0.9973,0.9973,exact_agree,0.9973,pass
+2023-2024,all,nr_units,Residentia,ResidentialUnits,,159926,159926,1.0,1.0,text,0.9811,0.9811,exact_agree,0.9811,FAIL
+2023-2024,all,lot_area,Calculat_1,CalculatedTotalSF,,159926,148903,0.9339,0.9402,number,0.9955,0.9987,within_5pct,0.9987,pass
+2023-2024,all,land_use,FK_LandUse,FK_LandUse,,159926,159926,1.0,1.0,number,0.9968,0.9989,exact_agree,0.9968,pass
+2023-2024,all,bldg_type,BuildingTy,BuildingType,,159926,153143,0.9594,0.9583,text,0.9959,0.9959,exact_agree,0.9959,pass
+2023-2024,all,neighborhood,Neighborho,Neighborhood,,159926,151226,0.9466,0.9471,number,0.9989,0.9995,exact_agree,0.9989,pass
+2023-2024,sf_duplex,year_built,YearBuilt,YearBuilt,,123181,123181,1.0,1.0,number,0.9996,0.9996,exact_agree,0.9996,pass
+2023-2024,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,,123181,123181,1.0,1.0,number,0.9953,0.9957,exact_agree,0.9953,pass
+2023-2024,sf_duplex,bedrooms,NumberOfBe,NumberOfBedrooms,,123181,123181,1.0,1.0,number,0.9987,0.9987,exact_agree,0.9987,pass
+2023-2024,sf_duplex,full_baths,NumberOfFu,NumberOfFullBaths,,123181,123181,1.0,1.0,number,0.996,0.996,exact_agree,0.996,pass
+2023-2024,sf_duplex,half_baths,NumberOfHa,NumberOfHalfBaths,,123181,123181,1.0,1.0,number,0.9975,0.9975,exact_agree,0.9975,pass
+2023-2024,sf_duplex,rooms,NumberOfRo,NumberOfRooms,,123181,123181,1.0,1.0,number,0.9992,0.9992,exact_agree,0.9992,pass
+2023-2024,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,,123181,123090,0.9996,0.9993,number,0.9969,0.9969,exact_agree,0.9969,pass
+2023-2024,sf_duplex,nr_units,Residentia,ResidentialUnits,,123181,123181,1.0,1.0,number,0.9995,0.9995,exact_agree,0.9995,pass
+2023-2024,sf_duplex,lot_area,Calculat_1,CalculatedTotalSF,,123181,121542,0.9876,0.9892,number,0.998,0.9997,within_5pct,0.9997,pass
+2023-2024,sf_duplex,land_use,FK_LandUse,FK_LandUse,,123181,123181,1.0,1.0,number,0.9987,0.9999,exact_agree,0.9987,pass
+2023-2024,sf_duplex,bldg_type,BuildingTy,BuildingType,,123181,123061,0.9994,0.9991,number,0.9986,0.9986,exact_agree,0.9986,pass
+2023-2024,sf_duplex,neighborhood,Neighborho,Neighborhood,,123181,122030,0.9915,0.9919,number,1.0,1.0,exact_agree,1.0,pass
+2024-2025,all,year_built,YearBuilt,YearBuilt,,159448,159448,1.0,1.0,number,0.9985,0.9985,exact_agree,0.9985,pass
+2024-2025,all,bldg_area,BLDG_AREA,BLDG_AREA,,159448,159448,1.0,1.0,number,0.9948,0.9952,exact_agree,0.9948,pass
+2024-2025,all,bedrooms,NumberOfBedrooms,NumberOfBedrooms,,159448,159448,1.0,1.0,number,0.9981,0.9981,exact_agree,0.9981,pass
+2024-2025,all,full_baths,NumberOfFullBaths,NumberOfFullBaths,,159448,159448,1.0,1.0,number,0.9965,0.9965,exact_agree,0.9965,pass
+2024-2025,all,half_baths,NumberOfHalfBaths,NumberOfHalfBaths,,159448,159448,1.0,1.0,number,0.9984,0.9984,exact_agree,0.9984,pass
+2024-2025,all,rooms,NumberOfRooms,NumberOfRooms,,159448,159448,1.0,1.0,number,0.9988,0.9988,exact_agree,0.9988,pass
+2024-2025,all,nr_stories,NR_STORIES,NR_STORIES,,159448,151681,0.9523,0.9517,number,0.995,0.995,exact_agree,0.995,pass
+2024-2025,all,nr_units,ResidentialUnits,ResidentialUnits,,159448,159448,1.0,1.0,text,0.9981,0.9981,exact_agree,0.9981,pass
+2024-2025,all,lot_area,CalculatedTotalSF,CalculatedTotalSF,,159448,149911,0.9434,0.9446,number,0.9965,0.9996,within_5pct,0.9996,pass
+2024-2025,all,land_use,FK_LandUse,FK_LandUse,,159448,159448,1.0,1.0,number,0.9968,0.9987,exact_agree,0.9968,pass
+2024-2025,all,bldg_type,BuildingType,BuildingType,"Building type renumbered again in 2025 (10->17: 3,665; 1->10: 1,821; 5->8: 1,007; 14->11: 879 on SF/duplex). Roll 2025 is the benchmark only, never a feature source.",159448,0,0.9614,0.0,text,,,exact_agree,,excluded
+2024-2025,all,neighborhood,Neighborhood,Neighborhood,,159448,151171,0.9497,0.9497,number,0.998,0.9999,exact_agree,0.998,pass
+2024-2025,sf_duplex,year_built,YearBuilt,YearBuilt,,123129,123129,1.0,1.0,number,0.9996,0.9996,exact_agree,0.9996,pass
+2024-2025,sf_duplex,bldg_area,BLDG_AREA,BLDG_AREA,,123129,123129,1.0,1.0,number,0.9956,0.9961,exact_agree,0.9956,pass
+2024-2025,sf_duplex,bedrooms,NumberOfBedrooms,NumberOfBedrooms,,123129,123129,1.0,1.0,number,0.9987,0.9987,exact_agree,0.9987,pass
+2024-2025,sf_duplex,full_baths,NumberOfFullBaths,NumberOfFullBaths,,123129,123129,1.0,1.0,number,0.9966,0.9966,exact_agree,0.9966,pass
+2024-2025,sf_duplex,half_baths,NumberOfHalfBaths,NumberOfHalfBaths,,123129,123129,1.0,1.0,number,0.9981,0.9981,exact_agree,0.9981,pass
+2024-2025,sf_duplex,rooms,NumberOfRooms,NumberOfRooms,,123129,123129,1.0,1.0,number,0.9994,0.9994,exact_agree,0.9994,pass
+2024-2025,sf_duplex,nr_stories,NR_STORIES,NR_STORIES,,123129,123020,0.9994,0.9992,number,0.9941,0.9941,exact_agree,0.9941,pass
+2024-2025,sf_duplex,nr_units,ResidentialUnits,ResidentialUnits,,123129,123129,1.0,1.0,number,0.9996,0.9996,exact_agree,0.9996,pass
+2024-2025,sf_duplex,lot_area,CalculatedTotalSF,CalculatedTotalSF,,123129,121697,0.9896,0.9895,number,0.9975,0.9998,within_5pct,0.9998,pass
+2024-2025,sf_duplex,land_use,FK_LandUse,FK_LandUse,,123129,123129,1.0,1.0,number,0.9991,1.0,exact_agree,0.9991,pass
+2024-2025,sf_duplex,bldg_type,BuildingType,BuildingType,"Building type renumbered again in 2025 (10->17: 3,665; 1->10: 1,821; 5->8: 1,007; 14->11: 879 on SF/duplex). Roll 2025 is the benchmark only, never a feature source.",123129,0,0.9991,0.0,text,,,exact_agree,,excluded
+2024-2025,sf_duplex,neighborhood,Neighborhood,Neighborhood,,123129,122054,0.9926,0.9925,number,0.9999,1.0,exact_agree,0.9999,pass

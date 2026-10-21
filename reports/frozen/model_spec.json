@@ -1,0 +1,131 @@
+{
+  "frozen_at_commit": "b70ab9f215a94588638dfddea69c1f745df0aa36",
+  "selection": "CV 2021-2024 only; within 0.2 pts of best mean level-neutral MdAPE, then smallest mean |within-tier PRB|",
+  "lightgbm_seed": 20261018,
+  "config_sampler_seed": 20261025,
+  "target": "log price minus training-years-only hedonic time effect (Dec Y-1 trend level, neutral season)",
+  "monotone_up": [
+    "l_area",
+    "l_lot",
+    "full_baths",
+    "half_baths"
+  ],
+  "inputs": {
+    "sales_clean_sha256": "401f593c37c1a16488d78f269ee9ef831b7b3fb97f184c98f0375224c9f76e78",
+    "target_prices_sha256": "077559c2d145d4655e1b913e5741655788dec36e4bf61edb6c6c9b97d64c48f8"
+  },
+  "models": {
+    "primary": {
+      "variant": "independent",
+      "features": [
+        "l_area",
+        "l_lot",
+        "lot_missing",
+        "age",
+        "beds",
+        "full_baths",
+        "half_baths",
+        "baths_missing",
+        "stories_num",
+        "duplex",
+        "style",
+        "loc",
+        "x_m",
+        "y_m",
+        "d_downtown_m",
+        "d_lake_m",
+        "d_major_road_m",
+        "d_transit_m",
+        "d_park_m",
+        "knn_lppsf",
+        "knn_dist_m",
+        "nbhd_lppsf_24m",
+        "prior_lp_detr",
+        "months_since_prior",
+        "has_prior_sale",
+        "n_city_200m",
+        "n_vacant_200m"
+      ],
+      "config": {
+        "config_id": 18,
+        "learning_rate": 0.02,
+        "num_boost_round": 1000,
+        "num_leaves": 127,
+        "min_data_in_leaf": 10,
+        "feature_fraction": 0.8,
+        "bagging_fraction": 0.7,
+        "lambda_l2": 10.0,
+        "cat_smooth": 30.0,
+        "train_start": 2014,
+        "loc": "tract"
+      },
+      "cv_2021_2024": {
+        "mdape_ln": 0.12801189083525144,
+        "cod": 18.579133133033633,
+        "median_ratio": 1.0171886911754493,
+        "prd": 1.0374649927207409,
+        "prb": -0.058913104300797284,
+        "mki": 0.9056168020803876,
+        "prb_tier_abs": 0.16641376302175911
+      },
+      "booster_through_2024_sha256": "3ca82ed8783127afd5c7a250e08aae1df79a7075be624c9b3ebba2ac8cf102d1"
+    },
+    "secondary": {
+      "variant": "assessment_informed",
+      "features": [
+        "l_area",
+        "l_lot",
+        "lot_missing",
+        "age",
+        "beds",
+        "full_baths",
+        "half_baths",
+        "baths_missing",
+        "stories_num",
+        "duplex",
+        "style",
+        "loc",
+        "l_prior_total_rel",
+        "l_prior_land_rel",
+        "x_m",
+        "y_m",
+        "d_downtown_m",
+        "d_lake_m",
+        "d_major_road_m",
+        "d_transit_m",
+        "d_park_m",
+        "knn_lppsf",
+        "knn_dist_m",
+        "nbhd_lppsf_24m",
+        "prior_lp_detr",
+        "months_since_prior",
+        "has_prior_sale",
+        "n_city_200m",
+        "n_vacant_200m"
+      ],
+      "config": {
+        "config_id": 16,
+        "learning_rate": 0.08,
+        "num_boost_round": 300,
+        "num_leaves": 127,
+        "min_data_in_leaf": 50,
+        "feature_fraction": 0.8,
+        "bagging_fraction": 0.7,
+        "lambda_l2": 5.0,
+        "cat_smooth": 10.0,
+        "train_start": 2014,
+        "loc": "neighborhood"
+      },
+      "cv_2021_2024": {
+        "mdape_ln": 0.1285089348417121,
+        "cod": 18.65236466213768,
+        "median_ratio": 1.0272875658777845,
+        "prd": 1.0362913327599355,
+        "prb": -0.05044755878715529,
+        "mki": 0.9057498395040927,
+        "prb_tier_abs": 0.1490431221825113
+      },
+      "booster_through_2024_sha256": "d671e35415154c2da45d0f96f1c800febdbdc16b76b7d522b37958cca3acf15e"
+    }
+  }
+}

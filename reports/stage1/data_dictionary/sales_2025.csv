@@ -1,0 +1,22 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropertyID,integer,5685,0.0185,5497,0.0,100953 (2); 102115 (2); 105309 (2),139315; 255765; 211605
+PropType,text,5685,0.0185,5,0.0,Residential (4530); Condominium (688); Lg Apartment (188),Condominium; Commercial; Residential
+taxkey,integer,5685,0.0185,5497,0.0,(redacted),(redacted)
+Address,text,5685,0.019,5494,0.0,(redacted),(redacted)
+CondoProject,text,5685,0.8795,177,0.0,MILL VALLEY (20); WOODLANDS (19); VILLA DU COURS (ELEVATOR) (17),GREENWICH AVE LLC; TRACK TERRACE CONDOMINIUM; WESTERN LEATHER LOFTS
+District,integer,5685,0.0185,15,0.0,5 (580); 11 (494); 14 (446),1; 6; 15
+nbhd,integer,5685,0.0185,424,0.0,2100 (113); 4240 (101); 2080 (96),2930; 6423; 5350
+Style,text,5685,0.0215,72,0.0,Ranch (1047); Cape Cod (734); Duplex O/S (537),Res O/S 1 Story; Duplex O/S; Sit Down Restaurant
+Extwall,text,5685,0.1446,16,0.0,Aluminum/Vinyl (2761); Brick (1002); Asphalt/Other (261),Aluminum/Vinyl; Prem Wood; Masonry/Frame
+Stories,float,5685,0.0236,13,0.0,1 (2673); 2 (1572); 1.5 (1206),3; 8; 19
+Year_Built,integer,5685,0.0199,154,0.0,1953 (184); 1955 (157); 1952 (145),1991; 1925; 1843
+Rooms,integer,5685,0.0777,39,0.0,5 (1208); 6 (776); 10 (644),9; 39; 28
+FinishedSqft,integer,5685,0.0223,2132,0.0,864 (27); 936 (26); 1056 (23),1835; 1277; 2759
+Units,integer,5685,0.0185,34,0.0,1 (3934); 2 (1245); 4 (138),12; 17; 34
+SoldAsVacantLand,text,5685,0.0185,2,0.0,N (5564); Y (16),Y; N
+Bdrms,integer,5685,0.0777,23,0.0,3 (1749); 4 (1086); 2 (910),18; 9; 48
+Fbath,integer,5685,0.0185,9,0.0,1 (2491); 2 (2408); 0 (373),8; 2; 1
+Hbath,integer,5685,0.0185,4,0.0,0 (4085); 1 (1388); 2 (103),2; 3; 1
+Lotsize,integer,5685,0.0185,1417,0.0,1 (370); 0 (335); 4800 (323),8064; 7820; 10515
+Sale_date,date,5685,0.0185,308,0.0,4/30/2025 (48); 10/31/2025 (48); 6/27/2025 (48),12/16/2025; 12/24/2025; 12/13/2025
+Sale_price,integer,5685,0.0185,1199,0.0,250000 (117); 230000 (85); 225000 (81),140000; 111500; 43400

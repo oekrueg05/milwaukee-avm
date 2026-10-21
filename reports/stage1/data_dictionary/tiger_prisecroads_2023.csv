@@ -1,0 +1,5 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+LINEARID,integer,6360,0.0,6360,0.0,110556730686 (1); 1108296491257 (1); 1105332913240 (1),1106073829385; 110423530994; 1104260378963
+FULLNAME,text,6360,0.0,1932,0.0,Main St (109); US Hwy 12 (83); State Hwy 32 (81),100th Ave; State Hwy 80; E Bayfield St
+RTTYP,text,6360,0.0,6,0.0,M (2928); S (1789); C (871),O; S; U
+MTFCC,text,6360,0.0,2,0.0,S1200 (5970); S1100 (390),S1100; S1200

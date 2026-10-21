@@ -1,0 +1,145 @@
+code,filter,sale_year,rows_in,removed,rows_out
+F0,loaded (blank rows already dropped),2014,2946,0,2946
+F0,loaded (blank rows already dropped),2015,3706,0,3706
+F0,loaded (blank rows already dropped),2016,4422,0,4422
+F0,loaded (blank rows already dropped),2017,4840,0,4840
+F0,loaded (blank rows already dropped),2018,5515,0,5515
+F0,loaded (blank rows already dropped),2019,6211,1,6210
+F0,loaded (blank rows already dropped),2020,6355,1,6354
+F0,loaded (blank rows already dropped),2021,6508,0,6508
+F0,loaded (blank rows already dropped),2022,7146,0,7146
+F0,loaded (blank rows already dropped),2023,5831,0,5831
+F0,loaded (blank rows already dropped),2024,5690,0,5690
+F0,loaded (blank rows already dropped),2025,5685,105,5580
+F1,sale date outside file year,2014,2946,0,2946
+F1,sale date outside file year,2015,3706,0,3706
+F1,sale date outside file year,2016,4422,0,4422
+F1,sale date outside file year,2017,4840,0,4840
+F1,sale date outside file year,2018,5515,0,5515
+F1,sale date outside file year,2019,6210,6,6204
+F1,sale date outside file year,2020,6354,0,6354
+F1,sale date outside file year,2021,6508,0,6508
+F1,sale date outside file year,2022,7146,0,7146
+F1,sale date outside file year,2023,5831,0,5831
+F1,sale date outside file year,2024,5690,0,5690
+F1,sale date outside file year,2025,5580,0,5580
+F2,exact duplicate row,2014,2946,2,2944
+F2,exact duplicate row,2015,3706,5,3701
+F2,exact duplicate row,2016,4422,2,4420
+F2,exact duplicate row,2017,4840,4,4836
+F2,exact duplicate row,2018,5515,3,5512
+F2,exact duplicate row,2019,6204,151,6053
+F2,exact duplicate row,2020,6354,8,6346
+F2,exact duplicate row,2021,6508,35,6473
+F2,exact duplicate row,2022,7146,0,7146
+F2,exact duplicate row,2023,5831,0,5831
+F2,exact duplicate row,2024,5690,0,5690
+F2,exact duplicate row,2025,5580,0,5580
+F3,"missing tax key, date or price",2014,2944,0,2944
+F3,"missing tax key, date or price",2015,3701,0,3701
+F3,"missing tax key, date or price",2016,4420,0,4420
+F3,"missing tax key, date or price",2017,4836,0,4836
+F3,"missing tax key, date or price",2018,5512,0,5512
+F3,"missing tax key, date or price",2019,6053,9,6044
+F3,"missing tax key, date or price",2020,6346,0,6346
+F3,"missing tax key, date or price",2021,6473,0,6473
+F3,"missing tax key, date or price",2022,7146,0,7146
+F3,"missing tax key, date or price",2023,5831,0,5831
+F3,"missing tax key, date or price",2024,5690,0,5690
+F3,"missing tax key, date or price",2025,5580,0,5580
+F4,"price < $10,000",2014,2944,9,2935
+F4,"price < $10,000",2015,3701,8,3693
+F4,"price < $10,000",2016,4420,4,4416
+F4,"price < $10,000",2017,4836,7,4829
+F4,"price < $10,000",2018,5512,9,5503
+F4,"price < $10,000",2019,6044,36,6008
+F4,"price < $10,000",2020,6346,5,6341
+F4,"price < $10,000",2021,6473,8,6465
+F4,"price < $10,000",2022,7146,4,7142
+F4,"price < $10,000",2023,5831,7,5824
+F4,"price < $10,000",2024,5690,0,5690
+F4,"price < $10,000",2025,5580,2,5578
+F5,property type not Residential,2014,2935,822,2113
+F5,property type not Residential,2015,3693,976,2717
+F5,property type not Residential,2016,4416,1110,3306
+F5,property type not Residential,2017,4829,1132,3697
+F5,property type not Residential,2018,5503,1302,4201
+F5,property type not Residential,2019,6008,1328,4680
+F5,property type not Residential,2020,6341,1093,5248
+F5,property type not Residential,2021,6465,1242,5223
+F5,property type not Residential,2022,7142,1372,5770
+F5,property type not Residential,2023,5824,1159,4665
+F5,property type not Residential,2024,5690,1090,4600
+F5,property type not Residential,2025,5578,1050,4528
+F6,no roll Y-1 record,2014,2113,0,2113
+F6,no roll Y-1 record,2015,2717,3,2714
+F6,no roll Y-1 record,2016,3306,1,3305
+F6,no roll Y-1 record,2017,3697,1,3696
+F6,no roll Y-1 record,2018,4201,2,4199
+F6,no roll Y-1 record,2019,4680,5,4675
+F6,no roll Y-1 record,2020,5248,1,5247
+F6,no roll Y-1 record,2021,5223,3,5220
+F6,no roll Y-1 record,2022,5770,5,5765
+F6,no roll Y-1 record,2023,4665,3,4662
+F6,no roll Y-1 record,2024,4600,2,4598
+F6,no roll Y-1 record,2025,4528,6,4522
+F7,roll Y-1 land use not SF/duplex,2014,2113,23,2090
+F7,roll Y-1 land use not SF/duplex,2015,2714,42,2672
+F7,roll Y-1 land use not SF/duplex,2016,3305,49,3256
+F7,roll Y-1 land use not SF/duplex,2017,3696,62,3634
+F7,roll Y-1 land use not SF/duplex,2018,4199,67,4132
+F7,roll Y-1 land use not SF/duplex,2019,4675,79,4596
+F7,roll Y-1 land use not SF/duplex,2020,5247,84,5163
+F7,roll Y-1 land use not SF/duplex,2021,5220,107,5113
+F7,roll Y-1 land use not SF/duplex,2022,5765,116,5649
+F7,roll Y-1 land use not SF/duplex,2023,4662,82,4580
+F7,roll Y-1 land use not SF/duplex,2024,4598,83,4515
+F7,roll Y-1 land use not SF/duplex,2025,4522,97,4425
+F8,new construction or no building in roll Y-1,2014,2090,7,2083
+F8,new construction or no building in roll Y-1,2015,2672,11,2661
+F8,new construction or no building in roll Y-1,2016,3256,2,3254
+F8,new construction or no building in roll Y-1,2017,3634,5,3629
+F8,new construction or no building in roll Y-1,2018,4132,27,4105
+F8,new construction or no building in roll Y-1,2019,4596,7,4589
+F8,new construction or no building in roll Y-1,2020,5163,0,5163
+F8,new construction or no building in roll Y-1,2021,5113,1,5112
+F8,new construction or no building in roll Y-1,2022,5649,1,5648
+F8,new construction or no building in roll Y-1,2023,4580,0,4580
+F8,new construction or no building in roll Y-1,2024,4515,0,4515
+F8,new construction or no building in roll Y-1,2025,4425,0,4425
+F9,"multi-parcel sale (same date and price, all parcels within 200 m)",2014,2083,2,2081
+F9,"multi-parcel sale (same date and price, all parcels within 200 m)",2015,2661,4,2657
+F9,"multi-parcel sale (same date and price, all parcels within 200 m)",2016,3254,2,3252
+F9,"multi-parcel sale (same date and price, all parcels within 200 m)",2017,3629,2,3627
+F9,"multi-parcel sale (same date and price, all parcels within 200 m)",2018,4105,10,4095
+F9,"multi-parcel sale (same date and price, all parcels within 200 m)",2019,4589,11,4578
+F9,"multi-parcel sale (same date and price, all parcels within 200 m)",2020,5163,6,5157
+F9,"multi-parcel sale (same date and price, all parcels within 200 m)",2021,5112,7,5105
+F9,"multi-parcel sale (same date and price, all parcels within 200 m)",2022,5648,22,5626
+F9,"multi-parcel sale (same date and price, all parcels within 200 m)",2023,4580,5,4575
+F9,"multi-parcel sale (same date and price, all parcels within 200 m)",2024,4515,9,4506
+F9,"multi-parcel sale (same date and price, all parcels within 200 m)",2025,4425,8,4417
+F10,resale < 12 months (flip),2014,2081,22,2059
+F10,resale < 12 months (flip),2015,2657,13,2644
+F10,resale < 12 months (flip),2016,3252,28,3224
+F10,resale < 12 months (flip),2017,3627,23,3604
+F10,resale < 12 months (flip),2018,4095,40,4055
+F10,resale < 12 months (flip),2019,4578,103,4475
+F10,resale < 12 months (flip),2020,5157,138,5019
+F10,resale < 12 months (flip),2021,5105,124,4981
+F10,resale < 12 months (flip),2022,5626,162,5464
+F10,resale < 12 months (flip),2023,4575,226,4349
+F10,resale < 12 months (flip),2024,4506,282,4224
+F10,resale < 12 months (flip),2025,4417,185,4232
+F11,two sales of one parcel in the same day/month,2014,2059,2,2057
+F11,two sales of one parcel in the same day/month,2015,2644,6,2638
+F11,two sales of one parcel in the same day/month,2016,3224,0,3224
+F11,two sales of one parcel in the same day/month,2017,3604,14,3590
+F11,two sales of one parcel in the same day/month,2018,4055,8,4047
+F11,two sales of one parcel in the same day/month,2019,4475,14,4461
+F11,two sales of one parcel in the same day/month,2020,5019,8,5011
+F11,two sales of one parcel in the same day/month,2021,4981,4,4977
+F11,two sales of one parcel in the same day/month,2022,5464,0,5464
+F11,two sales of one parcel in the same day/month,2023,4349,2,4347
+F11,two sales of one parcel in the same day/month,2024,4224,2,4222
+F11,two sales of one parcel in the same day/month,2025,4232,0,4232

@@ -1,0 +1,98 @@
+name: CI
+
+# Tests and lint on synthetic data only. No real data is downloaded or read,
+# no .env or Census key is used, and the frozen model spec and the hashed
+# prospective 2026 file are made read-only and must be unchanged at the end.
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements.lock
+
+      - name: Install (pinned)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.lock
+          pip install -e . --no-deps
+
+      - name: Empty data folder (no real data in CI)
+        run: |
+          echo "AVM_DATA_DIR=$RUNNER_TEMP/avm-data-empty" >> "$GITHUB_ENV"
+          mkdir -p "$RUNNER_TEMP/avm-data-empty"
+
+      - name: Make frozen and prospective files read-only
+        run: chmod -R a-w reports/frozen reports/prospective
+
+      - name: Verify the prospective 2026 hash (read-only)
+        run: python -m avm.prospective check
+
+      - name: Lint (ruff, minimal rule set)
+        run: ruff check src tests
+
+      - name: No em or en dashes in docs
+        run: python -m avm.ci_checks dashes
+
+      - name: Privacy (no tax keys, street addresses or owner-field values in tracked files)
+        run: python -m avm.ci_checks privacy
+
+      - name: Tests
+        run: pytest -q tests
+
+      - name: Data folder still empty
+        run: test -z "$(ls -A "$AVM_DATA_DIR")"
+
+      - name: Frozen and prospective files unchanged
+        run: |
+          git status --porcelain -- reports/frozen reports/prospective > changes.txt
+          if [ -s changes.txt ]; then cat changes.txt; echo "frozen or prospective files changed"; exit 1; fi
+          echo "reports/frozen and reports/prospective unchanged"
+
+  # Every committed version of every file, on all refs. Runs only in the
+  # public snapshot repo: the private project repo's history still holds
+  # identifiers by decision (no history rewrite), so it would fail there.
+  history:
+    if: github.repository == 'oekrueg05/milwaukee-avm'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements.lock
+
+      - name: Install (pinned)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.lock
+          pip install -e . --no-deps
+
+      - name: Fetch all tags
+        run: git fetch --tags --force
+
+      - name: History privacy (all refs, every blob)
+        run: python -m avm.ci_checks history

@@ -1,0 +1,12 @@
+# Paths replaced by placeholders for publication: <repo>, <data>, <rebuild-data>, <venv>, <python>, <home>.
+Stage 9 re-run in <rebuild-data> at 2026-10-20T21:29:48+00:00 after the same-day Stage 9 code fixes; tables compared with the live run by sha256.
+
+match    divergence_stats.csv  462138cd6bfcfc47  462138cd6bfcfc47
+match    divergence_top.csv  994371e952f7e3e5  994371e952f7e3e5
+match    exclusions.csv  07f67766befab710  07f67766befab710
+match    group_sales_check_by_year.csv  450d9937aff11e14  450d9937aff11e14
+match    group_tax_shifts.csv  658b8241df710ae1  658b8241df710ae1
+match    special_valuation_list.csv  1ee40ca093bd45c8  1ee40ca093bd45c8
+match    tract_summary.csv  20a51279816a0d5b  20a51279816a0d5b
+
+ALL MATCH

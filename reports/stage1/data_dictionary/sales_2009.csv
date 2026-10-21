@@ -1,0 +1,20 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropType,text,2997,0.0003,5,0.0,Residential (2368); Condominium (501); Commercial (86),Commercial; Residential; Condominium
+Taxkey,integer,2997,0.0,2941,0.0,(redacted),(redacted)
+Address,text,2997,0.0,2683,0.0,(redacted),(redacted)
+CondoProject,text,2997,0.8292,146,0.0,BREAKWATER CONDOS (62); POINT ON THE RIVER CONDOS (30); LANDMARK ON THE LAKE (21),WHISPERING HILLS (TOWNHOUSE); UNION POINT CONDOMINIUM; 18: 1-Br
+District,integer,2997,0.0,15,0.0,5 (431); 11 (375); 14 (287),2; 8; 10
+Nbhd,integer,2997,0.0,320,0.0,2080 (111); 2100 (86); 4420 (70),5396; 800; 3150
+Style,text,2997,0.0,80,0.0,Ranch (799); Cape Cod (529); APARTMENT (269),Split Level; Apartment: 18: 1-Br  Units; UNKWN
+Extwall,text,2997,0.2102,9,0.0,Aluminum / Vinyl (1305); Brick (547); Frame (277),Prem Wood; Masonry / Frame; Aluminum / Vinyl
+Stories,float,2997,0.0,9,0.0,1 (2017); 2 (532); 1.5 (301),3.5; 1.5; 2
+Year_Built,integer,2997,0.0,133,0.0,1955 (113); 1953 (109); 1950 (108),1876; 1985; 1901
+Nr_of_rms,integer,2997,0.0,10,0.0,0 (2560); 4 (173); 5 (122),4; 2; 6
+Fin_sqft,integer,2997,0.0,1359,0.0,0 (41); 1056 (20); 864 (19),1761; 1013; 1643
+Units,integer,2997,0.0,4,0.0,1 (2592); 2 (367); 0 (25),0; 3; 2
+Bdrms,integer,2997,0.0,10,0.0,3 (1288); 2 (678); 4 (507),5; 8; 6
+Fbath,integer,2997,0.0,5,0.0,1 (1863); 2 (928); 0 (132),0; 1; 2
+Hbath,integer,2997,0.0,4,0.0,0 (2139); 1 (804); 2 (53),2; 3; 1
+Lotsize,integer,2997,0.0,879,0.0,0 (515); 4800 (191); 3600 (83),5822; 10107; 9106
+Sale_date,date,2997,0.0,12,0.0,2009-11 (379); 2009-08 (343); 2009-10 (341),2009-07; 2009-12; 2009-05
+Sale_price,integer,2997,0.0,956,0.0,115000 (37); 110000 (37); 130000 (36),172900; 457500; 49000

@@ -1,0 +1,21 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropertyID,integer,6355,0.0002,6347,0.0,847721 (2); 855264 (2); 854304 (2),855381; 847684; 861091
+PropType,text,6355,0.0002,6,0.0,Residential (5254); Condominium (777); Lg Apartment (166),Exempt; Commercial; Condominium
+taxkey,integer,6355,0.0002,6294,0.0,(redacted),(redacted)
+Address,text,6355,0.0002,6292,0.0,(redacted),(redacted)
+CondoProject,text,6355,0.8782,185,0.0,HARBOR FRONT (26); RIVERBRIDGE (23); LANDMARK ON THE LAKE (23),SARATOGA PLACE; RIVER HOUSES; FOREST HILLS
+District,integer,6355,0.0003,15,0.0,5 (779); 11 (707); 10 (594),5; 10; 15
+nbhd,integer,6355,0.0041,430,0.0,2100 (185); 4340 (155); 4240 (116),2080; 5980; 5140
+Style,text,6355,0.003,71,0.0,Ranch (1539); Cape Cod (976); Res O/S A & 1/2 (419),Office Building - Class A; AP1 (Conventional Apt with 4-6 Units); Laundromat
+Extwall,text,6355,0.1267,17,0.0,Aluminum/Vinyl (3092); Brick (1240); Wood (314),Aluminum/Vinyl; Alum/Vynyl Siding; Asphalt/Other
+Stories,float,6355,0.0038,12,0.0,1 (3873); 2 (1614); 1.5 (760),12; 15; 3
+Year_Built,integer,6355,0.0014,154,0.0,1955 (210); 1953 (210); 1952 (206),1984; 1943; 2019
+Rooms,integer,6355,0.0474,22,0.0,5 (1756); 6 (1241); 4 (725),19; 0; 13
+FinishedSqft,text,6355,0.0033,2160,0.0,"864 (36); 1,056 (27); 980 (26)","2,420; 2,537; 3,895"
+Units,integer,6355,0.0002,36,0.0,1 (4856); 2 (1143); 4 (119),303; 68; 16
+Bdrms,integer,6355,0.0474,10,0.0,3 (2677); 4 (1259); 2 (1139),6; 8; 1
+Fbath,integer,6355,0.0002,7,0.0,1 (3313); 2 (2415); 0 (341),6; 1; 2
+Hbath,integer,6355,0.0002,5,0.0,0 (4547); 1 (1654); 2 (146),2; 1; 0
+Lotsize,text,6355,0.0002,1554,0.0,"0 (468); 4,800 (384); 1 (345)","10,210; 4,746; 10,064"
+Sale_date,date,6355,0.0002,307,0.0,10/30/2020 (86); 7/31/2020 (64); 11/30/2020 (63),8/14/2020; 9/5/2020; 8/2/2020
+Sale_price,text,6355,0.0002,1310,0.0,"$150,000 (100); $175,000 (94); $160,000 (93)","$311,300; $172,800; $157,940"

@@ -1,0 +1,21 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropertyID,integer,6508,0.0,6481,0.0,878421 (16); 863475 (3); 875416 (2),869449; 879513; 872369
+PropType,text,6508,0.0,6,0.0,Residential (5252); Condominium (928); Lg Apartment (191),Exempt; Condominium; Residential
+taxkey,integer,6508,0.0,6413,0.0,(redacted),(redacted)
+Address,text,6508,0.0006,6405,0.0,(redacted),(redacted)
+CondoProject,text,6508,0.8576,211,0.0,WOODLANDS (30); LANDMARK ON THE LAKE (28); WILLOW CREEK (24),POINT ON THE RIVER CONDOS; RESERVOIR HILL TOWNHOMES; WHISPERING HILLS (WALK-UP)
+District,integer,6508,0.0002,15,0.0,5 (652); 14 (613); 10 (572),5; 10; 15
+nbhd,integer,6508,0.0049,447,0.0,4520 (142); 4420 (124); 2080 (114),6274; 4425; 6268
+Style,text,6508,0.0045,62,0.0,Ranch (1327); Cape Cod (859); Duplex O/S (499),"Triplex; Bank, Savings & Loan; Special - to use this code see supv."
+Extwall,text,6508,0.1489,18,0.0,Aluminum/Vinyl (3140); Brick (1188); Asphalt/Other (315),Aluminum/Vinyl; Wood; Stucco
+Stories,float,6508,0.0063,14,0.0,1 (3649); 2 (1807); 1.5 (872),4; 3.5; 1.5
+Year_Built,integer,6508,0.0023,150,0.0,1955 (231); 1950 (181); 1956 (170),1921; 2016; 1982
+Rooms,integer,6508,0.0493,21,0.0,5 (1678); 6 (1160); 4 (736),0; 14; 20
+FinishedSqft,text,6508,0.0048,2164,0.0,"936 (36); 864 (36); 1,054 (34)","1,546; 1,580; 2,896"
+Units,integer,6508,0.0,37,0.0,1 (4685); 2 (1407); 4 (156),10; 60; 128
+Bdrms,integer,6508,0.0492,10,0.0,3 (2544); 4 (1387); 2 (1204),4; 7; 1
+Fbath,integer,6508,0.0,7,0.0,1 (3153); 2 (2675); 0 (353),6; 2; 1
+Hbath,integer,6508,0.0,4,0.0,0 (4721); 1 (1654); 2 (126),2; 3; 1
+Lotsize,text,6508,0.0002,1515,0.0,"1 (501); 0 (464); 4,800 (408)","16,177; 7,204; 9,125"
+Sale_date,date,6508,0.0,300,0.0,4/30/2021 (94); 5/28/2021 (79); 6/30/2021 (73),5/6/2021; 11/9/2021; 3/29/2021
+Sale_price,text,6508,0.0,1255,0.0,"$150,000 (118); $200,000 (115); $180,000 (110)","$213,000; $154,500; $49,000"

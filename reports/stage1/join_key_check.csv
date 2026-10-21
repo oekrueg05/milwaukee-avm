@@ -1,0 +1,167 @@
+sales_year,subset,target,source,n_sales,n_unmatched,match_rate
+2002,all,parcels_2025,parcels_2025,170,2,0.9882
+2002,all,parcels_current,parcels_current,170,4,0.9765
+2002,residential,parcels_2025,parcels_2025,7,0,1.0
+2002,residential,parcels_current,parcels_current,7,1,0.8571
+2003,all,parcels_2025,parcels_2025,215,7,0.9674
+2003,all,parcels_current,parcels_current,215,9,0.9581
+2003,residential,parcels_2025,parcels_2025,5,0,1.0
+2003,residential,parcels_current,parcels_current,5,0,1.0
+2004,all,parcels_2025,parcels_2025,277,0,1.0
+2004,all,parcels_current,parcels_current,277,0,1.0
+2004,residential,parcels_2025,parcels_2025,3,0,1.0
+2004,residential,parcels_current,parcels_current,3,0,1.0
+2005,all,parcels_2025,parcels_2025,408,8,0.9804
+2005,all,parcels_current,parcels_current,408,10,0.9755
+2005,residential,parcels_2025,parcels_2025,9,1,0.8889
+2005,residential,parcels_current,parcels_current,9,2,0.7778
+2006,all,parcels_2025,parcels_2025,344,10,0.9709
+2006,all,parcels_current,parcels_current,344,15,0.9564
+2006,residential,parcels_2025,parcels_2025,15,0,1.0
+2006,residential,parcels_current,parcels_current,15,1,0.9333
+2007,all,parcels_2025,parcels_2025,283,9,0.9682
+2007,all,parcels_current,parcels_current,283,10,0.9647
+2007,residential,parcels_2025,parcels_2025,5,0,1.0
+2007,residential,parcels_current,parcels_current,5,0,1.0
+2008,all,roll_Y,file 2008 (chained_to_yr_assmt),152,0,1.0
+2008,all,parcels_2025,parcels_2025,152,3,0.9803
+2008,all,parcels_current,parcels_current,152,4,0.9737
+2008,residential,roll_Y,file 2008 (chained_to_yr_assmt),2,0,1.0
+2008,residential,parcels_2025,parcels_2025,2,0,1.0
+2008,residential,parcels_current,parcels_current,2,0,1.0
+2009,all,roll_Y-1,file 2008 (chained_to_yr_assmt),2997,89,0.9703
+2009,all,roll_Y,file 2009 (chained_to_yr_assmt),2997,72,0.976
+2009,all,parcels_2025,parcels_2025,2997,7,0.9977
+2009,all,parcels_current,parcels_current,2997,13,0.9957
+2009,residential,roll_Y-1,file 2008 (chained_to_yr_assmt),2368,2,0.9992
+2009,residential,roll_Y,file 2009 (chained_to_yr_assmt),2368,0,1.0
+2009,residential,parcels_2025,parcels_2025,2368,2,0.9992
+2009,residential,parcels_current,parcels_current,2368,6,0.9975
+2010,all,roll_Y-1,file 2009 (chained_to_yr_assmt),1922,23,0.988
+2010,all,roll_Y,file 2010 (chained_to_yr_assmt),1922,0,1.0
+2010,all,parcels_2025,parcels_2025,1922,2,0.999
+2010,all,parcels_current,parcels_current,1922,3,0.9984
+2010,residential,roll_Y-1,file 2009 (chained_to_yr_assmt),1513,3,0.998
+2010,residential,roll_Y,file 2010 (chained_to_yr_assmt),1513,0,1.0
+2010,residential,parcels_2025,parcels_2025,1513,0,1.0
+2010,residential,parcels_current,parcels_current,1513,1,0.9993
+2011,all,roll_Y-1,file 2010 (chained_to_yr_assmt),1759,5,0.9972
+2011,all,roll_Y,file 2011 (chained_to_yr_assmt),1759,1,0.9994
+2011,all,parcels_2025,parcels_2025,1759,3,0.9983
+2011,all,parcels_current,parcels_current,1759,4,0.9977
+2011,residential,roll_Y-1,file 2010 (chained_to_yr_assmt),1271,1,0.9992
+2011,residential,roll_Y,file 2011 (chained_to_yr_assmt),1271,0,1.0
+2011,residential,parcels_2025,parcels_2025,1271,2,0.9984
+2011,residential,parcels_current,parcels_current,1271,3,0.9976
+2012,all,roll_Y-1,file 2011 (chained_to_yr_assmt),1996,4,0.998
+2012,all,roll_Y,file 2012 (inferred_between),1996,2,0.999
+2012,all,parcels_2025,parcels_2025,1996,5,0.9975
+2012,all,parcels_current,parcels_current,1996,6,0.997
+2012,residential,roll_Y-1,file 2011 (chained_to_yr_assmt),1471,1,0.9993
+2012,residential,roll_Y,file 2012 (inferred_between),1471,0,1.0
+2012,residential,parcels_2025,parcels_2025,1471,3,0.998
+2012,residential,parcels_current,parcels_current,1471,3,0.998
+2013,all,roll_Y-1,file 2012 (inferred_between),2754,7,0.9975
+2013,all,roll_Y,file 2013 (confirmed),2754,4,0.9985
+2013,all,parcels_2025,parcels_2025,2754,19,0.9931
+2013,all,parcels_current,parcels_current,2754,20,0.9927
+2013,residential,roll_Y-1,file 2012 (inferred_between),2004,5,0.9975
+2013,residential,roll_Y,file 2013 (confirmed),2004,2,0.999
+2013,residential,parcels_2025,parcels_2025,2004,6,0.997
+2013,residential,parcels_current,parcels_current,2004,7,0.9965
+2014,all,roll_Y-1,file 2013 (confirmed),2946,3,0.999
+2014,all,roll_Y,file 2014 (confirmed),2946,1,0.9997
+2014,all,parcels_2025,parcels_2025,2946,9,0.9969
+2014,all,parcels_current,parcels_current,2946,12,0.9959
+2014,residential,roll_Y-1,file 2013 (confirmed),2118,0,1.0
+2014,residential,roll_Y,file 2014 (confirmed),2118,0,1.0
+2014,residential,parcels_2025,parcels_2025,2118,5,0.9976
+2014,residential,parcels_current,parcels_current,2118,8,0.9962
+2015,all,roll_Y-1,file 2014 (confirmed),3706,5,0.9987
+2015,all,roll_Y,file 2015 (confirmed),3706,2,0.9995
+2015,all,parcels_2025,parcels_2025,3706,11,0.997
+2015,all,parcels_current,parcels_current,3706,13,0.9965
+2015,residential,roll_Y-1,file 2014 (confirmed),2726,3,0.9989
+2015,residential,roll_Y,file 2015 (confirmed),2726,0,1.0
+2015,residential,parcels_2025,parcels_2025,2726,2,0.9993
+2015,residential,parcels_current,parcels_current,2726,4,0.9985
+2016,all,roll_Y-1,file 2015 (confirmed),4422,4,0.9991
+2016,all,roll_Y,file 2016 (confirmed),4422,1,0.9998
+2016,all,parcels_2025,parcels_2025,4422,22,0.995
+2016,all,parcels_current,parcels_current,4422,25,0.9943
+2016,residential,roll_Y-1,file 2015 (confirmed),3311,1,0.9997
+2016,residential,roll_Y,file 2016 (confirmed),3311,0,1.0
+2016,residential,parcels_2025,parcels_2025,3311,6,0.9982
+2016,residential,parcels_current,parcels_current,3311,8,0.9976
+2017,all,roll_Y-1,file 2016 (confirmed),4840,3,0.9994
+2017,all,roll_Y,file 2017 (confirmed),4840,0,1.0
+2017,all,parcels_2025,parcels_2025,4840,27,0.9944
+2017,all,parcels_current,parcels_current,4840,31,0.9936
+2017,residential,roll_Y-1,file 2016 (confirmed),3703,1,0.9997
+2017,residential,roll_Y,file 2017 (confirmed),3703,0,1.0
+2017,residential,parcels_2025,parcels_2025,3703,16,0.9957
+2017,residential,parcels_current,parcels_current,3703,18,0.9951
+2018,all,roll_Y-1,file 2017 (confirmed),5515,2,0.9996
+2018,all,roll_Y,file 2018 (confirmed),5515,0,1.0
+2018,all,parcels_2025,parcels_2025,5515,33,0.994
+2018,all,parcels_current,parcels_current,5515,36,0.9935
+2018,residential,roll_Y-1,file 2017 (confirmed),4207,2,0.9995
+2018,residential,roll_Y,file 2018 (confirmed),4207,0,1.0
+2018,residential,parcels_2025,parcels_2025,4207,10,0.9976
+2018,residential,parcels_current,parcels_current,4207,13,0.9969
+2019,all,roll_Y-1,file 2018 (confirmed),6210,9,0.9986
+2019,all,roll_Y,file 2019 (confirmed),6210,4,0.9994
+2019,all,parcels_2025,parcels_2025,6210,83,0.9866
+2019,all,parcels_current,parcels_current,6210,89,0.9857
+2019,residential,roll_Y-1,file 2018 (confirmed),4721,5,0.9989
+2019,residential,roll_Y,file 2019 (confirmed),4721,2,0.9996
+2019,residential,parcels_2025,parcels_2025,4721,20,0.9958
+2019,residential,parcels_current,parcels_current,4721,23,0.9951
+2020,all,roll_Y-1,file 2019 (confirmed),6354,1,0.9998
+2020,all,roll_Y,file 2020 (confirmed),6354,0,1.0
+2020,all,parcels_2025,parcels_2025,6354,23,0.9964
+2020,all,parcels_current,parcels_current,6354,26,0.9959
+2020,residential,roll_Y-1,file 2019 (confirmed),5254,1,0.9998
+2020,residential,roll_Y,file 2020 (confirmed),5254,0,1.0
+2020,residential,parcels_2025,parcels_2025,5254,16,0.997
+2020,residential,parcels_current,parcels_current,5254,17,0.9968
+2021,all,roll_Y-1,file 2020 (confirmed),6508,4,0.9994
+2021,all,roll_Y,file 2021 (confirmed),6508,1,0.9998
+2021,all,parcels_2025,parcels_2025,6508,21,0.9968
+2021,all,parcels_current,parcels_current,6508,31,0.9952
+2021,residential,roll_Y-1,file 2020 (confirmed),5252,3,0.9994
+2021,residential,roll_Y,file 2021 (confirmed),5252,0,1.0
+2021,residential,parcels_2025,parcels_2025,5252,13,0.9975
+2021,residential,parcels_current,parcels_current,5252,20,0.9962
+2022,all,roll_Y-1,file 2021 (confirmed),7146,12,0.9983
+2022,all,roll_Y,file 2022 (confirmed),7146,0,1.0
+2022,all,parcels_2025,parcels_2025,7146,19,0.9973
+2022,all,parcels_current,parcels_current,7146,23,0.9968
+2022,residential,roll_Y-1,file 2021 (confirmed),5774,5,0.9991
+2022,residential,roll_Y,file 2022 (confirmed),5774,0,1.0
+2022,residential,parcels_2025,parcels_2025,5774,8,0.9986
+2022,residential,parcels_current,parcels_current,5774,12,0.9979
+2023,all,roll_Y-1,file 2022 (confirmed),5831,7,0.9988
+2023,all,roll_Y,file 2023 (confirmed),5831,2,0.9997
+2023,all,parcels_2025,parcels_2025,5831,2,0.9997
+2023,all,parcels_current,parcels_current,5831,11,0.9981
+2023,residential,roll_Y-1,file 2022 (confirmed),4672,3,0.9994
+2023,residential,roll_Y,file 2023 (confirmed),4672,1,0.9998
+2023,residential,parcels_2025,parcels_2025,4672,1,0.9998
+2023,residential,parcels_current,parcels_current,4672,8,0.9983
+2024,all,roll_Y-1,file 2023 (confirmed),5690,4,0.9993
+2024,all,roll_Y,file 2024 (confirmed),5690,1,0.9998
+2024,all,parcels_2025,parcels_2025,5690,0,1.0
+2024,all,parcels_current,parcels_current,5690,5,0.9991
+2024,residential,roll_Y-1,file 2023 (confirmed),4600,2,0.9996
+2024,residential,roll_Y,file 2024 (confirmed),4600,0,1.0
+2024,residential,parcels_2025,parcels_2025,4600,0,1.0
+2024,residential,parcels_current,parcels_current,4600,4,0.9991
+2025,all,roll_Y-1,file 2024 (confirmed),5580,8,0.9986
+2025,all,roll_Y,file 2025 (confirmed),5580,3,0.9995
+2025,all,parcels_2025,parcels_2025,5580,3,0.9995
+2025,all,parcels_current,parcels_current,5580,1,0.9998
+2025,residential,roll_Y-1,file 2024 (confirmed),4530,6,0.9987
+2025,residential,roll_Y,file 2025 (confirmed),4530,3,0.9993
+2025,residential,parcels_2025,parcels_2025,4530,3,0.9993
+2025,residential,parcels_current,parcels_current,4530,0,1.0

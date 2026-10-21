@@ -1,0 +1,20 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropType,text,283,0.0,5,0.0,Commercial (251); Lg Apartment (14); Vacant Land (12),Residential; Lg Apartment; Commercial
+Taxkey,integer,283,0.0,279,0.0,(redacted),(redacted)
+Address,text,283,0.0,275,0.0,(redacted),(redacted)
+CondoProject,text,283,0.9576,12,0.0,"51: 1-Br (1); 79: 1-Br ,40: 1-Br ,43: 2-Br (1); 2: 1-Br ,23: 2-Br (1)","7: 2-Br ,17: 3-Br; 8: 2-Br; 9: 3-Br ,31: 3-Br"
+District,integer,283,0.0,15,0.0,12 (36); 4 (28); 8 (28),4; 12; 3
+Nbhd,integer,283,0.0,75,0.0,6242 (12); 6460 (12); 6240 (11),6411; 6256; 6420
+Style,text,283,0.0,65,0.0,"Store Bldg - Multi Story (Store & Apt, S... (61); Warehouse Building - 1 Story (30); Store Building - Single tenant, 1 story (19)",Not Listed (Exm or Mfg); Nursing Home; Sit Down Restaurant
+Extwall,text,283,0.9823,3,0.0,Frame (2); Aluminum / Vinyl (2); Block (1),Aluminum / Vinyl; Block; Frame
+Stories,float,283,0.0,12,0.0,1 (124); 2 (103); 0 (31),14; 2.5; 1.5
+Year_Built,integer,283,0.0,103,0.0,0 (30); 1900 (13); 1964 (8),1914; 1984; 1928
+Nr_of_rms,integer,283,0.0,2,0.0,0 (282); 1 (1),1; 0
+Fin_sqft,integer,283,0.0,247,0.0,0 (28); 3860 (3); 4965 (2),1368; 36186; 2419
+Units,integer,283,0.0,4,0.0,1 (274); 0 (5); 4 (3),7; 0; 4
+Bdrms,integer,283,0.0,3,0.0,0 (278); 4 (3); 7 (2),7; 4; 0
+Fbath,integer,283,0.0,3,0.0,0 (277); 1 (4); 2 (2),2; 1; 0
+Hbath,integer,283,0.0,2,0.0,0 (281); 1 (2),1; 0
+Lotsize,integer,283,0.0,242,0.0,3600 (14); 7200 (5); 11129 (5),114315; 145490; 3840
+Sale_date,date,283,0.0,12,0.0,2007-11 (30); 2007-02 (29); 2007-10 (27),2007-07; 2007-12; 2007-05
+Sale_price,integer,283,0.0,199,0.0,250000 (6); 300000 (5); 120000 (5),50000; 745500; 570000

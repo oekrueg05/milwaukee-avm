@@ -1,0 +1,20 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropType,text,215,0.0,5,0.0,Commercial (192); Lg Apartment (10); Vacant Land (6),Residential; Commercial; Lg Apartment
+Taxkey,integer,215,0.0,212,0.0,(redacted),(redacted)
+Address,text,215,0.0,212,0.0,(redacted),(redacted)
+CondoProject,text,215,0.9442,12,0.0,"33: 1-Br ,6: 2-Br (1); LANTERNE COURT (1); 40: 3-Br (1)","HATHAWAY; 48: 1-Br ,39: 2-Br; 20: 2-Br ,2: 3-Br"
+District,integer,215,0.0,15,0.0,12 (28); 14 (22); 8 (19),14; 3; 10
+Nbhd,integer,215,0.0,61,0.0,6418 (17); 6282 (15); 6278 (13),6242; 6970; 6240
+Style,text,215,0.0,50,0.0,"Store Bldg - Multi Story (Store & Apt, S... (64); Warehouse Building - 1 Story (17); Store Building - Single tenant, 1 story (14)","Day Care Center; Multi Story Warehouse; Apartment: 33: 1-Br ,6: 2-Br  Units"
+Extwall,text,215,0.9767,3,0.0,Brick (3); Aluminum / Vinyl (1); Stucco (1),Stucco; Aluminum / Vinyl; Brick
+Stories,float,215,0.0,6,0.0,1 (91); 2 (81); 0 (17),0; 4; 3
+Year_Built,integer,215,0.0,87,0.0,0 (19); 1900 (9); 1927 (8),1957; 1926; 1990
+Nr_of_rms,integer,215,0.0,3,0.0,0 (213); 5 (1); 4 (1),4; 5; 0
+Fin_sqft,integer,215,0.0,183,0.0,0 (19); 3860 (3); 3600 (2),994; 1651; 2123
+Units,integer,215,0.0,2,0.0,1 (214); 4 (1),4; 1
+Bdrms,integer,215,0.0,4,0.0,0 (208); 3 (4); 2 (2),2; 4; 3
+Fbath,integer,215,0.0,3,0.0,0 (208); 1 (5); 2 (2),2; 1; 0
+Hbath,integer,215,0.0,1,0.0,0 (215),0
+Lotsize,integer,215,0.0,175,0.0,7200 (7); 4800 (7); 0 (7),19635; 4500; 63510
+Sale_date,date,215,0.0,12,0.0,2003-12 (28); 2003-05 (26); 2003-08 (24),2003-07; 2003-12; 2003-05
+Sale_price,integer,215,0.0,151,0.0,100000 (9); 80000 (6); 150000 (4),6500; 73000; 400000

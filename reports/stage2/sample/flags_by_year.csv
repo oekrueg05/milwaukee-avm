@@ -1,0 +1,3 @@
+sale_year,n_clean,first_sale_of_flip,multi_parcel_3plus_flag,resale_12m_ambiguous,deed_verifiable_share,deed_non_market,deed_non_market_share_of_verifiable,permit_window_covered,permit_any_residential,permit_significant,has_benchmark,ratio_outlier_iaao,ppsf_outlier,land_use_changed,baths_missing,full_baths_pre2019_raw_present,single_family,duplex
+2024,4222,205,4,0,0.8685,31,0.0085,1.0,53,4,4215,19,8,10,0,0,3002,1220
+2025,4232,74,3,0,0.0,0,,1.0,61,3,4229,14,7,8,0,0,2989,1243

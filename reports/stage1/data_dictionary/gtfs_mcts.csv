@@ -1,0 +1,11 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+stop_lat,float,3696,0.0,3690,0.0,43.0122569 (2); 43.0605479 (2); 43.0030019 (2),42.9667493; 43.0457888; 43.0028985
+stop_code,integer,3696,0.0,3696,0.0,1718 (1); 1843 (1); 4026 (1),8449; 2009; 3642
+stop_lon,float,3696,0.0,3693,0.0,-87.9874601 (2); -87.9141531 (2); -87.9209612 (2),-87.9840457; -87.9468197; -88.0333851
+timepoint,integer,3696,0.0,2,0.0,0 (2799); 1 (897),1; 0
+stop_url,empty,3696,1.0,0,0.0,,
+stop_id,integer,3696,0.0,3696,0.0,1718 (1); 1843 (1); 4026 (1),8449; 2009; 3642
+stop_desc,empty,3696,1.0,0,0.0,,
+stop_name,text,3696,0.0,2242,0.0,S11 & MITCHELL (3); FLORIST & TEUTONIA (3); FOREST HOME & S27 (3),HOWELL & EDGERTON; WINDLAKE & HARRISON; WILSON & CAPITOL
+location_type,integer,3696,0.0,1,0.0,0 (3696),0
+zone_id,empty,3696,1.0,0,0.0,,

@@ -1,0 +1,20 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropType,text,34523,0.0001,5,0.0,Residential (24634); Condominium (5715); Commercial (2922),Lg Apartment; Commercial; Residential
+Taxkey,integer,34523,0.0,29439,0.0,(redacted),(redacted)
+Address,text,34523,0.0,26846,0.0,(redacted),(redacted)
+CondoProject,text,34523,0.8072,537,0.0,4: 2-Br (279); LANDMARK ON THE LAKE (242); POINT ON THE RIVER CONDOS (170),TERRACE MANOR; NORTH MARSHALL ST CONDOS; PARK TERRACE BLUFF HOMES
+District,integer,34523,0.0,15,0.0,5 (4441); 11 (4085); 3 (3296),3; 13; 5
+Nbhd,integer,34523,0.0,591,0.0,2100 (945); 2080 (873); 4240 (713),1780; 6280; 6440
+Style,text,34523,0.0002,382,0.0,Ranch (7412); Cape Cod (5159); APARTMENT (3381),"Apartment: 185: 1-Br ,1: 2-Br  Units; Apartment: 50: 2-Br ,22: 3-Br  Units; Apartment: 1: 2-Br ,1: 2-Br ,1: 2-Br ,1:..."
+Extwall,text,34523,0.2867,9,0.0,Aluminum / Vinyl (13931); Brick (5684); Frame (2528),Prem Wood; Brick; Stone
+Stories,float,34523,0.0,19,0.0,1 (21217); 2 (8302); 1.5 (3585),6; 1; 10
+Year_Built,integer,34523,0.0,168,0.0,1953 (1118); 1955 (1051); 1950 (999),1863; 1982; 1865
+Nr_of_rms,integer,34523,0.0,13,0.0,0 (29052); 4 (2163); 5 (1545),8; 11; 3
+Fin_sqft,integer,34523,0.0,4421,0.0,0 (506); 1056 (133); 980 (133),774; 2338; 5075
+Units,integer,34523,0.0,9,0.0,1 (29828); 2 (4304); 3 (230),3; 6; 4
+Bdrms,integer,34523,0.0,15,0.0,3 (13350); 2 (6459); 4 (5820),9; 1; 10
+Fbath,integer,34523,0.0,8,0.0,1 (17389); 2 (11678); 0 (4234),5; 2; 1
+Hbath,integer,34523,0.0,4,0.0,0 (24862); 1 (9037); 2 (598),2; 3; 1
+Lotsize,integer,34523,0.0,4740,0.0,0 (5926); 4800 (1902); 3600 (1248),11120; 10404; 5605
+Sale_date,date,34523,0.0,204,0.0,2018-05 (568); 2016-06 (551); 2017-06 (549),2003-07; 2005-10; 2004-10
+Sale_price,integer,34523,0.0,3692,0.0,125000 (361); 130000 (355); 110000 (344),168800; 146483; 314900

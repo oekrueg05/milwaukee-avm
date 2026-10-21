@@ -1,0 +1,14 @@
+prop_types,groups,rows,dropped_groups,residential_rows
+Residential,427,889,9,889
+Condominium+Residential,102,217,0,114
+Commercial+Residential,25,53,0,28
+Lg Apartment+Residential,18,39,0,21
+Condominium,11,27,4,0
+Lg Apartment,8,16,7,0
+Commercial+Condominium,3,6,0,0
+Condominium+Lg Apartment,2,4,0,0
+Commercial,1,9,1,0
+Commercial+Lg Apartment,1,2,0,0
+Commercial+Condominium+Residential,1,3,0,1
+Condominium+Lg Apartment+Residential,1,3,0,1
+Manufacturing+Residential,1,2,0,1

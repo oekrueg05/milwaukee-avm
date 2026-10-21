@@ -1,0 +1,20 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropType,text,2946,0.0,5,0.0,Residential (2118); Condominium (607); Commercial (117),Lg Apartment; Residential; Condominium
+Taxkey,integer,2946,0.0,2931,0.0,(redacted),(redacted)
+Address,text,2946,0.0,2627,0.0,(redacted),(redacted)
+CondoProject,text,2946,0.7644,195,0.0,4: 2-Br (27); LANDMARK ON THE LAKE (21); HARBOR FRONT (19),SERVITE WOODS (TRILEVEL & BILEVEL); LOFTS ON BROADWAY; HIGHLANDS ON PARK
+District,integer,2946,0.0,15,0.0,5 (411); 11 (347); 3 (317),2; 7; 9
+Nbhd,integer,2946,0.0,388,0.0,2100 (79); 4520 (74); 2080 (67),4540; 5700; 6234
+Style,text,2946,0.0003,118,0.0,Ranch (638); Cape Cod (455); APARTMENT (369),TRIPLEX; Hi Rise; Apartment: 16: 1-Br  Units
+Extwall,text,2946,0.2814,9,0.0,Aluminum / Vinyl (1188); Brick (536); Frame (185),Block; Frame; Aluminum / Vinyl
+Stories,float,2946,0.0,12,0.0,1 (1849); 2 (659); 1.5 (348),4; 7; 2.5
+Year_Built,integer,2946,0.0,140,0.0,1956 (93); 1955 (91); 1953 (86),1914; 1983; 1954
+Nr_of_rms,integer,2946,0.0,11,0.0,0 (2358); 4 (265); 5 (156),6; 8; 3
+Fin_sqft,integer,2946,0.0,1472,0.0,0 (21); 980 (15); 1056 (12),1400; 902; 1293
+Units,integer,2946,0.0,5,0.0,1 (2597); 2 (324); 3 (17),3; 1; 2
+Bdrms,integer,2946,0.0,9,0.0,3 (1193); 2 (622); 4 (490),8; 4; 2
+Fbath,integer,2946,0.0,6,0.0,1 (1521); 2 (1098); 0 (224),5; 3; 1
+Hbath,integer,2946,0.0,4,0.0,0 (2070); 1 (821); 2 (52),2; 3; 1
+Lotsize,integer,2946,0.0,890,0.0,0 (610); 4800 (162); 3600 (104),2670; 17420; 4636
+Sale_date,date,2946,0.0,12,0.0,2014-07 (340); 2014-06 (331); 2014-05 (313),2014-07; 2014-12; 2014-05
+Sale_price,integer,2946,0.0,953,0.0,110000 (43); 100000 (33); 130000 (32),480000; 158500; 181100

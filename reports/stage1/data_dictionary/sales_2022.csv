@@ -1,0 +1,21 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropertyID,integer,7146,0.0,7055,0.0,98868 (2); 99593 (2); 99621 (2),224282; 251893; 220764
+PropType,text,7146,0.0,6,0.0,Residential (5774); Condominium (887); Commercial (240),Exempt; Residential; Commercial
+taxkey,integer,7146,0.0,7055,0.0,(redacted),(redacted)
+Address,text,7146,0.0,7055,0.0,(redacted),(redacted)
+CondoProject,text,7146,0.8762,202,0.0,LANDMARK ON THE LAKE (27); WOODLANDS (26); BLATZ (23),HIGHLANDS ON PARK; SHEMITIS COMMONS; BUCKLEY/BURROUGHS CONDOS
+District,integer,7146,0.0,15,0.0,5 (778); 11 (612); 10 (586),5; 10; 15
+nbhd,integer,7146,0.0,459,0.0,2100 (156); 2080 (132); 4520 (124),6869; 6264; 5397
+Style,text,7146,0.0029,81,0.0,Ranch (1495); Cape Cod (1006); Duplex O/S (552),Pole Building; Strip Shopping Center; Condo Duplex
+Extwall,text,7146,0.1296,18,0.0,Aluminum/Vinyl (3468); Brick (1408); Wood (331),Brick; Asphalt/Other; Wood
+Stories,float,7146,0.0055,13,0.0,1 (3955); 2.0 (2008); 1.5 (1015),12; 5; 0.0
+Year_Built,integer,7146,0.0015,155,0.0,1955 (249); 1952 (212); 1951 (196),1992; 1927; 1869
+Rooms,integer,7146,0.062,40,0.0,5 (1427); 6 (991); 10 (905),22; 33; 23
+FinishedSqft,integer,7146,0.0034,2386,0.0,1056 (30); 936 (30); 864 (29),580; 1225; 2350
+Units,integer,7146,0.0,49,0.0,1 (5070); 2 (1564); 4 (166),21; 4; 57
+Bdrms,integer,7146,0.062,24,0.0,3 (2200); 4 (1484); 2 (1037),15; 10; 32
+Fbath,integer,7146,0.0,8,0.0,1 (3409); 2 (2885); 0 (509),7; 2; 1
+Hbath,integer,7146,0.0,4,0.0,0 (5183); 1 (1793); 2 (164),2; 3; 1
+Lotsize,integer,7146,0.0,1670,0.0,0 (489); 1 (456); 4800 (419),17160; 5054; 5684
+Sale_date,date,7146,0.0,313,0.0,2022-02-28 (64); 2022-06-30 (63); 2022-03-18 (54),2022-06-14; 2022-03-26; 2022-01-14
+Sale_price,integer,7146,0.0,1284,0.0,200000.00 (117); 250000.00 (117); 220000.00 (104),678000.00; 770000.00; 73500.00

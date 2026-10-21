@@ -1,0 +1,9 @@
+group,n,coverage,median_rel_width,calibration,method
+all,4197,0.7217059804622349,0.42925776753312084,global,gbm_independent
+high,1267,0.7466456195737964,0.3431265182509685,global,gbm_independent
+low,1354,0.7149187592319055,0.6710547961369946,global,gbm_independent
+mid,1413,0.7070063694267515,0.3758395752921206,global,gbm_independent
+all,4197,0.7178937336192518,0.4268684186564211,mondrian (by tier),gbm_independent
+high,1267,0.755327545382794,0.34584963916529526,mondrian (by tier),gbm_independent
+low,1354,0.706794682422452,0.6649792531120569,mondrian (by tier),gbm_independent
+mid,1413,0.6956829440905874,0.36852094840618554,mondrian (by tier),gbm_independent

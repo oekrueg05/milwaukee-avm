@@ -1,0 +1,10 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+Date Opened,date,16685,0.0,2699,0.0,2021-06-10 00:00:00 (33); 2024-06-27 00:00:00 (33); 2023-03-03 00:00:00 (30),2025-06-13 00:00:00; 2025-08-28 00:00:00; 2019-10-04 00:00:00
+Address,text,16685,0.0,12453,0.0,(redacted),(redacted)
+Record ID,text,16685,0.0,16384,0.0,COM-NEW-20-00064 (4); COM-ALT-17-00503 (3); COM-ALT-17-00820 (3),COM-ALT-18-00297; COM-ALT-22-00229; RES-ALT-20-00539
+Permit Type,text,16685,0.0,4,0.0,Commercial Alteration Permit (7512); Residential Alteration Permit (6110); Residential New Construction Permit (2318),Commercial Alteration Permit; Residential New Construction Permit; Commercial New Construction Permit
+Status,text,16685,0.0,1,0.0,Issued (16685),Issued
+Date Issued,date,16685,0.0,2421,0.0,2016-10-13 00:00:00 (40); 2022-07-13 00:00:00 (35); 2020-08-27 00:00:00 (31),2024-08-19 00:00:00; 2019-11-13 00:00:00; 2021-03-02 00:00:00
+Construction Total Cost,float,16685,0.0001,2950,0.0,0.00 (6669); 50000.00 (408); 20000.00 (338),3500.00; 159750.00; 214400.00
+Use of Building,text,16685,0.4833,1737,0.0,Detached garage (1359); Commercial (659); One-family dwelling (586),mix use; Commercial - Office; Coffee Shop with Drive-thru
+Dwelling units impact,text,16685,0.4261,3,0.0,Maintain Current Units (8217); Added or Gained (1007); Lost or Eliminated (352),Added or Gained; Maintain Current Units; Lost or Eliminated

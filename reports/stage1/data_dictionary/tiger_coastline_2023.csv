@@ -1,0 +1,3 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+NAME,text,4236,0.0,8,0.0,Pacific (1901); Atlantic (987); Gulf (661),Pacific; Atlantic; Caribe
+MTFCC,text,4236,0.0,1,0.0,L4150 (4236),L4150

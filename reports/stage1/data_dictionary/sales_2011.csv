@@ -1,0 +1,20 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropType,text,1759,0.0,5,0.0,Residential (1271); Condominium (333); Commercial (90),Lg Apartment; Residential; Condominium
+Taxkey,integer,1759,0.0,1747,0.0,(redacted),(redacted)
+Address,text,1759,0.0,1593,0.0,(redacted),(redacted)
+CondoProject,text,1759,0.7834,137,0.0,4: 2-Br (24); POINT ON THE RIVER CONDOS (21); 601 LOFTS (14),GEORGIAN COURT; HARBOR FRONT; HIGHLANDS ON PARK
+District,integer,1759,0.0,15,0.0,5 (249); 11 (227); 3 (182),2; 8; 10
+Nbhd,integer,1759,0.0,333,0.0,2100 (51); 4340 (49); 4240 (43),5977; 5170; 6250
+Style,text,1759,0.0,87,0.0,Ranch (395); Cape Cod (258); APARTMENT (209),Duplex N/S; HI-RISE; Apartment: 8: 1-Br  Units
+Extwall,text,1759,0.278,9,0.0,Aluminum / Vinyl (694); Brick (329); Frame (111),Block; Aluminum / Vinyl; Frame
+Stories,float,1759,0.0,12,0.0,1 (1119); 2 (402); 1.5 (171),6; 4; 0
+Year_Built,integer,1759,0.0,130,0.0,1952 (73); 1953 (61); 1955 (57),1909; 1940; 1983
+Nr_of_rms,integer,1759,0.0,10,0.0,0 (1435); 5 (113); 4 (112),8; 10; 3
+Fin_sqft,integer,1759,0.0,1075,0.0,0 (26); 1108 (9); 980 (8),1525; 2297; 1055
+Units,integer,1759,0.0,4,0.0,1 (1523); 2 (217); 0 (14),3; 0; 2
+Bdrms,integer,1759,0.0,9,0.0,3 (711); 2 (338); 4 (308),7; 5; 3
+Fbath,integer,1759,0.0,6,0.0,1 (890); 2 (658); 0 (159),5; 3; 1
+Hbath,integer,1759,0.0,4,0.0,0 (1237); 1 (484); 2 (34),2; 3; 1
+Lotsize,integer,1759,0.0,620,0.0,0 (343); 4800 (93); 3600 (67),16689; 3809; 4830
+Sale_date,date,1759,0.0,12,0.0,2011-06 (192); 2011-08 (187); 2011-09 (179),2011-07; 2011-12; 2011-05
+Sale_price,integer,1759,0.0,702,0.0,85000 (23); 100000 (23); 120000 (23),1850000; 53900; 91000

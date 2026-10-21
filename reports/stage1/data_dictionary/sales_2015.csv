@@ -1,0 +1,20 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropType,text,3706,0.0,5,0.0,Residential (2726); Condominium (657); Commercial (177),Lg Apartment; Residential; Condominium
+Taxkey,integer,3706,0.0,3685,0.0,(redacted),(redacted)
+Address,text,3706,0.0,3385,0.0,(redacted),(redacted)
+CondoProject,text,3706,0.7911,230,0.0,4: 2-Br (30); RIVERBRIDGE (24); BLATZ (22),HIGHLANDS 2; 13: 3-Br; REGENCY HOUSE
+District,integer,3706,0.0,15,0.0,5 (474); 11 (438); 3 (400),2; 7; 9
+Nbhd,integer,3706,0.0,428,0.0,2100 (118); 2080 (102); 4420 (77),50; 5073; 4360
+Style,text,3706,0.0005,137,0.0,Ranch (817); Cape Cod (599); APARTMENT (390),"Billboard; Duplex N/S; Apartment: 7: 1-Br ,1: 2-Br  Units"
+Extwall,text,3706,0.2644,9,0.0,Aluminum / Vinyl (1545); Brick (624); Frame (305),Stucco; Frame; Aluminum / Vinyl
+Stories,float,3706,0.0,13,0.0,1 (2273); 2 (917); 1.5 (377),2.5; 7; 13
+Year_Built,integer,3706,0.0,145,0.0,1953 (119); 1952 (116); 1950 (115),1958; 1905; 1923
+Nr_of_rms,integer,3706,0.0,11,0.0,0 (3073); 4 (232); 5 (180),3; 1; 5
+Fin_sqft,integer,3706,0.0,1729,0.0,0 (39); 980 (20); 1150 (18),1235; 3454; 4078
+Units,integer,3706,0.0,5,0.0,1 (3209); 2 (454); 3 (32),3; 1; 2
+Bdrms,integer,3706,0.0,11,0.0,3 (1538); 2 (680); 4 (641),6; 9; 5
+Fbath,integer,3706,0.0,6,0.0,1 (1954); 2 (1282); 0 (330),5; 3; 2
+Hbath,integer,3706,0.0,4,0.0,0 (2566); 1 (1049); 2 (89),2; 3; 1
+Lotsize,integer,3706,0.0,1109,0.0,0 (686); 4800 (197); 3600 (133),37537; 19519; 4935
+Sale_date,date,3706,0.0,12,0.0,2015-06 (468); 2015-07 (437); 2015-08 (377),2015-07; 2015-12; 2015-05
+Sale_price,integer,3706,0.0,1091,0.0,100000 (44); 130000 (42); 125000 (42),37500; 209500; 168300

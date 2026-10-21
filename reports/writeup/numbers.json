@@ -1,0 +1,1491 @@
+{
+ "n_test": {
+  "value": 4197.0,
+  "display": "4,197",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "mdape_ln_assessor": {
+  "value": 0.133143572168825,
+  "display": "13.3%",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "cod_assessor": {
+  "value": 17.755348312992112,
+  "display": "17.76",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "median_ratio_assessor": {
+  "value": 0.8937482510199671,
+  "display": "0.894",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "prd_assessor": {
+  "value": 1.013023162571784,
+  "display": "1.013",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "meets_prd_assessor": {
+  "value": 1.0,
+  "display": "yes",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "prb_assessor": {
+  "value": 0.02159147512639269,
+  "display": "+0.022",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "meets_prb_assessor": {
+  "value": 1.0,
+  "display": "yes",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "within_10_assessor": {
+  "value": 0.35358589468668095,
+  "display": "35%",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "within_20_assessor": {
+  "value": 0.6426018584703359,
+  "display": "64%",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "calibration_slope_assessor": {
+  "value": 0.809571149395003,
+  "display": "0.81",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "mdape_ln_hedonic": {
+  "value": 0.1293308676270315,
+  "display": "12.9%",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "mdape_ln_hedonic_diff": {
+  "value": -0.003812704541793499,
+  "display": "-0.4 pts",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "mdape_ln_hedonic_diff_ci": {
+  "value": null,
+  "display": "[-1.0, +0.2]",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "cod_hedonic": {
+  "value": 17.85918312166979,
+  "display": "17.86",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "median_ratio_hedonic": {
+  "value": 1.0012842745462274,
+  "display": "1.001",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "meets_prd_hedonic": {
+  "value": 1.0,
+  "display": "yes",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "meets_prb_hedonic": {
+  "value": 1.0,
+  "display": "yes",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "within_10_hedonic": {
+  "value": 0.3945675482487491,
+  "display": "39%",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "within_20_hedonic": {
+  "value": 0.6676197283774125,
+  "display": "67%",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "calibration_slope_hedonic": {
+  "value": 0.8658910224336833,
+  "display": "0.87",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "mdape_ln_primary": {
+  "value": 0.11941132745311944,
+  "display": "11.9%",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "mdape_ln_primary_diff": {
+  "value": -0.013732244715705555,
+  "display": "-1.4 pts",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "mdape_ln_primary_diff_ci": {
+  "value": null,
+  "display": "[-2.0, -0.9]",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "cod_primary": {
+  "value": 16.524741552966404,
+  "display": "16.52",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "cod_primary_diff": {
+  "value": -1.230606760025708,
+  "display": "-1.23",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "cod_primary_diff_ci": {
+  "value": null,
+  "display": "[-1.72, -0.72]",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "median_ratio_primary": {
+  "value": 0.9969041012141746,
+  "display": "0.997",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "prd_primary": {
+  "value": 1.0204615817839864,
+  "display": "1.020",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "meets_prd_primary": {
+  "value": 1.0,
+  "display": "yes",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "prb_primary": {
+  "value": -0.02584888845642653,
+  "display": "-0.026",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "meets_prb_primary": {
+  "value": 1.0,
+  "display": "yes",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "within_10_primary": {
+  "value": 0.4350726709554444,
+  "display": "44%",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "within_20_primary": {
+  "value": 0.7076483202287348,
+  "display": "71%",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "calibration_slope_primary": {
+  "value": 0.886869397648567,
+  "display": "0.89",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "mdape_ln_secondary": {
+  "value": 0.12122281764631548,
+  "display": "12.1%",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "mdape_ln_secondary_diff": {
+  "value": -0.011920754522509514,
+  "display": "-1.2 pts",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "mdape_ln_secondary_diff_ci": {
+  "value": null,
+  "display": "[-1.7, -0.6]",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "cod_secondary": {
+  "value": 16.667324598884687,
+  "display": "16.67",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "median_ratio_secondary": {
+  "value": 1.007348745805318,
+  "display": "1.007",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "meets_prd_secondary": {
+  "value": 1.0,
+  "display": "yes",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "meets_prb_secondary": {
+  "value": 1.0,
+  "display": "yes",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "within_10_secondary": {
+  "value": 0.424112461281868,
+  "display": "42%",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "within_20_secondary": {
+  "value": 0.6966881105551584,
+  "display": "70%",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "calibration_slope_secondary": {
+  "value": 0.8757408531262638,
+  "display": "0.88",
+  "source": "reports/writeup/headline_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "target_median_ratio": {
+  "value": null,
+  "display": "0.90 to 1.10",
+  "source": "avm.ratio_study.IAAO_TARGETS",
+  "used_in": [
+   "README"
+  ]
+ },
+ "target_cod": {
+  "value": null,
+  "display": "<= 15",
+  "source": "avm.ratio_study.IAAO_TARGETS",
+  "used_in": [
+   "README"
+  ]
+ },
+ "target_prd": {
+  "value": null,
+  "display": "0.98 to 1.03",
+  "source": "avm.ratio_study.IAAO_TARGETS",
+  "used_in": [
+   "README"
+  ]
+ },
+ "target_prb": {
+  "value": null,
+  "display": "-0.05 to 0.05",
+  "source": "avm.ratio_study.IAAO_TARGETS",
+  "used_in": [
+   "README"
+  ]
+ },
+ "a3_n": {
+  "value": 4215.0,
+  "display": "4,215",
+  "source": "reports/stage3/assessor_ratio_study_2025.csv (IAAO trimmed, all)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "a3_median_ratio": {
+  "value": 0.8917635236336575,
+  "display": "0.892",
+  "source": "reports/stage3/assessor_ratio_study_2025.csv (IAAO trimmed, all)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "a3_median_ratio_ci": {
+  "value": null,
+  "display": "[0.885, 0.899]",
+  "source": "reports/stage3/assessor_ratio_study_2025.csv (IAAO trimmed, all)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "a3_cod": {
+  "value": 17.5979864917169,
+  "display": "17.6",
+  "source": "reports/stage3/assessor_ratio_study_2025.csv (IAAO trimmed, all)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "a3_cod_ci": {
+  "value": null,
+  "display": "[17.1, 18.1]",
+  "source": "reports/stage3/assessor_ratio_study_2025.csv (IAAO trimmed, all)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "a3_prd": {
+  "value": 1.009132744026823,
+  "display": "1.009",
+  "source": "reports/stage3/assessor_ratio_study_2025.csv (IAAO trimmed, all)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "a3_prb": {
+  "value": 0.036330920915003,
+  "display": "+0.036",
+  "source": "reports/stage3/assessor_ratio_study_2025.csv (IAAO trimmed, all)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "n_train": {
+  "value": 44038.0,
+  "display": "44,038",
+  "source": "interim/sales_clean.parquet, sale_year 2014-2024",
+  "used_in": [
+   "README"
+  ]
+ },
+ "lift_cv_base": {
+  "value": 0.1359,
+  "display": "13.59%",
+  "source": "reports/stage6/lift_table.csv (independent, CV mdape_ln)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "lift_cv_all": {
+  "value": 0.1287,
+  "display": "12.87%",
+  "source": "reports/stage6/lift_table.csv (independent, CV mdape_ln)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "lift_best_group": {
+  "value": "+prior_sales_nearby",
+  "display": "prior sales nearby",
+  "source": "reports/stage6/lift_table.csv (independent, CV mdape_ln)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "lift_best_gain": {
+  "value": 0.003500000000000003,
+  "display": "0.35 pts",
+  "source": "reports/stage6/lift_table.csv (independent, CV mdape_ln)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "cover_all": {
+  "value": 0.8522754348344055,
+  "display": "85.2%",
+  "source": "reports/stage7/interval_coverage_2025.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "width_all": {
+  "value": 0.5257249460430574,
+  "display": "53%",
+  "source": "reports/stage7/interval_coverage_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "cover_low": {
+  "value": 0.810192023633678,
+  "display": "81.0%",
+  "source": "reports/stage7/interval_coverage_2025.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "width_low": {
+  "value": 0.8183338611212769,
+  "display": "82%",
+  "source": "reports/stage7/interval_coverage_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "cover_mid": {
+  "value": 0.8669497523000708,
+  "display": "86.7%",
+  "source": "reports/stage7/interval_coverage_2025.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "cover_high": {
+  "value": 0.8737174427782163,
+  "display": "87.4%",
+  "source": "reports/stage7/interval_coverage_2025.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "comp_a_mdape": {
+  "value": 0.1420196580310866,
+  "display": "14.2%",
+  "source": "reports/stage7/comp_accuracy_2025.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "comp_n": {
+  "value": 4197.0,
+  "display": "4,197",
+  "source": "reports/stage7/comp_accuracy_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "comp_b_mdape": {
+  "value": 0.1244143836860882,
+  "display": "12.4%",
+  "source": "reports/stage7/comp_accuracy_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "comp_model_mdape": {
+  "value": 0.1194113274531194,
+  "display": "11.9%",
+  "source": "reports/stage7/comp_accuracy_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "comp_first_tier_share": {
+  "value": 0.9904693828925424,
+  "display": "99%",
+  "source": "reports/stage7/comp_tiers_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "comp_radii": {
+  "value": null,
+  "display": "0.5, 1, 1.25 mi",
+  "source": "avm.comps.RADII_MI",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "comp_windows": {
+  "value": null,
+  "display": "12 then 24 months",
+  "source": "avm.comps.WINDOWS_MONTHS",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "gap_bw_mdape_vs_overall_level_assessor": {
+  "value": 0.0734330602277046,
+  "display": "+7.3 pts",
+  "source": "reports/stage8/gaps.csv (CV 2021-2024)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "gap_bw_mdape_vs_overall_level_primary": {
+  "value": 0.0742938886885017,
+  "display": "+7.4 pts",
+  "source": "reports/stage8/gaps.csv (CV 2021-2024)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "gap_q15_mdape_vs_overall_level_assessor": {
+  "value": 0.124312771245496,
+  "display": "+12.4 pts",
+  "source": "reports/stage8/gaps.csv (CV 2021-2024)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "gap_q15_mdape_vs_overall_level_primary": {
+  "value": 0.1313701164164126,
+  "display": "+13.1 pts",
+  "source": "reports/stage8/gaps.csv (CV 2021-2024)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s9_parcels_scored": {
+  "value": 121467.0,
+  "display": "121,467",
+  "source": "reports/stage9/divergence_stats.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s9_listable_outside_and_comps_agree": {
+  "value": 12694.0,
+  "display": "12,694",
+  "source": "reports/stage9/divergence_stats.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s9_special_listable": {
+  "value": 479.0,
+  "display": "479",
+  "source": "reports/stage9/divergence_stats.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "s9_listed_student_area": {
+  "value": 87.0,
+  "display": "87",
+  "source": "reports/stage9/divergence_stats.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s9_group_result": {
+  "value": null,
+  "display": "Passing all three: Hispanic-majority tracts and the lowest income quintile are under-assessed, assessed and taxed below their market-value share. Hispanic-majority tracts: persistent (the tier-adjusted sales check holds in 4 of 4 earlier rolls); a typical home (assessed $158,300) pays about $111 a year less, $1.7 million across 14,476 homes, and the fixed levy puts about $15 a year more on each of the other 106,991. The lowest income quintile: a 2025 result (the tier-adjusted sales check holds in 2 of 4 earlier rolls); a typical home (assessed $114,400) pays about $65 a year less, $1.7 million across 23,609 homes, and the fixed levy puts about $17 a year more on each of the other 97,858. The groups overlap, so the amounts do not add. White-majority tracts and the highest income quintile fail only the tier-specific time adjustment: consistent with assessments lagging faster appreciation in some areas, not a valuation pattern. Black-majority tracts: the two checks conflict (the bias-corrected shift, +1.1% [+0.6%, +1.6%], says over-assessed; the 2025 sales check, -1.3% [-2.4%, -0.4%], says under-assessed; both intervals exclude zero), so no claim is made.",
+  "source": "reports/stage9/group_tax_shifts.csv (verdicts)",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "tax_gross": {
+  "value": 22.42,
+  "display": "$22.42",
+  "source": "reports/stage9/tax_rate.json",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "pros_rows": {
+  "value": 122222.0,
+  "display": "122,222",
+  "source": "reports/prospective/prospective_meta.json",
+  "used_in": [
+   "README"
+  ]
+ },
+ "pros_sha": {
+  "value": "de73656af10f90732b4f0d9e9f967cb4e1ba30bce0f95179a8244d0689b6fc2a",
+  "display": "de73656af10f",
+  "source": "reports/prospective/prospective_meta.json",
+  "used_in": [
+   "README"
+  ]
+ },
+ "pros_date": {
+  "value": "2026-10-18T22:48:29+00:00",
+  "display": "2026-10-18",
+  "source": "reports/prospective/prospective_meta.json",
+  "used_in": [
+   "README"
+  ]
+ },
+ "pros_sha_full": {
+  "value": "de73656af10f90732b4f0d9e9f967cb4e1ba30bce0f95179a8244d0689b6fc2a",
+  "display": "de73656af10f90732b4f0d9e9f967cb4e1ba30bce0f95179a8244d0689b6fc2a",
+  "source": "reports/prospective/prospective_meta.json",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "pros_train": {
+  "value": 47897.0,
+  "display": "47,897",
+  "source": "reports/prospective/prospective_meta.json",
+  "used_in": [
+   "README"
+  ]
+ },
+ "raw_sales": {
+  "value": 64855.0,
+  "display": "64,855",
+  "source": "reports/stage2/filter_log.csv (F0 rows_in, 2014-2025)",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "clean_sales": {
+  "value": 48270.0,
+  "display": "48,270",
+  "source": "reports/stage2/filter_log.csv (F11 rows_out, 2014-2025)",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "filter_table": {
+  "value": null,
+  "display": "| filter | removed | remaining |\n|---|---|---|\n| F0 loaded (blank rows already dropped) | 107 | 64,748 |\n| F1 sale date outside file year | 6 | 64,742 |\n| F2 exact duplicate row | 210 | 64,532 |\n| F3 missing tax key, date or price | 9 | 64,523 |\n| F4 price < $10,000 | 99 | 64,424 |\n| F5 property type not Residential | 13,676 | 50,748 |\n| F6 no roll Y-1 record | 32 | 50,716 |\n| F7 roll Y-1 land use not SF/duplex | 891 | 49,825 |\n| F8 new construction or no building in roll Y-1 | 61 | 49,764 |\n| F9 multi-parcel sale (same date and price, all parcels within 200 m) | 88 | 49,676 |\n| F10 resale < 12 months (flip) | 1,346 | 48,330 |\n| F11 two sales of one parcel in the same day/month | 60 | 48,270 |",
+  "source": "reports/stage2/filter_log.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "clean_rate_black": {
+  "value": 0.0752303426066732,
+  "display": "7.5%",
+  "source": "reports/stage8/cleaning_rates_by_group.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "flip_rate_black": {
+  "value": 0.0538509705698184,
+  "display": "5.4%",
+  "source": "reports/stage8/cleaning_rates_by_group.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "clean_rate_white": {
+  "value": 0.048854961832061,
+  "display": "4.9%",
+  "source": "reports/stage8/cleaning_rates_by_group.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "flip_rate_white": {
+  "value": 0.0263065179095713,
+  "display": "2.6%",
+  "source": "reports/stage8/cleaning_rates_by_group.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "clean_rate_q1": {
+  "value": 0.0843043180260452,
+  "display": "8.4%",
+  "source": "reports/stage8/cleaning_rates_by_group.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "clean_rate_q5": {
+  "value": 0.0436829222368668,
+  "display": "4.4%",
+  "source": "reports/stage8/cleaning_rates_by_group.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "gap_bw_cod_assessor": {
+  "value": 9.635655170892072,
+  "display": "+9.6",
+  "source": "reports/stage8/gaps.csv (CV 2021-2024)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "gap_bw_cod_primary": {
+  "value": 10.552476029885112,
+  "display": "+10.6",
+  "source": "reports/stage8/gaps.csv (CV 2021-2024)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "n_features": {
+  "value": 27.0,
+  "display": "27",
+  "source": "reports/frozen/model_spec.json",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "cfg_num_leaves": {
+  "value": 127.0,
+  "display": "127",
+  "source": "reports/frozen/model_spec.json",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "cfg_learning_rate": {
+  "value": 0.02,
+  "display": "0.02",
+  "source": "reports/frozen/model_spec.json",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "cfg_num_boost_round": {
+  "value": 1000.0,
+  "display": "1000",
+  "source": "reports/frozen/model_spec.json",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "cfg_min_data_in_leaf": {
+  "value": 10.0,
+  "display": "10",
+  "source": "reports/frozen/model_spec.json",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "cfg_feature_fraction": {
+  "value": 0.8,
+  "display": "0.8",
+  "source": "reports/frozen/model_spec.json",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "cfg_bagging_fraction": {
+  "value": 0.7,
+  "display": "0.7",
+  "source": "reports/frozen/model_spec.json",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "cfg_lambda_l2": {
+  "value": 10.0,
+  "display": "10",
+  "source": "reports/frozen/model_spec.json",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "seed": {
+  "value": 20261018.0,
+  "display": "20261018",
+  "source": "reports/frozen/model_spec.json",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "spec_sha": {
+  "value": null,
+  "display": "2e91821ef56b",
+  "source": "sha256 of reports/frozen/model_spec.json",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "feature_table": {
+  "value": null,
+  "display": "| feature | what | proxy note |\n|---|---|---|\n| l_area | log finished sq ft (roll Y-1) | size; no proxy concern |\n| l_lot | log lot sq ft; lot_missing flags a filled median | size; no proxy concern |\n| beds | bedrooms, clipped 1-7 (MPROP only, never the sales file) | no proxy concern |\n| full_baths | full baths (2019+ rolls; 0 + baths_missing before) | no proxy concern |\n| half_baths | half baths (as above) | no proxy concern |\n| style | assessor building type code; codes with < 30 training sales -> other | no proxy concern |\n| duplex | roll Y-1 land use 8820 | property type; no proxy concern |\n| loc | location fixed effect: assessor neighborhood or census tract, units with < 30 training sales folded into the assessor region | LOCATION: allowed by rule 7 but can proxy for protected-class composition; equity audited in Stage 8 |\n| age | numeric age (GBM; the hedonic uses age_bin) | building vintage; correlates with neighborhood history, monitored in Stage 8 |\n| stories_num | numeric stories, NaN if missing (GBM) | no proxy concern |\n| x_m, y_m | parcel centroid (UTM m) | LOCATION: allowed; fine-grained location can proxy for neighborhood composition; audited in Stage 8 |\n| d_downtown_m, d_lake_m, d_major_road_m, d_transit_m, d_park_m | distances to amenities/disamenities | location; low proxy risk; audited in Stage 8 |\n| knn_lppsf, knn_dist_m, nbhd_lppsf_24m | prior nearby sale prices per sq ft (before the cutoff, detrended) | market evidence; inherits any historical price discrimination in the area; audited in Stage 8 |\n| prior_lp_detr, months_since_prior, has_prior_sale | the parcel's own prior sale (> 12 months before, before the cutoff) | no proxy concern |\n| n_city_200m, n_vacant_200m | city-owned (municipal exemption incl. tax-deed foreclosure) and vacant parcels within 200 m, roll Y-1 | STRONG PROXY RISK: disinvestment and foreclosure track racial composition in Milwaukee; flagged, audited in Stage 8 |",
+  "source": "avm.features.FEATURE_DOC and avm.stage6_geo.FEATURE_DOC_6, filtered to the frozen primary's features",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "cqr_q": {
+  "value": 0.0622024513018626,
+  "display": "0.0622",
+  "source": "reports/stage7/interval_coverage_2025.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s9_listed": {
+  "value": 1000.0,
+  "display": "1,000",
+  "source": "reports/stage9/divergence_stats.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s9_listed_over_assessed": {
+  "value": 106.0,
+  "display": "106",
+  "source": "reports/stage9/divergence_stats.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "s9_listed_under_assessed": {
+  "value": 894.0,
+  "display": "894",
+  "source": "reports/stage9/divergence_stats.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s9_listed_student_area_above_model": {
+  "value": 60.0,
+  "display": "60",
+  "source": "reports/stage9/divergence_stats.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "s9_level": {
+  "value": 0.8934031251938579,
+  "display": "0.893",
+  "source": "reports/stage9/divergence_stats.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "s9_median_shift": {
+  "value": 1600.3249503712796,
+  "display": "$1,600",
+  "source": "reports/stage9/divergence_stats.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s9_change": {
+  "value": 1.1463659147869674,
+  "display": "14.6%",
+  "source": "reports/stage9/divergence_stats.csv (median 2025/2024 total, minus one)",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "s9_flat_share": {
+  "value": 0.0048572863411461,
+  "display": "0.5%",
+  "source": "reports/stage9/divergence_stats.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s9_rules_table": {
+  "value": null,
+  "display": "| rule | definition | parcels |\n|---|---|---|\n| assessment unchanged from 2024 | roll 2025 total equals roll 2024 total, while almost every assessment changed citywide (likely a condition-based or legally restricted value) | 423 |\n| land use changed in roll 2025 | roll 2025 land use differs from roll 2024, which the model used | 22 |\n| units inconsistent with land use | residential units in roll 2024 or 2025 above 2 for single-family (8810) or above 4 for duplex (8820) | 14 |\n| commercial building type | building type in roll 2024 or 2025 is a commercial code (starts with C), not one of the documented residential style codes 01-22 (MPROP documentation, Appendix E) | 36 |",
+  "source": "avm.stage9_divergence.SPECIAL_RULES and reports/stage9/divergence_stats.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s9_excl_table": {
+  "value": null,
+  "display": "| rule | definition | parcels |\n|---|---|---|\n| no positive roll 2025 assessment | roll 2025 total missing or zero (dropped before the rules below) | 196 |\n| exempt in roll 2025 | any exemption code in roll 2025 (pays no or partial tax) | 34 |\n| building value gone in roll 2025 | improvements < 10% of roll 2025 total while roll 2024 had a building (likely demolition, fire or condemnation; model features are stale) | 19 |\n| assessment collapsed | roll 2025 total < 50% of roll 2024 total | 17 |\n| sq ft changed between rolls | finished sq ft differs between rolls 2024 and 2025 (model features are stale) | 481 |",
+  "source": "avm.stage9_divergence.QUALITY_RULES and reports/stage9/exclusions.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s9_flags_table": {
+  "value": null,
+  "display": "| flag | definition |\n|---|---|\n| N parcels in this tract have this exact assessment | 5 or more included parcels in the same tract share this exact roll 2025 total |\n| student-rental area (within 0.75 mi of the Marquette or UWM main campus) | parcel centroid within 0.75 mi of the main campus polygon (largest TIGER 2023 area landmark, MTFCC K2540) of Marquette University or UW-Milwaukee. Income-producing student rentals carry value the model's features cannot see, so divergence here may reflect the model (untested; comps there point the same way as the model) |",
+  "source": "avm.stage9_divergence.CONTEXT_FLAGS",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s9_group_table": {
+  "value": null,
+  "display": "| group | homes | shift [95% CI] | model bias [95% CI] | corrected shift [95% CI] | assessor ratio on 2025 sales vs city | corrected, tercile time adj. | sales check, tercile | (a) / (b) / (c) | result |\n|---|---|---|---|---|---|---|---|---|---|\n| Black majority | 54,589 | +2.7% [+2.5%, +2.9%] | -1.6% [-2.0%, -1.1%] | +1.1% [+0.6%, +1.6%] | -1.3% [-2.4, -0.4] | +1.8% [+1.3%, +2.3%] | -1.9% [-2.8, -0.6] | pass / fail / fail | no claim: 2025 sales check does not agree with a CI excluding one |\n| Hispanic majority | 14,476 | -1.0% [-1.3%, -0.6%] | -2.4% [-3.6%, -1.2%] | -3.4% [-4.5%, -2.1%] | -4.6% [-7.9, -2.3] | -2.8% [-4.0%, -1.5%] | -4.7% [-8.3, -2.8] | pass / pass / pass | under-assessed vs market share |\n| White majority | 38,658 | -1.8% [-2.0%, -1.7%] | +2.5% [+2.1%, +3.0%] | +0.7% [+0.2%, +1.1%] | +1.5% [+0.6, +2.2] | -0.2% [-0.6%, +0.3%] | +1.7% [+0.8, +2.5] | pass / pass / fail | consistent with assessments lagging faster appreciation in some areas, not a valuation pattern (does not survive tier-specific time adjustment) |\n| no majority (mixed) | 13,744 | -0.7% [-0.9%, -0.5%] | +0.5% [-0.3%, +1.3%] | -0.2% [-1.0%, +0.6%] | +1.5% [-0.2, +3.7] | -0.9% [-1.7%, -0.1%] | +1.3% [-0.4, +3.9] | fail / fail / fail | no claim: corrected shift's CI includes zero |\n| Q1 (lowest income) | 23,609 | +1.2% [+0.9%, +1.5%] | -3.9% [-4.9%, -2.8%] | -2.7% [-3.8%, -1.6%] | -6.0% [-8.8, -1.7] | -1.4% [-2.5%, -0.2%] | -6.3% [-8.7, -2.3] | pass / pass / pass | under-assessed vs market share |\n| Q2 | 24,047 | +1.6% [+1.4%, +1.8%] | -1.4% [-2.3%, -0.6%] | +0.2% [-0.8%, +1.1%] | -1.8% [-3.1, +0.8] | +1.0% [+0.0%, +1.9%] | -1.9% [-3.6, +0.3] | fail / fail / fail | no claim: corrected shift's CI includes zero |\n| Q3 | 24,692 | +1.6% [+1.4%, +1.8%] | +0.3% [-0.3%, +1.0%] | +1.9% [+1.3%, +2.6%] | -0.0% [-1.3, +1.5] | +1.7% [+1.1%, +2.4%] | -0.1% [-1.4, +1.4] | pass / fail / fail | no claim: 2025 sales check does not agree with a CI excluding one |\n| Q4 | 24,270 | -0.5% [-0.7%, -0.3%] | +1.4% [+0.9%, +2.0%] | +0.9% [+0.4%, +1.5%] | +1.1% [-0.1, +2.2] | +0.2% [-0.4%, +0.8%] | +1.1% [-0.2, +2.3] | pass / fail / fail | no claim: 2025 sales check does not agree with a CI excluding one |\n| Q5 (highest income) | 24,849 | -1.8% [-2.0%, -1.6%] | +2.6% [+2.1%, +3.1%] | +0.7% [+0.2%, +1.3%] | +1.8% [+0.5, +2.9] | -0.1% [-0.7%, +0.4%] | +2.0% [+0.9, +3.3] | pass / pass / fail | consistent with assessments lagging faster appreciation in some areas, not a valuation pattern (does not survive tier-specific time adjustment) |",
+  "source": "reports/stage9/group_tax_shifts.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s9_by_year_table": {
+  "value": null,
+  "display": "| group | roll 2021 | roll 2022 | roll 2023 | roll 2024 | roll 2025 |\n|---|---|---|---|---|---|\n| Black majority | -3.6 [-4.6, -2.6] | -0.9 [-1.9, +0.1] | -0.6 [-1.8, +0.5] | +0.4 [-0.8, +1.5] | -1.9 [-2.8, -0.7] |\n| Hispanic majority | -5.0 [-7.2, -2.3] * | -3.4 [-6.3, -0.8] * | -4.4 [-9.2, -1.4] * | -8.0 [-10.4, -4.5] * | -4.7 [-8.1, -2.6] * |\n| White majority | +3.2 [+2.2, +4.0] * | +1.1 [+0.4, +2.0] * | +0.8 [-0.0, +1.6] | +0.7 [-0.0, +1.6] | +1.7 [+0.9, +2.5] * |\n| no majority (mixed) | +1.5 [+0.2, +3.2] | +0.2 [-1.5, +1.7] | +1.1 [-0.2, +2.8] | +0.2 [-0.9, +1.7] | +1.3 [-0.4, +3.8] |\n| Q1 (lowest income) | -6.3 [-8.5, -3.7] * | -1.9 [-4.0, +0.2] | -3.6 [-6.1, -0.8] * | -2.4 [-5.0, +0.4] | -6.3 [-9.1, -2.4] * |\n| Q2 | -3.5 [-5.9, -1.5] | -2.8 [-4.1, -0.6] | -2.0 [-4.2, -0.4] | -0.3 [-1.8, +1.1] | -1.9 [-3.5, -0.0] |\n| Q3 | -0.9 [-2.3, +0.4] | +0.4 [-0.6, +1.8] | +0.2 [-1.0, +1.9] | +0.3 [-0.8, +1.5] | -0.1 [-1.3, +1.5] |\n| Q4 | +0.8 [-0.2, +2.0] | -0.1 [-1.2, +1.0] | +0.4 [-1.0, +1.5] | +0.6 [-0.7, +1.5] | +1.1 [-0.2, +2.2] |\n| Q5 (highest income) | +3.5 [+2.3, +4.6] * | +1.7 [+0.7, +2.7] * | +1.9 [+0.8, +3.9] * | +0.3 [-0.7, +1.4] | +2.0 [+0.9, +3.3] * |",
+  "source": "reports/stage9/group_sales_check_by_year.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "tax_prior": {
+  "value": 22.93,
+  "display": "$22.93",
+  "source": "reports/stage9/tax_rate.json (City of Milwaukee 2024 rate, county table)",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "tax_excluded": {
+  "value": null,
+  "display": "the first dollar credit (every improved parcel) and the lottery and gaming credit (owner-occupied principal dwellings only); both are computed on value only up to a statutory cap (Wis. Stat. 79.10(9)(bm), (9)(bn), (11)), so above the cap they do not grow with the assessment",
+  "source": "reports/stage9/tax_rate.json",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "ccao_read": {
+  "value": null,
+  "display": "2026-10-20",
+  "source": "date the Cook County README was read for the comparison",
+  "used_in": [
+   "README"
+  ]
+ },
+ "flip_months": {
+  "value": 12.0,
+  "display": "12 months",
+  "source": "avm.sales.FLIP_MONTHS",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "multi_radius": {
+  "value": 200.0,
+  "display": "200 m",
+  "source": "avm.clean_sales.MULTI_RADIUS_M",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "iqr_k": {
+  "value": 3.0,
+  "display": "3",
+  "source": "avm.clean_sales.IQR_K",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "knn_k": {
+  "value": 10.0,
+  "display": "10",
+  "source": "avm.priors.K",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "knn_window": {
+  "value": 24.0,
+  "display": "24 months",
+  "source": "avm.priors.WINDOW_MONTHS",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "own_min": {
+  "value": 12.0,
+  "display": "12 months",
+  "source": "avm.priors.OWN_MIN_MONTHS",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "n_configs": {
+  "value": 20.0,
+  "display": "20",
+  "source": "avm.freeze.N_CONFIGS",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "mdape_tol": {
+  "value": 0.002,
+  "display": "0.2 pts",
+  "source": "avm.freeze.MDAPE_TOL",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "n_boot": {
+  "value": 2000.0,
+  "display": "2,000",
+  "source": "avm.ratio_study.N_BOOT",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "min_tracts_group": {
+  "value": 5.0,
+  "display": "5",
+  "source": "avm.equity.MIN_TRACTS_OWN_GROUP",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "comp_a_mdape_before": {
+  "value": 0.1451473549349875,
+  "display": "14.5%",
+  "source": "reports/stage7/comp_accuracy_2025_before_tiered.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "lvl_bw_assessor_cv": {
+  "value": -0.0617601655374289,
+  "display": "-6.2",
+  "source": "reports/stage8/gaps.csv (CV 2021-2024, mean log ratio x 100)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "lvl_bw_primary_cv": {
+  "value": -0.0408943334054222,
+  "display": "-4.1",
+  "source": "reports/stage8/gaps.csv (CV 2021-2024, mean log ratio x 100)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "lvl_bw_diff_cv": {
+  "value": -0.0208658321320067,
+  "display": "-2.1 [-2.7, -1.5]",
+  "source": "reports/stage8/gaps.csv (CV 2021-2024, |gap| minus assessor |gap|)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "lvl_q15_assessor_cv": {
+  "value": -0.1007384461193777,
+  "display": "-10.1",
+  "source": "reports/stage8/gaps.csv (CV 2021-2024, mean log ratio x 100)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "lvl_q15_primary_cv": {
+  "value": -0.064479489714223,
+  "display": "-6.4",
+  "source": "reports/stage8/gaps.csv (CV 2021-2024, mean log ratio x 100)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "lvl_bw_assessor_y25": {
+  "value": -0.0590147695479999,
+  "display": "-5.9",
+  "source": "reports/stage8/gaps.csv (2025, mean log ratio x 100)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "lvl_bw_primary_y25": {
+  "value": -0.0727779232376433,
+  "display": "-7.3",
+  "source": "reports/stage8/gaps.csv (2025, mean log ratio x 100)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "lvl_bw_diff_y25": {
+  "value": 0.0137631536896433,
+  "display": "+1.4 [+0.1, +2.7]",
+  "source": "reports/stage8/gaps.csv (2025, |gap| minus assessor |gap|)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "lvl_q15_assessor_y25": {
+  "value": -0.1112628931247235,
+  "display": "-11.1",
+  "source": "reports/stage8/gaps.csv (2025, mean log ratio x 100)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "lvl_q15_primary_y25": {
+  "value": -0.1054562161580217,
+  "display": "-10.5",
+  "source": "reports/stage8/gaps.csv (2025, mean log ratio x 100)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "lvl_q15_diff_y25": {
+  "value": -0.0058066769667017,
+  "display": "-0.6 [-2.5, +1.5]",
+  "source": "reports/stage8/gaps.csv (2025, |gap| minus assessor |gap|)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "grp_black_assessor": {
+  "value": -0.2465615261596989,
+  "display": "-0.247",
+  "source": "reports/stage8/group_tables.csv (CV 2021-2024, mean log ratio)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "grp_black_primary": {
+  "value": 0.0013888064739565,
+  "display": "+0.001",
+  "source": "reports/stage8/group_tables.csv (CV 2021-2024, mean log ratio)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "grp_white_assessor": {
+  "value": -0.18480136062227,
+  "display": "-0.185",
+  "source": "reports/stage8/group_tables.csv (CV 2021-2024, mean log ratio)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "grp_white_primary": {
+  "value": 0.0422831398793787,
+  "display": "+0.042",
+  "source": "reports/stage8/group_tables.csv (CV 2021-2024, mean log ratio)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "cv_prd_primary": {
+  "value": 1.0374649927207409,
+  "display": "1.037",
+  "source": "reports/frozen/model_spec.json (cv_2021_2024)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "cv_prb_primary": {
+  "value": -0.058913104300797284,
+  "display": "-0.059",
+  "source": "reports/frozen/model_spec.json (cv_2021_2024)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "tier_prb_low_primary": {
+  "value": -0.230479007774085,
+  "display": "-0.230",
+  "source": "reports/frozen/frozen_eval_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "tier_prb_low_assessor": {
+  "value": -0.0537462862561513,
+  "display": "-0.054",
+  "source": "reports/stage6/within_tier_prb_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "tier_prb_mid_primary": {
+  "value": -0.1466983616506662,
+  "display": "-0.147",
+  "source": "reports/frozen/frozen_eval_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "tier_prb_mid_assessor": {
+  "value": 0.0194367720331387,
+  "display": "+0.019",
+  "source": "reports/stage6/within_tier_prb_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "tier_prb_high_primary": {
+  "value": -0.0034255431306493,
+  "display": "-0.003",
+  "source": "reports/frozen/frozen_eval_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "tier_prb_high_assessor": {
+  "value": 0.0177651779379489,
+  "display": "+0.018",
+  "source": "reports/stage6/within_tier_prb_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "hedonic_loc": {
+  "value": null,
+  "display": "assessor-neighborhood",
+  "source": "avm.stage8_equity.HEDONIC",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "hedonic_start": {
+  "value": 2020.0,
+  "display": "2020",
+  "source": "avm.stage8_equity.HEDONIC",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "cover_excess_mid": {
+  "value": 0.06694975230007072,
+  "display": "6.7 pts",
+  "source": "reports/stage7/interval_coverage_2025.csv (coverage - nominal)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "cover_excess_high": {
+  "value": 0.07371744277821624,
+  "display": "7.4 pts",
+  "source": "reports/stage7/interval_coverage_2025.csv (coverage - nominal)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "tax_used": {
+  "value": 20.8,
+  "display": "$20.80",
+  "source": "reports/stage9/tax_rate.json (net rate)",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "tax_used_kind": {
+  "value": "net",
+  "display": "net",
+  "source": "reports/stage9/tax_rate.json",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "tax_levy_credit": {
+  "value": null,
+  "display": "included through the net rate: it reduces each bill in proportion to assessed value (Wis. Stat. 79.10), so the net rate is the marginal tax per assessed dollar",
+  "source": "reports/stage9/tax_rate.json",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s9_student_share": {
+  "value": 0.03468431755126907,
+  "display": "3.5%",
+  "source": "reports/stage9/divergence_stats.csv (all_student_area / parcels_scored)",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "rebuild_status": {
+  "value": 1.0,
+  "display": "completed without error, reproduced the frozen spec and the frozen model's 2025 predictions exactly, and verified the prospective file's hash",
+  "source": "reports/rebuild/rebuild_log.txt",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "stage9_recheck": {
+  "value": null,
+  "display": "After later Stage 9 code fixes the same day, Stage 9 was re-run in the rebuild folder and every table matched the live run",
+  "source": "reports/rebuild/stage9_recheck.txt",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "mr_bw_assessor_cv": {
+  "value": -0.0308092312318672,
+  "display": "-3.1",
+  "source": "reports/stage8/gaps.csv (CV 2021-2024, median ratio)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "mr_bw_primary_cv": {
+  "value": -0.0323833857943614,
+  "display": "-3.2",
+  "source": "reports/stage8/gaps.csv (CV 2021-2024, median ratio)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "mr_bw_diff_cv": {
+  "value": 0.0015741545624941,
+  "display": "+0.2 [-0.7, +0.9]",
+  "source": "reports/stage8/gaps.csv (CV 2021-2024, median ratio, |gap| minus assessor |gap|)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "mr_bw_assessor_y25": {
+  "value": -0.0222511701442527,
+  "display": "-2.2",
+  "source": "reports/stage8/gaps.csv (2025, median ratio)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "mr_bw_primary_y25": {
+  "value": -0.0582614713829516,
+  "display": "-5.8",
+  "source": "reports/stage8/gaps.csv (2025, median ratio)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "mr_bw_diff_y25": {
+  "value": 0.0360103012386989,
+  "display": "+3.6 [+2.0, +5.0]",
+  "source": "reports/stage8/gaps.csv (2025, median ratio, |gap| minus assessor |gap|)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s9_parcels_sf_duplex_roll_2024": {
+  "value": 123168.0,
+  "display": "123,168",
+  "source": "reports/stage9/divergence_stats.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "s9_parcels_model_scored": {
+  "value": 122214.0,
+  "display": "122,214",
+  "source": "reports/stage9/divergence_stats.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "cv_mdape_frozen": {
+  "value": 0.12801189083525144,
+  "display": "12.80%",
+  "source": "reports/frozen/model_spec.json (primary cv_2021_2024 mdape_ln)",
+  "used_in": [
+   "README"
+  ]
+ },
+ "tax_statute": {
+  "value": null,
+  "display": "https://docs.legis.wisconsin.gov/statutes/statutes/79/ii/10",
+  "source": "reports/stage9/tax_rate.json",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "repo_slug": {
+  "value": null,
+  "display": "oekrueg05/milwaukee-avm",
+  "source": "AVM_REPO_SLUG or the git origin remote",
+  "used_in": [
+   "README"
+  ]
+ }
+}

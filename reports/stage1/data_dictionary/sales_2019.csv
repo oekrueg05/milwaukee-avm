@@ -1,0 +1,21 @@
+field,inferred_type,n_rows,null_rate,n_unique,corrupt_date_rate,top_values,examples
+PropertyID,integer,6211,0.0002,5976,0.0,215821 (8); 200812 (6); 137389 (4),176959; 139149; 138953
+PropType,text,6211,0.0014,5,0.0,Residential (4721); Condominium (840); Lg Apartment (331),Residential; Manufacturing; Commercial
+taxkey,integer,6211,0.0002,5976,0.0,(redacted),(redacted)
+Address,text,6211,0.0002,5973,0.0,(redacted),(redacted)
+CondoProject,text,6211,0.8649,189,0.0,RIDGE COURT (48); BLATZ (24); LANDMARK ON THE LAKE (21),MCCORMICK ON FARWELL; COMMERCE BLUFF ONE; SHEMITIS COMMONS
+District,integer,6211,0.0002,15,0.0,5 (722); 11 (638); 10 (556),5; 10; 15
+nbhd,integer,6211,0.0002,443,0.0,2100 (174); 4420 (136); 4240 (119),5283; 5808; 5980
+Style,text,6211,0.0002,75,0.0,Ranch (1357); Cape Cod (894); Residence O/S (505),Muffler Shop; Residence With Commercial Usage; Office Building - Multi Story ( Ofc & Ap...
+Extwall,text,6211,0.1404,18,0.0,Aluminum/Vinyl (2791); Brick (1296); Frame (297),Concrete Block; Asphalt/Other; Brick on Frame
+Stories,float,6211,0.0043,12,0.0,1 (3640); 2 (1667); 1.5 (735),4; 14; 3
+Year_Built,integer,6211,0.0014,148,0.0,1955 (218); 1952 (190); 1953 (181),1998; 1982; 1991
+Rooms,integer,6211,0.0335,20,0.0,5 (1641); 6 (1062); 4 (772),1; 5; 19
+FinishedSqft,integer,6211,0.0002,2228,0.0,864 (32); 1056 (27); 980 (24),2446; 4695; 1058
+Units,integer,6211,0.0002,49,0.0,1 (4519); 2 (1133); 4 (190),10; 16; 11
+Bdrms,integer,6211,0.0335,10,0.0,3 (2434); 2 (1404); 4 (1158),2; 8; 6
+Fbath,integer,6211,0.1056,5,0.0,1 (3447); 2 (1964); 3 (131),3; 2; 1
+Hbath,integer,6211,0.7794,5,0.0,1 (1280); 2 (85); 0 (3),0; 1; 2
+Lotsize,integer,6211,0.0002,1483,0.0,0 (485); 1 (417); 4800 (370),8925; 7735; 4464
+Sale_date,date,6211,0.0002,306,0.0,6/28/2019 (98); 8/29/2019 (91); 5/31/2019 (81),12/30/2019; 2/28/2019; 2/13/2019
+Sale_price,integer,6211,0.0018,1431,0.0,150000 (73); 160000 (72); 110000 (72),160100; 194000; 136100

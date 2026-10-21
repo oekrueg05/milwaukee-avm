@@ -1,0 +1,39 @@
+# Data lives outside the repo (see src/avm/config.py). Guard against strays.
+data/
+
+# Large generated report artifacts (small tables and figures are tracked)
+reports/**/*.parquet
+!reports/prospective/predictions_2026.parquet
+reports/**/*.pkl
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Models
+models/
+*.lgb
+*.joblib
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Secrets
+.env
+
+# Parcel-level outputs with addresses or tax keys: written to <data>/reports_private/, never committed.
+reports/stage9/divergence_top.csv
+reports/stage9/special_valuation_list.csv
+reports/stage9/sample/divergence_top.csv
+reports/stage9/sample/special_valuation_list.csv
+reports/stage9/page/assessment_check_private.html
+reports/stage9/page/assessment_check.html

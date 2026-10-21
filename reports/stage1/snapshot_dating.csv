@@ -1,0 +1,4 @@
+file_year,YR_ASSMT_mode,YR_ASSMT_mode_share,assessment_change_date_mode,assessment_change_date_mode_share,assessment_change_date_max,n_convey_dates_parsed,n_convey_in_next_year,n_convey_after_next_year,latest_convey_date_le_next_year,share_current_eq_prev_assessment,median_current_over_prev
+2015,2016,1.0,2015-04-08,0.9224,2015-12-17,152810,7,7,2016-08-28,0.5014,1.0
+2021,2021,0.9996,2021-11-19,0.9966,2022-02-28,0,0,0,,0.9582,1.0
+2025,n/a (field absent),,2025-12-08,0.9962,2026-01-26,0,0,0,,0.0695,1.1456

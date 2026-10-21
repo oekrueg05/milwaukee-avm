@@ -1,0 +1,51 @@
+group,n,coverage,median_rel_width,calibration,method
+all,4197,0.8406004288777699,0.5476029115065129,global,stage6 independent baseline
+high,1267,0.8602999210734017,0.4220230260371832,global,stage6 independent baseline
+low,1354,0.8131462333825702,0.8910081623368933,global,stage6 independent baseline
+mid,1413,0.8464260438782731,0.47348302088433514,global,stage6 independent baseline
+unrated,163,0.8650306748466258,0.5105891992500732,global,stage6 independent baseline
+all,4197,0.8394091017393376,0.5467700604612444,mondrian (by tier),stage6 independent baseline
+high,1267,0.8516179952644041,0.4125494054657071,mondrian (by tier),stage6 independent baseline
+low,1354,0.8138847858197932,0.8927695594978942,mondrian (by tier),stage6 independent baseline
+mid,1413,0.8492569002123143,0.47628148663832554,mondrian (by tier),stage6 independent baseline
+unrated,163,0.8711656441717791,0.5188697924818447,mondrian (by tier),stage6 independent baseline
+all,4197,0.8410769597331427,0.5307235836269562,global,stage6 independent +all groups
+high,1267,0.8531965272296764,0.4042299709903432,global,stage6 independent +all groups
+low,1354,0.8242245199409158,0.8376604185720122,global,stage6 independent +all groups
+mid,1413,0.8414720452937013,0.46709357604287444,global,stage6 independent +all groups
+unrated,163,0.8834355828220859,0.46564689923105507,global,stage6 independent +all groups
+all,4197,0.8398856325947105,0.529108854756807,mondrian (by tier),stage6 independent +all groups
+high,1267,0.8492501973164956,0.4006780047018324,mondrian (by tier),stage6 independent +all groups
+low,1354,0.829394387001477,0.8494030545773675,mondrian (by tier),stage6 independent +all groups
+mid,1413,0.8421797593772116,0.4683095322882348,mondrian (by tier),stage6 independent +all groups
+unrated,163,0.8343558282208589,0.4414636730954595,mondrian (by tier),stage6 independent +all groups
+all,4197,0.756730998332142,0.5344849976396435,global,stage6 assessment_informed baseline
+high,1267,0.7111286503551697,0.4290821868982416,global,stage6 assessment_informed baseline
+low,1354,0.7998522895125554,0.8217830625827144,global,stage6 assessment_informed baseline
+mid,1413,0.748761500353857,0.4928920077217519,global,stage6 assessment_informed baseline
+unrated,163,0.8220858895705522,0.483501594672874,global,stage6 assessment_informed baseline
+all,4197,0.7557779366213963,0.5370672309061868,mondrian (by tier),stage6 assessment_informed baseline
+high,1267,0.7103393843725335,0.4279048053289979,mondrian (by tier),stage6 assessment_informed baseline
+low,1354,0.7917282127031019,0.8076402316250574,mondrian (by tier),stage6 assessment_informed baseline
+mid,1413,0.7501769285208776,0.4955753248199847,mondrian (by tier),stage6 assessment_informed baseline
+unrated,163,0.8588957055214724,0.5342324484725034,mondrian (by tier),stage6 assessment_informed baseline
+all,4197,0.7736478436978794,0.5547161878777411,global,stage6 assessment_informed +all groups
+high,1267,0.7371744277821626,0.44032752043356577,global,stage6 assessment_informed +all groups
+low,1354,0.7983751846381093,0.8277121967787633,global,stage6 assessment_informed +all groups
+mid,1413,0.7777777777777778,0.5260499847162948,global,stage6 assessment_informed +all groups
+unrated,163,0.8159509202453987,0.5097799932172614,global,stage6 assessment_informed +all groups
+all,4197,0.7743626399809388,0.5577983855114403,mondrian (by tier),stage6 assessment_informed +all groups
+high,1267,0.7371744277821626,0.44032752043356577,mondrian (by tier),stage6 assessment_informed +all groups
+low,1354,0.792466765140325,0.8158012149231482,mondrian (by tier),stage6 assessment_informed +all groups
+mid,1413,0.7770700636942676,0.5244282063788133,mondrian (by tier),stage6 assessment_informed +all groups
+unrated,163,0.8895705521472392,0.5753277199854476,mondrian (by tier),stage6 assessment_informed +all groups
+all,4232,0.8293950850661626,0.6270573393647723,"split conformal, global",hedonic
+high,1267,0.9344909234411997,0.6270573393647723,"split conformal, global",hedonic
+low,1374,0.6564774381368268,0.6270573393647723,"split conformal, global",hedonic
+mid,1416,0.8997175141242938,0.6270573393647723,"split conformal, global",hedonic
+unrated,175,0.8571428571428571,0.6270573393647723,"split conformal, global",hedonic
+all,4232,0.8246691871455577,0.47259997325835984,"split conformal, by tier",hedonic
+high,1267,0.8429360694554064,0.4556198902695467,"split conformal, by tier",hedonic
+low,1374,0.8224163027656477,0.8959769062870508,"split conformal, by tier",hedonic
+mid,1416,0.8008474576271186,0.47259997325835984,"split conformal, by tier",hedonic
+unrated,175,0.9028571428571428,0.7527011385233323,"split conformal, by tier",hedonic

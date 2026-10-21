@@ -1,0 +1,23 @@
+feature,expected,spearman_value_vs_shap,mean_abs_shap,verdict
+l_area,+,0.992,0.14,as expected
+l_lot,+,0.966,0.0306,as expected
+full_baths,+,0.773,0.0212,as expected
+half_baths,+,0.726,0.0047,as expected
+age,-,-0.923,0.0295,as expected
+beds,none,-0.088,0.0053,n/a
+stories_num,none,-0.223,0.002,n/a
+d_lake_m,-,-0.305,0.0148,as expected
+d_downtown_m,none,-0.849,0.0076,n/a
+d_major_road_m,+,0.087,0.0059,CHECK
+d_transit_m,none,0.658,0.0084,n/a
+d_park_m,-,-0.263,0.0052,as expected
+knn_lppsf,+,0.961,0.1261,as expected
+nbhd_lppsf_24m,+,0.979,0.1104,as expected
+knn_dist_m,none,-0.662,0.0078,n/a
+prior_lp_detr,+,0.851,0.0244,as expected
+months_since_prior,none,-0.951,0.0068,n/a
+has_prior_sale,none,0.799,0.0001,n/a
+n_city_200m,-,-0.622,0.0128,as expected
+n_vacant_200m,-,-0.434,0.0042,as expected
+x_m,none,0.222,0.0103,n/a
+y_m,none,-0.844,0.0175,n/a
