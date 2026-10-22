@@ -28,3 +28,6 @@ matplotlib>=3.9
 pytest>=8.3
 ruff>=0.17
 opentimestamps>=0.4.5
+
+# value_parcel MCP server (stdio)
+mcp>=2.3,<3

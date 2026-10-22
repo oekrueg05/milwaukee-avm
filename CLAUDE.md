@@ -144,6 +144,14 @@ Read it before starting any stage.
   privacy` (in CI) must pass. This repo's history still holds identifiers, so it
   stays private; any public repo is a fresh redacted snapshot.
 
+- **value_parcel MCP server (#6, Owen 2026-10-21/22):** `python -m avm.serving build` writes the serving
+  database to `<data>/serving/` (never committed). It refits the frozen spec only to recover the booster
+  for SHAP and aborts unless every value in the hashed 2026 file is reproduced exactly; served values come
+  from the hashed file. `avm.mcp_server` (via `avm.lookup`, standard library only) verifies the hashes at
+  startup and only reads. Responses: values and ranges rounded to $1,000, the fixed label "model estimate,
+  not an appraisal or assessment", no owner names, no assessed values, no over/under verdicts. Drivers are
+  hybrid groups (location, nearby sale prices, this home's prior sale, nearby vacant or city-owned lots;
+  structure features individual). A plain number with suffixed variants returns multiple_matches.
 - **Comparable sales** come only from `avm.comps` (Owen, 2026-10-20): same
   property type; 0.5 / 1 / 1.25 mi within 12 months, then 24; stop at the
   first tier with >= 3; exclude first-sale-of-flip, IAAO ratio and price/sq ft

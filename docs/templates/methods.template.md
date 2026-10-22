@@ -54,7 +54,7 @@ Conformal quantile regression: LightGBM quantile models for the tenth and nineti
 
 ## Comparable sales
 
-From the eligible pool (clean sales of the same property type before the valuation date, excluding first sales of a flip, IAAO ratio outliers and price-per-square-foot outliers), the search tries {{comp_radii}} within the most recent {{comp_windows}}, and stops at the first step with at least three sales. Up to five are kept, ranked by a structural distance weighted by each feature's SHAP importance. The step used is recorded for each home as a confidence field. Comp value (a) is the median comp price moved to the valuation date; (b) also adjusts each comp by the model's view of the difference. Only (a) uses no model prediction, though it is not fully independent: comps are ranked with the model's SHAP weights, and the pool drops sales flagged as outliers on the assessor's own ratio. Under the previous rule (fixed two-year pool, no exclusions) comp value (a) had a level-neutral error of {{comp_a_mdape_before}}; it is now {{comp_a_mdape}}.
+From the eligible pool (clean sales of the same property type before the valuation date, excluding the home's own sales, first sales of a flip, IAAO ratio outliers and price-per-square-foot outliers), the search tries {{comp_radii}} within the most recent {{comp_windows}}, and stops at the first step with at least three sales. Up to five are kept, ranked by a structural distance weighted by each feature's SHAP importance. The step used is recorded for each home as a confidence field. Comp value (a) is the median comp price moved to the valuation date; (b) also adjusts each comp by the model's view of the difference. Only (a) uses no model prediction, though it is not fully independent: comps are ranked with the model's SHAP weights, and the pool drops sales flagged as outliers on the assessor's own ratio. Under the previous rule (fixed two-year pool, no exclusions) comp value (a) had a level-neutral error of {{comp_a_mdape_before}}; it is now {{comp_a_mdape}}.
 
 ## Explanations
 
@@ -101,7 +101,7 @@ Shown next to a listed home, without moving it:
 - **Partial permit coverage**, starting in 2017, so the renovation flag undercounts.
 - **Pre-2020 sales files look less filtered** than the later filtered extracts, so training years differ in quality from the test year.
 - **The assessor's level verdict depends on the valuation-date convention**; dispersion results do not.
-- **Daily-updated city files change with every download**; they are pinned once downloaded.
+- **Daily-updated city files change with every download**; they are pinned once downloaded (`python -m avm.acquire --refresh-current` refreshes them).
 - **Transit stops are current, not historical**, for every year; parks use one year's parcel outlines with each roll's land use.
 - **City-owned and vacant parcel counts can proxy for neighborhood composition**; they are allowed location features, and removing them barely changes the fairness gaps.
 - **2025 was viewed across Stages 3 to 6**; the out-of-time 2026 test is the cleaner check.

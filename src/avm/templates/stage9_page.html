@@ -228,7 +228,7 @@ footer { font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--rul
         <li>Each home is valued at January 1, 2025, the roll's valuation date, with an 80% range calibrated on 2022-2024 sales (conformal quantile regression).</li>
         <li>On 2025 sales, which the model never trained on, its median absolute error with the overall level removed was <span class="num" id="mdape"></span>; the assessor's was <span class="num" id="mdape_a"></span> on the same sales.</li>
         <li>Relative gap = (assessed &divide; model estimate) &divide; the citywide median of that ratio (<span class="num" id="lvl"></span>). Implied market value = assessed &divide; the citywide level.</li>
-        <li>Comparable sales: same property type, searched within 0.5, 1 and 1.25 mi over the 12 months before the valuation date, then over 24 months, stopping at the first step with at least 3 sales; quick-flip purchases and outlier sales are excluded. Up to 5 are kept, ranked by similarity weighted by the model's feature importance, and time-adjusted to the valuation date only (no model adjustment). Each parcel's detail shows the radius and window used.</li>
+        <li>Comparable sales: same property type, searched within 0.5, 1 and 1.25 mi over the 12 months before the valuation date, then over 24 months, stopping at the first step with at least 3 sales; the home's own sales, quick-flip purchases and outlier sales are excluded. Up to 5 are kept, ranked by similarity weighted by the model's feature importance, and time-adjusted to the valuation date only (no model adjustment). Each parcel's detail shows the radius and window used.</li>
       </ul>
     </div>
     <div class="card">

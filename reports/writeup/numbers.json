@@ -540,8 +540,8 @@
   ]
  },
  "comp_a_mdape": {
-  "value": 0.1420196580310866,
-  "display": "14.2%",
+  "value": 0.1426869104073322,
+  "display": "14.3%",
   "source": "reports/stage7/comp_accuracy_2025.csv",
   "used_in": [
    "README",
@@ -557,7 +557,7 @@
   ]
  },
  "comp_b_mdape": {
-  "value": 0.1244143836860882,
+  "value": 0.1244716392531,
   "display": "12.4%",
   "source": "reports/stage7/comp_accuracy_2025.csv",
   "used_in": [
@@ -573,7 +573,7 @@
   ]
  },
  "comp_first_tier_share": {
-  "value": 0.9904693828925424,
+  "value": 0.9902311174648558,
   "display": "99%",
   "source": "reports/stage7/comp_tiers_2025.csv",
   "used_in": [
@@ -639,8 +639,8 @@
   ]
  },
  "s9_listable_outside_and_comps_agree": {
-  "value": 12694.0,
-  "display": "12,694",
+  "value": 12690.0,
+  "display": "12,690",
   "source": "reports/stage9/divergence_stats.csv",
   "used_in": [
    "README"

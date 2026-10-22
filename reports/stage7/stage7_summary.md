@@ -75,27 +75,27 @@ Comp value (a) = median of comps moved to the Jan 1 2025 trend level, no model a
 |---|---|---|---|---|
 | median_ratio | assessor | 4197 | 0.8937 [0.8874, 0.9002] | -0.1032 [-0.1093, -0.0973] |
 | median_ratio | model | 4197 | 0.9969 [0.9912, 1.0029] |  |
-| median_ratio | comps (a) time-adjusted | 4197 | 0.9904 [0.9827, 0.9989] | -0.0065 [-0.0143, +0.0008] |
-| median_ratio | comps (b) model-adjusted | 4197 | 0.9881 [0.9816, 0.9950] | -0.0088 [-0.0134, -0.0049] |
+| median_ratio | comps (a) time-adjusted | 4197 | 0.9904 [0.9827, 0.9991] | -0.0065 [-0.0142, +0.0009] |
+| median_ratio | comps (b) model-adjusted | 4197 | 0.9880 [0.9812, 0.9948] | -0.0089 [-0.0135, -0.0049] |
 | cod | assessor | 4197 | 17.7553 [17.2272, 18.2837] | +1.2306 [+0.7205, +1.7218] |
 | cod | model | 4197 | 16.5247 [16.0340, 17.0545] |  |
-| cod | comps (a) time-adjusted | 4197 | 20.7947 [20.1123, 21.5393] | +4.2700 [+3.6545, +4.8448] |
-| cod | comps (b) model-adjusted | 4197 | 17.3932 [16.8705, 17.9504] | +0.8684 [+0.6207, +1.1174] |
+| cod | comps (a) time-adjusted | 4197 | 20.8401 [20.1521, 21.5765] | +4.3154 [+3.6932, +4.8811] |
+| cod | comps (b) model-adjusted | 4197 | 17.4112 [16.8844, 17.9665] | +0.8865 [+0.6351, +1.1369] |
 | prb | assessor | 4197 | 0.0216 [0.0085, 0.0346] | +0.0474 [+0.0368, +0.0587] |
 | prb | model | 4197 | -0.0258 [-0.0410, -0.0104] |  |
-| prb | comps (a) time-adjusted | 4197 | -0.1218 [-0.1436, -0.1004] | -0.0959 [-0.1098, -0.0820] |
-| prb | comps (b) model-adjusted | 4197 | -0.0563 [-0.0718, -0.0400] | -0.0305 [-0.0348, -0.0257] |
+| prb | comps (a) time-adjusted | 4197 | -0.1221 [-0.1437, -0.1010] | -0.0963 [-0.1102, -0.0821] |
+| prb | comps (b) model-adjusted | 4197 | -0.0567 [-0.0721, -0.0405] | -0.0308 [-0.0352, -0.0261] |
 | mdape_ln | assessor | 4197 | 0.1331 [0.1279, 0.1389] | +0.0137 [+0.0085, +0.0196] |
 | mdape_ln | model | 4197 | 0.1194 [0.1153, 0.1235] |  |
-| mdape_ln | comps (a) time-adjusted | 4197 | 0.1420 [0.1368, 0.1478] | +0.0226 [+0.0171, +0.0283] |
-| mdape_ln | comps (b) model-adjusted | 4197 | 0.1244 [0.1192, 0.1299] | +0.0050 [+0.0008, +0.0093] |
+| mdape_ln | comps (a) time-adjusted | 4197 | 0.1427 [0.1370, 0.1478] | +0.0233 [+0.0172, +0.0285] |
+| mdape_ln | comps (b) model-adjusted | 4197 | 0.1245 [0.1189, 0.1299] | +0.0051 [+0.0008, +0.0095] |
 
 Search tier used (confidence field: the first tier with at least 3 eligible comps):
 
 | comp_window_months | comp_radius_mi | subjects | share |
 |---|---|---|---|
-| 12 | 0.5 | 4157 | 0.9905 |
-| 12 | 1 | 25 | 0.006 |
+| 12 | 0.5 | 4156 | 0.9902 |
+| 12 | 1 | 26 | 0.0062 |
 | 12 | 1.25 | 15 | 0.0036 |
 | 24 | 0.5 | 0 | 0 |
 | 24 | 1 | 0 | 0 |
@@ -106,24 +106,24 @@ Change vs the previous comp rule (1 km, else 2 km; fixed 2023-2024 pool; no flip
 | statistic | method | n_before | n_now | before | now | change |
 |---|---|---|---|---|---|---|
 | median_ratio | comps (a) time-adjusted | 4197 | 4197 | 0.9902 | 0.9904 | 0.0002 |
-| median_ratio | comps (b) model-adjusted | 4197 | 4197 | 0.996 | 0.9881 | -0.0078 |
-| cod | comps (a) time-adjusted | 4197 | 4197 | 20.81 | 20.79 | -0.0192 |
-| cod | comps (b) model-adjusted | 4197 | 4197 | 17.57 | 17.39 | -0.1779 |
-| mdape_ln | comps (a) time-adjusted | 4197 | 4197 | 0.1451 | 0.142 | -0.0031 |
-| mdape_ln | comps (b) model-adjusted | 4197 | 4197 | 0.1268 | 0.1244 | -0.0023 |
-| mdape | comps (a) time-adjusted | 4197 | 4197 | 0.1445 | 0.1418 | -0.0027 |
+| median_ratio | comps (b) model-adjusted | 4197 | 4197 | 0.996 | 0.988 | -0.008 |
+| cod | comps (a) time-adjusted | 4197 | 4197 | 20.81 | 20.84 | 0.0262 |
+| cod | comps (b) model-adjusted | 4197 | 4197 | 17.57 | 17.41 | -0.1599 |
+| mdape_ln | comps (a) time-adjusted | 4197 | 4197 | 0.1451 | 0.1427 | -0.0025 |
+| mdape_ln | comps (b) model-adjusted | 4197 | 4197 | 0.1268 | 0.1245 | -0.0023 |
+| mdape | comps (a) time-adjusted | 4197 | 4197 | 0.1445 | 0.142 | -0.0026 |
 | mdape | comps (b) model-adjusted | 4197 | 4197 | 0.1263 | 0.124 | -0.0023 |
-| within_10 | comps (a) time-adjusted | 4197 | 4197 | 0.365 | 0.3755 | 0.0105 |
+| within_10 | comps (a) time-adjusted | 4197 | 4197 | 0.365 | 0.3746 | 0.0095 |
 | within_10 | comps (b) model-adjusted | 4197 | 4197 | 0.4105 | 0.4224 | 0.0119 |
-| within_20 | comps (a) time-adjusted | 4197 | 4197 | 0.6352 | 0.6357 | 0.0005 |
-| within_20 | comps (b) model-adjusted | 4197 | 4197 | 0.6888 | 0.696 | 0.0071 |
+| within_20 | comps (a) time-adjusted | 4197 | 4197 | 0.6352 | 0.6347 | -0.0005 |
+| within_20 | comps (b) model-adjusted | 4197 | 4197 | 0.6888 | 0.6962 | 0.0074 |
 
 Disagreement flags use (a):
 
 | group | n | median_ratio | mdape_ln | mdape | within_10 | within_20 | cod |
 |---|---|---|---|---|---|---|---|
-| flagged (|model/comps(a) - 1| > 25%) | 608 | 1.003 | 0.1735 | 0.1765 | 0.3224 | 0.5559 | 22.78 |
-| not flagged | 3589 | 0.9962 | 0.1142 | 0.1134 | 0.4542 | 0.7334 | 15.45 |
+| flagged (|model/comps(a) - 1| > 25%) | 619 | 1.003 | 0.1737 | 0.1765 | 0.3215 | 0.5541 | 22.88 |
+| not flagged | 3578 | 0.9962 | 0.114 | 0.1134 | 0.4547 | 0.7342 | 15.41 |
 
 ## Five example properties
 

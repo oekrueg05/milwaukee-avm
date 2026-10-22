@@ -40,10 +40,10 @@ import pandas as pd
 
 from avm import frames
 from avm.acquire import load_manifest, sha256_of
+from avm.address import display_addresses
 from avm.config import DATA_DIR, INTERIM_DIR, PRIVATE_REPORTS_DIR, RAW_DIR, REPORTS_DIR
 from avm.gbm import GBMX
 from avm.intervals import calibrate, contain_point
-from avm.io import normalize_taxkey
 from avm.location import parcel_locations
 from avm.progress import log, step
 from avm.prospective import parcel_rows
@@ -96,23 +96,6 @@ FEATURE_LABELS = {"l_area": "finished sq ft", "l_lot": "lot size", "age": "build
                   "months_since_prior": "time since prior sale", "has_prior_sale": "has a prior sale",
                   "n_city_200m": "city-owned parcels nearby", "n_vacant_200m": "vacant parcels nearby",
                   "lot_missing": "lot size missing", "baths_missing": "baths missing"}
-
-
-def addresses() -> pd.DataFrame:
-    """One display address and ZIP per tax key from the MAI (no owner names
-    exist in the file). Duplexes with two numbers show a range."""
-    m = load_manifest().set_index("key")
-    a = pd.read_csv(DATA_DIR / m.loc["mai", "local_path"], dtype=str, keep_default_na=False, encoding="utf-8-sig")
-    a["tk"] = normalize_taxkey(a.TAXKEY)
-    a["hn"] = pd.to_numeric(a.HSE_NBR, errors="coerce")  # display only, not a model input
-    a = a.dropna(subset=["tk", "hn"])
-    street = (a.DIR.str.strip() + " " + a.STREET.str.strip() + " " + a.STTYPE.str.strip()).str.split().str.join(" ")
-    a["street"] = street
-    g = a.groupby(["tk", "street"]).agg(lo=("hn", "min"), hi=("hn", "max"), zip=("ZIP_CODE", "first")).reset_index()
-    g = g.sort_values(["tk", "lo"]).drop_duplicates("tk")
-    num = np.where(g.lo == g.hi, g.lo.astype(int).astype(str), g.lo.astype(int).astype(str) + "-" +
-                   g.hi.astype(int).astype(str))
-    return pd.DataFrame({"tk": g.tk, "address": num + " " + g.street, "zip5": g.zip.str[:5]})
 
 
 def safmr() -> pd.DataFrame | None:
@@ -193,7 +176,7 @@ def main() -> None:
         par = par.merge(cv, left_on="sale_id", right_index=True, how="left")
 
     with step("divergence, tax, groups, yields", 3600):
-        par = par.merge(addresses(), on="tk", how="left")
+        par = par.merge(display_addresses(), on="tk", how="left")
         par["address"] = par.address.fillna("address not in the city's address index")
         par["assessed_2025"] = par.bench_assessed_total
         ok = par.assessed_2025.notna() & (par.assessed_2025 > 0)
@@ -222,8 +205,9 @@ def main() -> None:
         par = par.merge(tg[["tract", "race_group", "income_group"]], on="tract", how="left")
         par["context_flags"] = context_flags(par)
         par["special_reason"] = special_reasons(par)
+        # Tax key breaks ties, so equal gaps always come out in the same order.
         ranked = (par[par.listable].assign(abs_log=lambda d: np.abs(np.log(d.relative_assessment)))
-                  .sort_values("abs_log", ascending=False))
+                  .sort_values(["abs_log", "tk"], ascending=[False, True], kind="stable"))
         top = ranked[ranked.special_reason == ""].head(TOP_N)
         special = ranked[ranked.special_reason != ""]
         drivers = top_drivers(m, pd.concat([top, special]), cols)

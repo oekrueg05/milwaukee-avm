@@ -5,7 +5,7 @@ SF/duplex sales dated before V, excluding first sales of a flip, IAAO ratio
 outliers (3 x IQR on the assessor ratio) and price/sq ft outliers.
 
 Tiered search per subject, same property type only (SFR -> SFR, duplex ->
-duplex). Tiers are tried in order and the search stops at the first with at
+duplex), never the subject's own parcel (same tax key). Tiers are tried in order and the search stops at the first with at
 least MIN_COMPS eligible sales:
     12 months before V: 0.5 mi, 1 mi, 1.25 mi
     24 months before V: 0.5 mi, 1 mi, 1.25 mi
@@ -46,7 +46,11 @@ def eligible_pool(rows: pd.DataFrame, sales: pd.DataFrame, valuation_date: str) 
 
 def comps_for(subjects: pd.DataFrame, pool: pd.DataFrame, weights: pd.Series, sd: pd.Series) -> pd.DataFrame:
     """Long table: sale_id (subject), comp_sale_id, rank, dist_m, struct_dist,
-    comp_radius_mi, comp_window_months."""
+    comp_radius_mi, comp_window_months. Subjects and pool must carry the tax
+    key `tk`; a subject's own parcel's sales are never its comps."""
+    for name, df in (("subjects", subjects), ("pool", pool)):
+        if "tk" not in df.columns or df.tk.isna().any():
+            raise ValueError(f"comps_for needs a tax key (tk) on every {name} row")
     rows = []
     w = weights.reindex(STRUCT).fillna(0).to_numpy()
     subjects = subjects.dropna(subset=["x_m", "y_m"])
@@ -58,10 +62,12 @@ def comps_for(subjects: pd.DataFrame, pool: pd.DataFrame, weights: pd.Series, sd
         tree = cKDTree(p[["x_m", "y_m"]].to_numpy())
         months = p.months_before.to_numpy()
         Z = (p[STRUCT] / sd).to_numpy()
-        px, py, pid = p.x_m.to_numpy(), p.y_m.to_numpy(), p.sale_id.to_numpy()
+        px, py, pid, ptk = p.x_m.to_numpy(), p.y_m.to_numpy(), p.sale_id.to_numpy(), p.tk.astype(str).to_numpy()
         far = tree.query_ball_point(t[["x_m", "y_m"]].to_numpy(), max(RADII_MI) * MILE_M)
-        for sid, x, y, z, cand in zip(t.sale_id, t.x_m, t.y_m, (t[STRUCT] / sd).to_numpy(), far):
+        for sid, stk, x, y, z, cand in zip(t.sale_id, t.tk.astype(str), t.x_m, t.y_m, (t[STRUCT] / sd).to_numpy(),
+                                           far):
             cand = np.asarray(cand, dtype=int)
+            cand = cand[ptk[cand] != stk]
             geo_all = np.hypot(px[cand] - x, py[cand] - y)
             for win, rad in TIERS:
                 sel = (months[cand] <= win) & (geo_all <= rad * MILE_M)

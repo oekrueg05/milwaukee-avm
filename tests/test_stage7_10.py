@@ -22,13 +22,14 @@ def _pool(rows):
     """rows: (sale_id, x_mi, y_mi, months_before, duplex)."""
     df = pd.DataFrame(rows, columns=["sale_id", "x_mi", "y_mi", "months_before", "duplex"])
     df["x_m"], df["y_m"] = df.x_mi * MI, df.y_mi * MI
+    df["tk"] = "T" + df.sale_id
     for c in C.STRUCT:
         df[c] = 1.0
     return df
 
 
 def _subject(duplex=0):
-    s = pd.DataFrame({"sale_id": ["S"], "x_m": [0.0], "y_m": [0.0], "duplex": [duplex]})
+    s = pd.DataFrame({"sale_id": ["S"], "tk": ["TS"], "x_m": [0.0], "y_m": [0.0], "duplex": [duplex]})
     for c in C.STRUCT:
         s[c] = 1.0
     return s
@@ -57,6 +58,22 @@ def test_comps_same_property_type_only_and_none_when_too_few():
     pool = _pool([(f"d{i}", 0.1, 0, 3, 1) for i in range(5)] + [("s0", 0.1, 0, 3, 0), ("s1", 2.0, 0, 3, 0)])
     out = C.comps_for(_subject(duplex=0), pool, W, SD)
     assert out.empty  # only one single-family sale within 1.25 mi: fewer than MIN_COMPS
+
+
+def test_comps_never_the_subjects_own_parcel():
+    # The subject parcel's own earlier sale is the closest, most similar sale; it must not count,
+    # so the 0.5 mi tier has only 2 others and the search widens to 1 mi.
+    pool = _pool([("own", 0.0, 0, 6, 0), ("n0", 0.2, 0, 6, 0), ("n1", 0.3, 0, 6, 0), ("m0", 0.8, 0, 6, 0)])
+    pool.loc[pool.sale_id == "own", "tk"] = "TS"
+    out = C.comps_for(_subject(), pool, W, SD)
+    assert "own" not in set(out.comp_sale_id)
+    assert set(out.comp_sale_id) == {"n0", "n1", "m0"} and (out.comp_radius_mi == 1.0).all()
+
+
+def test_comps_refuse_missing_tax_key():
+    pool = _pool([(f"a{i}", 0.1, 0, 3, 0) for i in range(3)])
+    with pytest.raises(ValueError):
+        C.comps_for(_subject().drop(columns="tk"), pool, W, SD)
 
 
 def test_eligible_pool_window_and_exclusions():

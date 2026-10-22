@@ -34,6 +34,8 @@ The City Assessor values every Milwaukee home each year. This project asks how c
 - **A starting value for underwriting.** Any single-family or duplex home gets a value, an 80% range and comparable sales from public data alone. The range is wide, so it starts diligence; it does not replace an appraisal or an inspection.
 - **A test bed for AVM fairness methods.** The group guardrail (bias correction, model-free sales check, tier-specific time adjustment) and the paired vertical-equity diagnostics can be reused on other models.
 
+Ask Claude about any Milwaukee home: [`docs/mcp.md`](docs/mcp.md).
+
 ## Results
 
 ### The benchmark: the City Assessor in 2025
@@ -67,7 +69,7 @@ The 80% ranges come from conformal quantile regression calibrated on 2022 to 202
 
 ### Comparable sales as a check
 
-Each home gets up to five same-type comparable sales when at least three qualify, searched at {{comp_radii}} over {{comp_windows}}, excluding quick flips and outliers; {{comp_first_tier_share}} of 2025 test sales find them at the tightest step. Time-adjusted comp values use no model prediction and reach a level-neutral error of {{comp_a_mdape}} on {{comp_n}} sales, against {{comp_model_mdape}} for the model. Model-adjusted comps ({{comp_b_mdape}}) borrow the model's judgement, so only time-adjusted comps drive disagreement flags.
+Each home gets up to five same-type comparable sales when at least three qualify, searched at {{comp_radii}} over {{comp_windows}}, excluding the home's own sales, quick flips and outliers; {{comp_first_tier_share}} of 2025 test sales find them at the tightest step. Time-adjusted comp values use no model prediction and reach a level-neutral error of {{comp_a_mdape}} on {{comp_n}} sales, against {{comp_model_mdape}} for the model. Model-adjusted comps ({{comp_b_mdape}}) borrow the model's judgement, so only time-adjusted comps drive disagreement flags.
 
 ### Reading vertical equity carefully
 
@@ -143,7 +145,7 @@ pip install -r requirements.lock && pip install -e .
 python -m avm.pipeline
 ```
 
-Data go to `C:\Users\<you>\data\milwaukee-avm` (override with `AVM_DATA_DIR`), outside the repo. Stage 8 needs a free Census API key in `.env` as `CENSUS_API_KEY`. Daily-updated city files are pinned once downloaded (`--refresh-current` to refresh). Seeds are fixed. The pipeline re-runs the tuning and requires it to reproduce the committed frozen spec exactly; the prospective file is checked, never regenerated.
+Data go to `C:\Users\<you>\data\milwaukee-avm` (override with `AVM_DATA_DIR`), outside the repo. Stage 8 needs a free Census API key in `.env` as `CENSUS_API_KEY`. Seeds are fixed. The pipeline re-runs the tuning and requires it to reproduce the committed frozen spec exactly; the prospective file is checked, never regenerated.
 
 ## Data and license
 

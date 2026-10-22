@@ -34,6 +34,8 @@ The City Assessor values every Milwaukee home each year. This project asks how c
 - **A starting value for underwriting.** Any single-family or duplex home gets a value, an 80% range and comparable sales from public data alone. The range is wide, so it starts diligence; it does not replace an appraisal or an inspection.
 - **A test bed for AVM fairness methods.** The group guardrail (bias correction, model-free sales check, tier-specific time adjustment) and the paired vertical-equity diagnostics can be reused on other models.
 
+Ask Claude about any Milwaukee home: [`docs/mcp.md`](docs/mcp.md).
+
 ## Results
 
 ### The benchmark: the City Assessor in 2025
@@ -67,7 +69,7 @@ The 80% ranges come from conformal quantile regression calibrated on 2022 to 202
 
 ### Comparable sales as a check
 
-Each home gets up to five same-type comparable sales when at least three qualify, searched at 0.5, 1, 1.25 mi over 12 then 24 months, excluding quick flips and outliers; 99% of 2025 test sales find them at the tightest step. Time-adjusted comp values use no model prediction and reach a level-neutral error of 14.2% on 4,197 sales, against 11.9% for the model. Model-adjusted comps (12.4%) borrow the model's judgement, so only time-adjusted comps drive disagreement flags.
+Each home gets up to five same-type comparable sales when at least three qualify, searched at 0.5, 1, 1.25 mi over 12 then 24 months, excluding the home's own sales, quick flips and outliers; 99% of 2025 test sales find them at the tightest step. Time-adjusted comp values use no model prediction and reach a level-neutral error of 14.3% on 4,197 sales, against 11.9% for the model. Model-adjusted comps (12.4%) borrow the model's judgement, so only time-adjusted comps drive disagreement flags.
 
 ### Reading vertical equity carefully
 
@@ -95,7 +97,7 @@ The audit also evaluates a cleaner sample in some groups. On 2021 to 2025 sales,
 
 ## Where the assessor and the model disagree
 
-The frozen model values every home it can score (122,214 of 123,168) at Jan 1 2025; after data-quality exclusions 121,467 are compared with their 2025 assessment, net of the assessor's citywide level (0.893). A home is listable when its assessment sits outside the model's 80% range **and** its comparable sales agree: 12,694 homes.
+The frozen model values every home it can score (122,214 of 123,168) at Jan 1 2025; after data-quality exclusions 121,467 are compared with their 2025 assessment, net of the assessor's citywide level (0.893). A home is listable when its assessment sits outside the model's 80% range **and** its comparable sales agree: 12,690 homes.
 
 - **Set aside, not ranked:** 479 of those look like a special valuation or a data issue (an assessment held flat from 2024 while the median home's assessment rose 14.6%, a land-use change, a unit count or commercial building type that does not fit the land use).
 - **Ranked:** of the 1,000 largest remaining gaps, 894 are assessed below the model and 106 above. The median tax difference is $1,600 a year at the 2025 net rate of $20.80 per thousand dollars of assessed value (Milwaukee County comparative rate table; $22.93 was the 2024 rate). The net rate is used because the school levy credit scales with assessed value under Wisconsin statute ([`docs/methods.md`](docs/methods.md#divergence-and-tax-dollars)).
@@ -143,7 +145,7 @@ pip install -r requirements.lock && pip install -e .
 python -m avm.pipeline
 ```
 
-Data go to `C:\Users\<you>\data\milwaukee-avm` (override with `AVM_DATA_DIR`), outside the repo. Stage 8 needs a free Census API key in `.env` as `CENSUS_API_KEY`. Daily-updated city files are pinned once downloaded (`--refresh-current` to refresh). Seeds are fixed. The pipeline re-runs the tuning and requires it to reproduce the committed frozen spec exactly; the prospective file is checked, never regenerated.
+Data go to `C:\Users\<you>\data\milwaukee-avm` (override with `AVM_DATA_DIR`), outside the repo. Stage 8 needs a free Census API key in `.env` as `CENSUS_API_KEY`. Seeds are fixed. The pipeline re-runs the tuning and requires it to reproduce the committed frozen spec exactly; the prospective file is checked, never regenerated.
 
 ## Data and license
 
