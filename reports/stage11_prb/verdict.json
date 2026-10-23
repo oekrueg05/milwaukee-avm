@@ -1,0 +1,68 @@
+{
+  "preregistered": {
+    "registered": "2026-10-22, before any Stage 11 diagnostic was run (Owen's go on the plan, with the co-primary no-own-sale check)",
+    "scope": "Verdict from CV 2021-2024 pooled (out-of-fold frozen primary; assessor roll Y). 2025 is reported only and never changes the verdict.",
+    "definitions": {
+      "failing_tier": "a neighborhood value tier (low, mid, high) where the method's observed CV within-tier PRB < -0.05 (ratios level-normalized by the method's median ratio within each year and tier)",
+      "PRB_null": "mean PRB over 2,000 simulated perfectly calibrated valuations: synthetic price P* = V * exp(u + e), V = the method's actual level-normalized values, e ~ N(0, sigma_p^2) sale noise from repeat sales (Case-Shiller intercept, per tier, redrawn from its bootstrap), u ~ N(0, sigma_u^2) with sigma_u^2 = robust variance of log(P / V) minus sigma_p^2",
+      "E": "observed PRB minus PRB_null; 95% interval combines the neighborhood-clustered bootstrap of the observed PRB and the simulation spread",
+      "Q_frozen": "proxy PRB for the frozen model: PRB formula with log2(proxy) as the value term, proxy = the home's most recent clean prior sale at least 24 months before the target sale, index-adjusted with the fold's training-only time effect; corrected for the own-prior-sale feature leak (beta from refit fold models, +/-0.05 finite difference) and disattenuated for proxy noise (sigma_q^2 = sigma_p^2 + drift * gap); 95% neighborhood-clustered bootstrap interval",
+      "Q_noown": "proxy PRB for the frozen spec refit on each CV fold WITHOUT the own-prior-sale feature group (no leak), disattenuated the same way",
+      "Q_assessor": "assessor proxy PRB, disattenuated; no leak correction is possible (bias direction stated: toward progressive)"
+    },
+    "rule": {
+      "mostly measurement artifact": "in EVERY failing tier: (3) PRB_null <= 0.5 * observed PRB (both negative) and E's interval includes 0 or lies within [-0.05, +0.05]; AND (2) Q_frozen's interval includes 0 or lies within [-0.05, +0.05]; AND Q_noown agrees with Q_frozen in direction (its interval also includes 0 or lies within [-0.05, +0.05])",
+      "real compression": "in AT LEAST ONE failing tier: Q_frozen's interval lies entirely below 0 AND E's interval lies entirely below 0 AND Q_noown's interval lies entirely below 0 (agreement in direction)",
+      "otherwise": "mixed, not resolved: name the diagnostic(s) that disagree, including any disagreement between Q_frozen and Q_noown; no fix is tested",
+      "assessor": "the same rule applied to the assessor with Q_assessor in place of Q_frozen and no Q_noown condition; reported alongside, does not affect the model verdict",
+      "context_only": "Diagnostics 1 (calibration slopes) and 4 (tier-specific time adjustment) do not change the verdict. If tier-specific time adjustment alone moves a failing tier's PRB into [-0.05, +0.05], the verdict states that the pattern depends on the time adjustment. Raw (uncorrected) proxy PRB and the two-prior-sales robustness check are reported next to Q; if they point the other way, the summary says so.",
+      "fixes": "tested only if the verdict is 'real compression': (a) post-hoc linear calibration by tier fit on earlier folds' out-of-fold predictions; (b) tier-aware features (neighborhood value tier, prior-3-year neighborhood median price). Keep candidates within +0.2 pts of the frozen model's mean CV level-neutral MdAPE; pick the smallest mean |Q|. The winner is a separate v2 model; the frozen model, its spec and the prospective 2026 file never change."
+    }
+  },
+  "amendments": [
+    {
+      "date": "2026-10-22",
+      "approved_by": "Owen",
+      "timing": "made after seeing the 2021-fold sample (reports/stage11_prb/sample/) and before any full CV 2021-2024 result was computed",
+      "why": "A calibrated valuation of finite accuracy (right on average given its value, with error) has negative Q against true value: it is pulled toward the mean relative to truth, so its ratio falls as true value rises. In the 2021 sample the Q expected from such a valuation was about -0.03 to -0.37 by tier and method. Judging Q against 0 would call any imperfect calibrated valuation 'compressed' and make 'artifact' a stricter standard than calibration. Diagnostic 3 already compares PRB with a calibrated valuation; Q now uses the same reference.",
+      "changes": {
+        "Q_null": "from the same simulation as PRB_null: synthetic proxy q* = log(V) + u + e_q (u the simulated valuation error, e_q ~ N(0, sigma_p^2 + drift * gap) per home), Q computed and disattenuated exactly as for the observed Q (no leak term). Mean over draws.",
+        "D": "D = Q - Q_null for Q_frozen (leak-corrected), D_noown = Q_noown - Q_noown_null, D_assessor likewise; 95% interval = clustered bootstrap of Q minus simulation draws of Q_null.",
+        "mostly measurement artifact": "in EVERY failing tier: PRB_null <= 0.5 * observed PRB (both negative) and E's interval includes 0 or lies within [-0.05, +0.05]; AND D's interval includes 0 or lies within [-0.05, +0.05]; AND D_noown agrees (its interval also includes 0 or lies within [-0.05, +0.05])",
+        "real compression": "in AT LEAST ONE failing tier: D's interval lies entirely below 0 AND E's interval lies entirely below 0 AND D_noown's interval lies entirely below 0",
+        "otherwise": "mixed, not resolved, naming the disagreement (unchanged)",
+        "assessor": "same rule with D_assessor, no D_noown condition (unchanged form)",
+        "noise_shape_sensitivity": "the t(4) noise variant is replaced by draws from the standardized trimmed repeat-sale residuals of the tier (sensitivity only; does not affect the verdict)",
+        "not_identified": "a bootstrap draw with proxy reliability <= 0.2 cannot be disattenuated; if more than 2.5% of draws are like that, the corrected interval is not identified (NaN) and the tier can be neither artifact nor compression"
+      },
+      "added_regardless_of_verdict": "tradeoff curve on CV 2021-2024: within each tier, log values scaled around the tier mean by k from 1 to about 1/slope in 8 steps, with the slope (and so the k grid) fit on earlier folds only (out-of-fold predictions of the frozen spec from 2018 up to Y-1); level-neutral MdAPE, D and PRB reported per k; the assessor placed on the same axes"
+    }
+  ],
+  "results": {
+    "split": "CV 2021-2024",
+    "rule": "amended 2026-10-22 (D = Q - Q_null)",
+    "model": {
+      "verdict": "mixed, not resolved",
+      "failing_tiers": [
+        "low",
+        "mid",
+        "high"
+      ],
+      "reasons": [
+        "low: noise explains >= half: True; E within/includes 0: True; E below 0: False; D within/includes 0: False; D below 0: False; D_noown within/includes 0: False; D_noown below 0: False",
+        "mid: noise explains >= half: True; E within/includes 0: False; E below 0: True; D within/includes 0: True; D below 0: False; D_noown within/includes 0: True; D_noown below 0: False",
+        "high: noise explains >= half: True; E within/includes 0: True; E below 0: False; D within/includes 0: False; D below 0: False; D_noown within/includes 0: True; D_noown below 0: False; D and D_noown disagree in direction"
+      ]
+    },
+    "assessor": {
+      "verdict": "mixed, not resolved",
+      "failing_tiers": [
+        "low"
+      ],
+      "reasons": [
+        "low: noise explains >= half: True; E within/includes 0: False; E below 0: False; D within/includes 0: False; D below 0: False"
+      ]
+    },
+    "time_adjustment_flags": []
+  }
+}

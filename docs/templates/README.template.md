@@ -1,6 +1,13 @@
 <!-- Generated file. Edit docs/templates/README.template.md and run `python -m avm.writeup`. -->
 # Milwaukee AVM
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="reports/writeup/hero-mdape-2025-dark.png">
+  <img alt="{{hero_title}}: level-neutral median absolute error for the model and the City Assessor, overall and by neighborhood value tier, with intervals" src="reports/writeup/hero-mdape-2025-light.png">
+</picture>
+
+{{hero_caption}}
+
 [![CI](https://github.com/{{repo_slug}}/actions/workflows/ci.yml/badge.svg)](https://github.com/{{repo_slug}}/actions/workflows/ci.yml)
 
 **A public-data valuation model for Milwaukee single-family and duplex homes, tested against real sale prices and benchmarked against the City Assessor.**
@@ -73,7 +80,13 @@ Each home gets up to five same-type comparable sales when at least three qualify
 
 ### Reading vertical equity carefully
 
-Vertical equity is the model's weak point. Both methods meet the IAAO PRD and PRB targets citywide on 2025, but in cross-validation the model fails both (PRD {{cv_prd_primary}}, PRB {{cv_prb_primary}}). Noise in sale prices makes PRD and PRB lean toward regressivity; noise in values pushes the calibration slope below one. The model's slope is closer to one than the assessor's ({{calibration_slope_primary}} against {{calibration_slope_assessor}}). But both face the same price noise, and within value tiers the model's PRB ({{tier_prb_low_primary}}, {{tier_prb_mid_primary}}, {{tier_prb_high_primary}}, low to high) is far more negative than the assessor's ({{tier_prb_low_assessor}}, {{tier_prb_mid_assessor}}, {{tier_prb_high_assessor}}), consistent with compression across similarly priced neighborhoods. Neither diagnostic settles it alone.
+Both methods meet the IAAO PRD and PRB targets citywide on 2025, but in cross-validation the model fails both (PRD {{cv_prd_primary}}, PRB {{cv_prb_primary}}), and within neighborhood value tiers its 2025 PRB ({{tier_prb_low_primary}}, {{tier_prb_mid_primary}}, {{tier_prb_high_primary}}, low to high) is far more negative than the assessor's ({{tier_prb_low_assessor}}, {{tier_prb_mid_assessor}}, {{tier_prb_high_assessor}}). PRD and PRB put sale price in the denominator, so noise in prices makes any method look regressive. Stage 11 tested whether that explains the gap, on cross-validation 2021 to 2024 with a rule fixed in advance. Each method's within-tier PRB was compared with the PRB that sale-price noise alone produces for a perfectly calibrated valuation of the same accuracy (noise measured from {{s11_pairs}} repeat-sale pairs). Ratios were also checked against an independent measure of value, the home's own earlier sale ({{s11_proxy_share}} of sales have one), against the same calibrated reference.
+
+> {{s11_verdict_text}}
+
+![Calibration against equal ratios, by value tier](reports/stage11_prb/tradeoff.png)
+
+The figure scales the model's values within each tier, from calibrated to spread out. In the low tier, the model rescaled to calibration (slope {{s11_low_cal_slope}}) has PRB {{s11_low_cal_prb}}. The frozen model sits at slope {{s11_low_k1_slope}}, PRB {{s11_low_k1_prb}}, level-neutral error {{s11_low_k1_mdape}}. Spreading values by {{s11_low_kmax_k}} brings PRB to {{s11_low_kmax_prb}}, but the slope falls to {{s11_low_kmax_slope}} and the level-neutral error rises to {{s11_low_kmax_mdape}}. The assessor sits at that end (slope {{s11_low_ass_slope}}, PRB {{s11_low_ass_prb}}, level-neutral error {{s11_low_ass_mdape}}). The curve uses cross-validation folds 2022 to 2024, because the scale for each fold is fit on earlier folds only and 2021 has none. No v2 model was built: the pre-registered rule allowed fixes only after a finding of real compression. Details are in [`docs/methods.md`](docs/methods.md#within-tier-vertical-equity-stage-11).
 
 ## Fairness audit
 
@@ -133,7 +146,7 @@ The most important ones (the full list is in [`docs/methods.md`](docs/methods.md
 
 - **Add interior condition.** MLS listing data (photos, remarks, condition fields) or inspection records would address what may be the largest source of error and narrow the ranges.
 - **Add an income approach for rentals.** Near the campuses homes are priced partly on rent, so a rent-based model (by-the-bed leases, local rent comps) belongs beside the sales model, and would test whether the student-rental gaps come from the model.
-- **Investigate the within-tier PRB gap** before any use for individual values, and re-check it on the prospective test.
+- **Re-run the within-tier PRB diagnostics on the prospective test**, and widen the independent-value check beyond homes with an earlier sale, which over-represent White-majority and higher-income tracts.
 - **Score the out-of-time test** as soon as the 2026 sales file and roll are released, and report it whatever it shows.
 - **Fill the duplex income view** with HUD Small Area Fair Market Rents by ZIP code.
 

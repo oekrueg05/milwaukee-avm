@@ -92,6 +92,25 @@ Shown next to a listed home, without moving it:
 
 **Dollars.** For a passing group, a typical home's amount is its median 2025 assessment times the corrected shift times the 2025 net rate, and the group total applies the corrected shift to the group's total assessment. The levy is fixed, so the same amount with the opposite sign is spread over every other home in the pool.
 
+## Within-tier vertical equity (Stage 11)
+
+The question was whether the model's negative PRB within neighborhood value tiers is real compression or the known bias from noise in sale prices. Everything here is on cross-validation 2021 to 2024, with 2025 reported only. Three methods are compared: the frozen model, the frozen specification refit without its own-prior-sale feature, and the assessor. The verdict rule (`reports/stage11_prb/verdict.json`) was committed before any result. It was amended once, after the 2021 sample and before the full run, because a calibrated valuation of finite accuracy also shows negative proxy PRB against true value.
+
+- **Sale-price noise** comes from {{s11_pairs}} pairs of sales of the same home (Case-Shiller: the squared difference of two detrended sales against the years between them). The noise standard deviation in log price is {{s11_sigma_low}} in the low tier, {{s11_sigma_mid}} in the mid tier and {{s11_sigma_high}} in the high tier.
+- **Calibrated null.** Each method keeps its own values. A simulated valuation error and sale noise are added, matched to the method's observed spread, over {{s11_n_sim}} draws. This gives the PRB that noise alone produces for a calibrated valuation of that accuracy (PRB_null); E is the observed PRB minus PRB_null.
+- **Independent value check (Q).** This is the PRB formula with the home's own clean earlier sale, at least {{s11_proxy_months}} months before, as the value term, so noise in the current sale price cannot drive it. Q is corrected for the model's use of that sale as a feature and for noise in the earlier sale. It is judged as D = Q minus Q_null, Q_null being the same statistic for the calibrated null. Homes with such a sale are {{s11_proxy_share}} of sales: {{s11_white_proxy}} are in White-majority tracts against {{s11_white_all}} overall, and {{s11_hiinc_proxy}} are in the two highest-income quintiles against {{s11_hiinc_all}}.
+- **Tier-specific time adjustment** changes any within-tier PRB by at most {{s11_t4_max}}.
+
+{{s11_table}}
+
+> {{s11_verdict_text}}
+
+**The tradeoff.** Underwriting needs calibrated predictions: within a tier, a home valued at V sells for about V on average. IAAO vertical equity asks for equal ratios across value. The model's log values were scaled around each fold's tier mean in {{s11_k_steps}} steps, from k equal to one to the inverse of the tier's calibration slope fit on earlier folds, plus the calibrated point. This uses cross-validation folds 2022 to 2024, since 2021 has no earlier fold. PRB reaches the band only as values are spread past calibration, at a cost in accuracy. The frozen model's slopes are {{s11_k1_slope_range}}; the assessor's are {{s11_ass_slope_range}}.
+
+{{s11_tradeoff_table}}
+
+No v2 model was built: the pre-registered rule allowed fixes (calibration by tier, tier-aware features) only after a finding of real compression.
+
 ## Limitations
 
 - **No interior condition** in public records: renovations, damage and deferred maintenance are invisible, which may be a large part of the remaining error and of the width of the ranges.
@@ -105,7 +124,7 @@ Shown next to a listed home, without moving it:
 - **Transit stops are current, not historical**, for every year; parks use one year's parcel outlines with each roll's land use.
 - **City-owned and vacant parcel counts can proxy for neighborhood composition**; they are allowed location features, and removing them barely changes the fairness gaps.
 - **2025 was viewed across Stages 3 to 6**; the out-of-time 2026 test is the cleaner check.
-- **Vertical equity is unresolved.** Both diagnostics are biased, in opposite directions; the frozen model fails PRD and PRB in cross-validation, and within neighborhood value tiers its PRB is far more negative than the assessor's.
+- **Within-tier vertical equity is mixed under the pre-registered rule, with no tier showing compression** (see Within-tier vertical equity). Passing the IAAO PRB band would take spreading values past calibration. The independent value check rests on homes with an earlier sale, which over-represent White-majority and higher-income tracts.
 - **Group gaps mix method error with group-specific appreciation**, because target prices use a citywide trend; differences between methods in the level gap are roughly unaffected, but accuracy and dispersion gaps are not, and the model's nearby-sales features may track local appreciation better than a roll can.
 - **The audit evaluates a cleaner subset** in Black-majority and low-income tracts, so accuracy there is likely overstated for every method.
 - **Student-rental areas** near Marquette and UW-Milwaukee hold {{s9_student_share}} of the homes compared but {{s9_listed_student_area_above_model}} of the {{s9_listed_over_assessed}} listings above the model. Rentals there earn income the model cannot see, so divergence there may reflect the model; this is untested.

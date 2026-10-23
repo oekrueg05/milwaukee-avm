@@ -1480,10 +1480,269 @@
    "methods"
   ]
  },
+ "s11_verdict_text": {
+  "value": "mixed, not resolved",
+  "display": "Under the pre-registered rule (amended after the 2021 sample, before full results), the verdict is 'mixed, not resolved'. Substantively, no tier shows compression: the model's negative PRB is about what sale-price noise produces for a calibrated valuation of its accuracy, apart from a small mid-tier excess (E = -0.045). The model is calibrated for prediction; reaching the IAAO PRB band requires spreading values past calibration at a cost in accuracy, which is where the assessor sits. Caveat: the prior-sale subset over-represents White-majority and higher-income tracts.",
+  "source": "reports/stage11_prb/verdict.json, within_tier_eval.csv (wording: avm.stage11_prb.VERDICT_WORDING)",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "s11_pairs": {
+  "value": 6311.0,
+  "display": "6,311",
+  "source": "reports/stage11_prb/sale_noise.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "s11_sigma_low": {
+  "value": 0.2292861872640728,
+  "display": "0.23",
+  "source": "reports/stage11_prb/sale_noise.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s11_sigma_mid": {
+  "value": 0.1290875324218058,
+  "display": "0.13",
+  "source": "reports/stage11_prb/sale_noise.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s11_sigma_high": {
+  "value": 0.1275213735265016,
+  "display": "0.13",
+  "source": "reports/stage11_prb/sale_noise.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s11_proxy_share": {
+  "value": 0.2297282183200984,
+  "display": "23%",
+  "source": "reports/stage11_prb/proxy_representativeness.csv",
+  "used_in": [
+   "README",
+   "methods"
+  ]
+ },
+ "s11_proxy_months": {
+  "value": 24.0,
+  "display": "24",
+  "source": "avm.stage11_prb.PROXY_MIN_MONTHS",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s11_n_sim": {
+  "value": 2000.0,
+  "display": "2,000",
+  "source": "avm.stage11_prb.N_SIM",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s11_k_steps": {
+  "value": 8.0,
+  "display": "8",
+  "source": "avm.stage11_prb.N_K",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s11_white_proxy": {
+  "value": 0.4965920155793573,
+  "display": "50%",
+  "source": "reports/stage11_prb/proxy_representativeness.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s11_white_all": {
+  "value": 0.3575662677552846,
+  "display": "36%",
+  "source": "reports/stage11_prb/proxy_representativeness.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s11_hiinc_proxy": {
+  "value": 0.5618305744888024,
+  "display": "56%",
+  "source": "reports/stage11_prb/proxy_representativeness.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s11_hiinc_all": {
+  "value": 0.4293143943630465,
+  "display": "43%",
+  "source": "reports/stage11_prb/proxy_representativeness.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s11_t4_max": {
+  "value": 0.0096846005181217,
+  "display": "0.010",
+  "source": "reports/stage11_prb/tier_time_adjustment.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s11_low_cal_slope": {
+  "value": 1.055762721820519,
+  "display": "1.06",
+  "source": "reports/stage11_prb/tradeoff.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s11_low_cal_prb": {
+  "value": -0.4328715899977886,
+  "display": "-0.43",
+  "source": "reports/stage11_prb/tradeoff.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s11_low_k1_slope": {
+  "value": 0.8514279135855447,
+  "display": "0.85",
+  "source": "reports/stage11_prb/tradeoff.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s11_low_k1_prb": {
+  "value": -0.2379189704138203,
+  "display": "-0.24",
+  "source": "reports/stage11_prb/tradeoff.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s11_low_k1_mdape": {
+  "value": 0.2117723700399615,
+  "display": "21.2%",
+  "source": "reports/stage11_prb/tradeoff.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s11_low_kmax_slope": {
+  "value": 0.6847724419130735,
+  "display": "0.68",
+  "source": "reports/stage11_prb/tradeoff.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s11_low_kmax_prb": {
+  "value": -0.0491404906961022,
+  "display": "-0.05",
+  "source": "reports/stage11_prb/tradeoff.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s11_low_kmax_mdape": {
+  "value": 0.2259073207237512,
+  "display": "22.6%",
+  "source": "reports/stage11_prb/tradeoff.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s11_low_ass_slope": {
+  "value": 0.6915922333637378,
+  "display": "0.69",
+  "source": "reports/stage11_prb/tradeoff.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s11_low_ass_prb": {
+  "value": -0.0812633842937732,
+  "display": "-0.08",
+  "source": "reports/stage11_prb/tradeoff.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s11_low_ass_mdape": {
+  "value": 0.2236833082694679,
+  "display": "22.4%",
+  "source": "reports/stage11_prb/tradeoff.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s11_low_kmax_k": {
+  "value": 1.2415359377482085,
+  "display": "1.24",
+  "source": "reports/stage11_prb/tradeoff.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "s11_ass_slope_range": {
+  "value": null,
+  "display": "0.68 to 0.80",
+  "source": "reports/stage11_prb/tradeoff.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s11_k1_slope_range": {
+  "value": null,
+  "display": "0.85 to 0.92",
+  "source": "reports/stage11_prb/tradeoff.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s11_table": {
+  "value": null,
+  "display": "| tier | method | PRB [95% CI] | calibrated-null PRB | E [95% CI] | D = Q minus Q_null [95% CI] |\n|---|---|---|---|---|---|\n| low | Model | -0.198 [-0.253, -0.161] | -0.209 | +0.011 [-0.046, +0.050] | +0.172 [+0.111, +0.228] |\n| low | Model without its own-sale feature | -0.199 [-0.255, -0.159] | -0.205 | +0.007 [-0.052, +0.048] | +0.166 [+0.102, +0.223] |\n| low | City Assessor | -0.074 [-0.126, -0.032] | -0.172 | +0.098 [+0.046, +0.141] | +0.254 [+0.185, +0.314] |\n| mid | Model | -0.188 [-0.224, -0.159] | -0.143 | -0.045 [-0.084, -0.016] | +0.051 [-0.008, +0.101] |\n| mid | Model without its own-sale feature | -0.196 [-0.231, -0.167] | -0.151 | -0.045 [-0.082, -0.017] | +0.052 [-0.014, +0.107] |\n| mid | City Assessor | -0.038 [-0.067, -0.013] | -0.135 | +0.097 [+0.066, +0.124] | +0.198 [+0.146, +0.253] |\n| high | Model | -0.053 [-0.116, -0.011] | -0.071 | +0.018 [-0.047, +0.060] | +0.040 [+0.004, +0.072] |\n| high | Model without its own-sale feature | -0.062 [-0.134, -0.015] | -0.077 | +0.015 [-0.059, +0.061] | +0.036 [-0.011, +0.074] |\n| high | City Assessor | +0.012 [-0.020, +0.033] | -0.072 | +0.084 [+0.049, +0.106] | +0.115 [+0.080, +0.150] |",
+  "source": "reports/stage11_prb/within_tier_eval.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
+ "s11_tradeoff_table": {
+  "value": null,
+  "display": "| tier | point | k | calibration slope | PRB | level-neutral MdAPE |\n|---|---|---|---|---|---|\n| low | rescaled to calibration (k = b) | 0.81 | 1.06 | -0.433 | 21.0% |\n| low | frozen model (k = 1) | 1.00 | 0.85 | -0.238 | 21.2% |\n| low | spread (k = 1/b) | 1.24 | 0.68 | -0.049 | 22.6% |\n| low | City Assessor |  | 0.69 | -0.081 | 22.4% |\n| mid | rescaled to calibration (k = b) | 0.93 | 0.98 | -0.297 | 10.5% |\n| mid | frozen model (k = 1) | 1.00 | 0.91 | -0.231 | 10.5% |\n| mid | spread (k = 1/b) | 1.08 | 0.84 | -0.166 | 10.8% |\n| mid | City Assessor |  | 0.68 | -0.050 | 12.3% |\n| high | rescaled to calibration (k = b) | 0.93 | 0.98 | -0.110 | 9.4% |\n| high | frozen model (k = 1) | 1.00 | 0.92 | -0.055 | 9.6% |\n| high | spread (k = 1/b) | 1.07 | 0.85 | +0.002 | 9.9% |\n| high | City Assessor |  | 0.80 | +0.022 | 10.5% |",
+  "source": "reports/stage11_prb/tradeoff.csv",
+  "used_in": [
+   "methods"
+  ]
+ },
  "repo_slug": {
   "value": null,
   "display": "oekrueg05/milwaukee-avm",
   "source": "AVM_REPO_SLUG or the git origin remote",
+  "used_in": [
+   "README"
+  ]
+ },
+ "hero_caption": {
+  "value": null,
+  "display": "Model minus assessor, in points of level-neutral median absolute error: all 2025 sales -1.4 pts [-2.0, -0.9], the model is more accurate; low-value neighborhoods -2.4 pts [-3.9, -0.7], the model is more accurate; mid-value neighborhoods -0.9 pts [-1.8, -0.1], the model is more accurate; high-value neighborhoods -1.9 pts [-2.5, -0.9], the model is more accurate. Neighborhood value tiers are terciles of each neighborhood's median sale price over the three prior years; homes in neighborhoods with too few sales to rate are in the overall group only.",
+  "source": "reports/writeup/hero_mdape_2025.csv",
+  "used_in": [
+   "README"
+  ]
+ },
+ "hero_title": {
+  "value": null,
+  "display": "More accurate than the City Assessor on the same 2025 sales",
+  "source": "avm.writeup.HERO_TITLE",
   "used_in": [
    "README"
   ]

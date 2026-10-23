@@ -12,7 +12,7 @@ import sys
 
 from avm import (acquire, clean_sales, profile_data, stage1_checks, stage3_assessor, stage4_hedonic, stage5_gbm,
                  stage6_geo, freeze, stage7_explain, prospective,
-                 stage8_equity, stage9_divergence, stage9_page, writeup)
+                 stage8_equity, stage9_divergence, stage9_page, stage11_prb, writeup)
 from avm.progress import log
 
 
@@ -55,6 +55,8 @@ def main() -> None:
         stage9_divergence.main()
         log("pipeline: stage 9 pages (private review and portfolio)")
         stage9_page.main()
+        log("pipeline: stage 11 within-tier PRB diagnostics (pre-registered rule in verdict.json)")
+        stage11_prb.main()
         log("pipeline: stage 10 write-up (README.md, docs/methods.md)")
         writeup.main()
         # The prospective 2026 predictions are NOT regenerated here: they are hashed and tagged.

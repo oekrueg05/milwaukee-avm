@@ -41,7 +41,7 @@ METHODS = {"assessor": "City Assessor", "hedonic": "Hedonic baseline", "primary"
 WHITELIST = [r"\b(19|20)\d{2}\b", r"\bStages? \d+(\s*(-|to|and)\s*\d+)?\b", r"\bQ[1-5]\b", r"\bJan(uary)? 1\b",
              r"\b80%", r"\b95%", r"\b0\.75 mi\b", r"\b3 to 5\b", r"\bK2540\b", r"\b88[12]0\b",
              r"\b[Ww]ithin (10|20)% of price",  # the within-10%/20% accuracy thresholds
-             r"\bsha256\b", r"\bY-1\b", r"\bL2\b", r"\bF\d{1,2}\b"]  # labels, not quantities
+             r"\bsha256\b", r"\bY-1\b", r"\bL2\b", r"\bF\d{1,2}\b", r"\bv2\b"]  # labels, not quantities
 
 
 class Numbers:
@@ -203,8 +203,216 @@ def collect(h: pd.DataFrame) -> Numbers:
     collect_review(N)
     collect_rebuild(N)
     collect_check2(N)
+    collect_stage11(N)
     N.add("repo_slug", None, repo_slug(), "AVM_REPO_SLUG or the git origin remote")
     return N
+
+
+def collect_stage11(N: Numbers) -> None:
+    """Stage 11 (issue #4): within-tier PRB verdict, per-tier table and tradeoff.
+    The verdict text is avm.stage11_prb.VERDICT_WORDING; the claims in it are
+    asserted against the outputs so a changed result fails the build."""
+    from avm import stage11_prb as S
+    from avm.reporting import md
+    d = REPORTS_DIR / "stage11_prb"
+    src = "reports/stage11_prb/"
+    v = json.loads((d / "verdict.json").read_text())["results"]
+    ev = pd.read_csv(d / "within_tier_eval.csv").fillna({"robustness": ""})
+    cv = ev[(ev.split == v["split"]) & (ev.robustness == "")].set_index(["tier", "method"])
+    tc = pd.read_csv(d / "tradeoff.csv").set_index(["tier", "point"])
+    rep = pd.read_csv(d / "proxy_representativeness.csv").set_index("subset")
+    noise = pd.read_csv(d / "sale_noise.csv").set_index("tier")
+    t4 = pd.read_csv(d / "tier_time_adjustment.csv")
+    # The wording's claims, checked.
+    if v["model"]["verdict"] != "mixed, not resolved":
+        raise AssertionError(f"Stage 11 verdict is {v['model']['verdict']!r}; the README wording assumes 'mixed'")
+    for m in ("model", "model_no_own_sale"):
+        if (cv.xs(m, level="method").d_hi < 0).any():
+            raise AssertionError(f"{m}: a tier has D below 0; 'no tier shows compression' no longer holds")
+    e = cv.xs("model", level="method")
+    if not (e.loc["mid", "e_hi"] < 0 and abs(e.loc["mid", "E"]) <= S.BAND
+            and all(e.loc[t, "e_lo"] <= 0 <= e.loc[t, "e_hi"] for t in ("low", "high"))):
+        raise AssertionError("E pattern changed: the wording names a small mid-tier excess only")
+    for t in S.TIERS:
+        a_, k1 = tc.loc[(t, "assessor")], tc.loc[(t, "step 0")]
+        if not (a_.calibration_slope < k1.calibration_slope and a_.prb_obs > k1.prb_obs):
+            raise AssertionError(f"{t}: the assessor no longer sits at the spread end of the tradeoff")
+    w = "race: White majority"
+    hi_inc = ["income: Q4", "income: Q5 (highest income)"]
+    sub, all_ = rep.loc["with proxy sale"], rep.loc["all common sales"]
+    if not (sub[w] > all_[w] and sub[hi_inc].sum() > all_[hi_inc].sum()):
+        raise AssertionError("the prior-sale subset no longer over-represents White-majority and higher-income tracts")
+    N.add("s11_verdict_text", v["model"]["verdict"],
+          S.VERDICT_WORDING.format(verdict=v["model"]["verdict"], mid_e=f"{e.loc['mid', 'E']:.3f}"),
+          src + "verdict.json, within_tier_eval.csv (wording: avm.stage11_prb.VERDICT_WORDING)")
+    N.add("s11_mid_e", e.loc["mid", "E"], signed(e.loc["mid", "E"]), src + "within_tier_eval.csv")
+    N.add("s11_mid_e_ci", None, f"[{signed(e.loc['mid', 'e_lo'])}, {signed(e.loc['mid', 'e_hi'])}]",
+          src + "within_tier_eval.csv")
+    N.add("s11_low_d", e.loc["low", "D"], signed(e.loc["low", "D"]), src + "within_tier_eval.csv")
+    N.add("s11_low_d_ci", None, f"[{signed(e.loc['low', 'd_lo'])}, {signed(e.loc['low', 'd_hi'])}]",
+          src + "within_tier_eval.csv")
+    N.add("s11_pairs", noise.pairs.sum(), intc(noise.pairs.sum()), src + "sale_noise.csv")
+    for t in S.TIERS:
+        N.add(f"s11_sigma_{t}", noise.loc[t, "sigma_p"], num(noise.loc[t, "sigma_p"], 2), src + "sale_noise.csv")
+    N.add("s11_proxy_share", sub.share_of_all, pct(sub.share_of_all, 0), src + "proxy_representativeness.csv")
+    N.add("s11_proxy_months", S.PROXY_MIN_MONTHS, str(S.PROXY_MIN_MONTHS), "avm.stage11_prb.PROXY_MIN_MONTHS")
+    N.add("s11_n_sim", S.N_SIM, intc(S.N_SIM), "avm.stage11_prb.N_SIM")
+    N.add("s11_k_steps", S.N_K, str(S.N_K), "avm.stage11_prb.N_K")
+    N.add("s11_white_proxy", sub[w], pct(sub[w], 0), src + "proxy_representativeness.csv")
+    N.add("s11_white_all", all_[w], pct(all_[w], 0), src + "proxy_representativeness.csv")
+    N.add("s11_hiinc_proxy", sub[hi_inc].sum(), pct(sub[hi_inc].sum(), 0), src + "proxy_representativeness.csv")
+    N.add("s11_hiinc_all", all_[hi_inc].sum(), pct(all_[hi_inc].sum(), 0), src + "proxy_representativeness.csv")
+    ch = (t4.prb_tercile_time_adj - t4.prb_citywide_time_adj).abs().max()
+    N.add("s11_t4_max", ch, num(ch, 3), src + "tier_time_adjustment.csv")
+    lo = tc.xs("low", level="tier")
+    kx = lo.loc[f"step {S.N_K - 1}"]
+    for key, r in [("cal", lo.loc["calibrated (k = b)"]), ("k1", lo.loc["step 0"]), ("kmax", kx),
+                   ("ass", lo.loc["assessor"])]:
+        N.add(f"s11_low_{key}_slope", r.calibration_slope, num(r.calibration_slope, 2), src + "tradeoff.csv")
+        N.add(f"s11_low_{key}_prb", r.prb_obs, signed(r.prb_obs, 2), src + "tradeoff.csv")
+        N.add(f"s11_low_{key}_mdape", r.mdape_ln, pct(r.mdape_ln), src + "tradeoff.csv")
+    N.add("s11_low_kmax_k", kx.k_mean, num(kx.k_mean, 2), src + "tradeoff.csv")
+    ass_sl = tc.xs("assessor", level="point").calibration_slope
+    k1_sl = tc.xs("step 0", level="point").calibration_slope
+    N.add("s11_ass_slope_range", None, f"{ass_sl.min():.2f} to {ass_sl.max():.2f}", src + "tradeoff.csv")
+    N.add("s11_k1_slope_range", None, f"{k1_sl.min():.2f} to {k1_sl.max():.2f}", src + "tradeoff.csv")
+    names = {"model": "Model", "model_no_own_sale": "Model without its own-sale feature", "assessor": "City Assessor"}
+    rows = []
+    for t in S.TIERS:
+        for m in names:
+            r = cv.loc[(t, m)]
+            rows.append({"tier": t, "method": names[m], "PRB [95% CI]": f"{r.prb_obs:+.3f} [{r.prb_lo:+.3f}, {r.prb_hi:+.3f}]",
+                         "calibrated-null PRB": f"{r.prb_null:+.3f}",
+                         "E [95% CI]": f"{r.E:+.3f} [{r.e_lo:+.3f}, {r.e_hi:+.3f}]",
+                         "D = Q minus Q_null [95% CI]": f"{r.D:+.3f} [{r.d_lo:+.3f}, {r.d_hi:+.3f}]"})
+    N.add("s11_table", None, md(pd.DataFrame(rows)), src + "within_tier_eval.csv")
+    trows = []
+    for t in S.TIERS:
+        g = tc.xs(t, level="tier")
+        for label, key in [("rescaled to calibration (k = b)", "calibrated (k = b)"), ("frozen model (k = 1)", "step 0"),
+                           ("spread (k = 1/b)", f"step {S.N_K - 1}"), ("City Assessor", "assessor")]:
+            r = g.loc[key]
+            trows.append({"tier": t, "point": label, "k": "" if key == "assessor" else f"{r.k_mean:.2f}",
+                          "calibration slope": f"{r.calibration_slope:.2f}", "PRB": f"{r.prb_obs:+.3f}",
+                          "level-neutral MdAPE": pct(r.mdape_ln)})
+    N.add("s11_tradeoff_table", None, md(pd.DataFrame(trows)), src + "tradeoff.csv")
+
+
+# ------------------------------------------------------------ hero figure ---
+
+# Two themes for GitHub's <picture> switch; slots 1-2 of the dataviz default
+# palette, validated against each background (all checks pass).
+HERO_THEMES = {
+    "light": {"bg": "#ffffff", "ink": "#1f2328", "muted": "#59636e", "grid": "#d1d9e0",
+              "model": "#2a78d6", "assessor": "#eb6834"},
+    "dark": {"bg": "#0d1117", "ink": "#f0f6fc", "muted": "#9198a1", "grid": "#3d444d",
+             "model": "#3987e5", "assessor": "#d95926"}}
+HERO_GROUPS = {"all": "All 2025 sales", "low": "Low-value\nneighborhoods", "mid": "Mid-value\nneighborhoods",
+               "high": "High-value\nneighborhoods"}
+HERO_TITLE = "More accurate than the City Assessor on the same 2025 sales"
+
+
+def hero() -> pd.DataFrame:
+    """Level-neutral MdAPE, frozen model vs assessor, on the 2025 held-out
+    sales: overall and by neighborhood value tier, with 95% paired-bootstrap
+    intervals (evaluate.compare). The overall row must reproduce the
+    headline exactly. Writes hero_mdape_2025.csv and a light and dark PNG."""
+    p = pd.read_parquet(INTERIM_DIR / "stage8_predictions.parquet")
+    p = p[(p.year == 2025) & p.method.isin(METHODS)].pivot(index="sale_id", columns="method", values="pred")
+    p = p.dropna().join(frames.sales().set_index("sale_id").target_price, how="inner")
+    tier = pd.read_parquet(INTERIM_DIR / "frozen_primary_predictions_2025.parquet").set_index("sale_id").tier
+    p["tier"] = tier.reindex(p.index)
+    if p.tier.isna().any():
+        raise AssertionError("2025 sales without a value tier")
+    rows = []
+    for g_key in HERO_GROUPS:
+        g = p if g_key == "all" else p[p.tier == g_key]
+        r = compare({"model": g.primary, "assessor": g.assessor}, g.target_price, base="assessor")
+        r = r[r.statistic == "mdape_ln"].set_index("method")
+        rows.append({"group": g_key, "n": len(g),
+                     **{f"{m}{x}": r.loc[m, c] for m in ("model", "assessor")
+                        for x, c in (("", "estimate"), ("_lo", "ci_low"), ("_hi", "ci_high"))},
+                     "diff": r.loc["model", "diff_vs_assessor"], "diff_lo": r.loc["model", "diff_ci_low"],
+                     "diff_hi": r.loc["model", "diff_ci_high"]})
+    t = pd.DataFrame(rows)
+    h = pd.read_csv(OUT / "headline_2025.csv")
+    hm = h[h.statistic == "mdape_ln"].set_index("method")
+    a = t.iloc[0]
+    want = [hm.loc["primary", "estimate"], hm.loc["assessor", "estimate"], hm.loc["primary", "diff_vs_assessor"],
+            hm.loc["primary", "diff_ci_low"], hm.loc["primary", "diff_ci_high"], hm.loc["primary", "n"]]
+    if not np.allclose([a.model, a.assessor, a["diff"], a.diff_lo, a.diff_hi, a.n], want, rtol=0, atol=1e-12):
+        raise AssertionError("hero overall row does not reproduce the headline")
+    t.to_csv(OUT / "hero_mdape_2025.csv", index=False)
+    for theme in HERO_THEMES:
+        hero_figure(t, theme, OUT / f"hero-mdape-2025-{theme}.png")
+    return t
+
+
+def hero_figure(t: pd.DataFrame, theme: str, path) -> None:
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from matplotlib.transforms import blended_transform_factory
+    c = HERO_THEMES[theme]
+    plt.rcdefaults()
+    fig, ax = plt.subplots(figsize=(7.2, 5.4), dpi=200, facecolor=c["bg"])
+    ax.set_facecolor(c["bg"])
+    fig.subplots_adjust(left=0.24, right=0.74, top=0.70, bottom=0.12)
+    ys = np.arange(len(t))[::-1].astype(float)
+    trans = blended_transform_factory(ax.transAxes, ax.transData)
+    for y, r in zip(ys, t.itertuples()):
+        for m, dy, mk in (("model", 0.15, "o"), ("assessor", -0.15, "s")):
+            est, lo, hi = (getattr(r, m) * 100, getattr(r, f"{m}_lo") * 100, getattr(r, f"{m}_hi") * 100)
+            ax.plot([lo, hi], [y + dy] * 2, color=c[m], lw=2.5, solid_capstyle="round", zorder=2)
+            ax.plot(est, y + dy, mk, color=c[m], ms=10, mec=c["bg"], mew=1.5, zorder=3)
+            if r.group == "all":
+                ax.text(lo - 0.3, y + dy, "Model" if m == "model" else "Assessor", ha="right", va="center",
+                        color=c["ink"], fontsize=10)
+        ax.text(1.04, y, f"{r.diff * 100:+.1f} pts\n[{r.diff_lo * 100:+.1f}, {r.diff_hi * 100:+.1f}]",
+                transform=trans, ha="left", va="center", color=c["ink"], fontsize=11, linespacing=1.3)
+    ax.text(1.04, ys[0] + 0.62, "Model minus\nassessor", transform=trans, ha="left", va="bottom",
+            color=c["muted"], fontsize=10, linespacing=1.2)
+    ax.set_yticks(ys, [f"{HERO_GROUPS[g]}\nn = {n:,}" for g, n in zip(t.group, t.n)], fontsize=11, color=c["ink"])
+    lo = min(t.model_lo.min(), t.assessor_lo.min()) * 100
+    hi = max(t.model_hi.max(), t.assessor_hi.max()) * 100
+    ax.set_xlim(np.floor(lo) - 2, np.ceil(hi) + 0.5)
+    ax.set_ylim(ys[-1] - 0.6, ys[0] + 0.6)
+    # Whole-number ticks only, so the integer labels are exact.
+    ax.xaxis.set_major_locator(matplotlib.ticker.MultipleLocator(2))
+    ax.xaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:.0f}%"))
+    ax.tick_params(axis="x", colors=c["muted"], labelsize=10)
+    ax.tick_params(axis="y", length=0)
+    ax.grid(axis="x", color=c["grid"], lw=0.8)
+    ax.set_axisbelow(True)
+    for sp in ax.spines.values():
+        sp.set_visible(False)
+    ax.set_xlabel("Level-neutral median absolute error", color=c["muted"], fontsize=10)
+    fig.text(0.03, 0.955, HERO_TITLE, color=c["ink"], fontsize=14, fontweight="bold", ha="left", va="top")
+    fig.text(0.03, 0.885, f"Held-out 2025 sales (n = {t.n.iloc[0]:,}), lower is better. Lines are 95% "
+             "paired-bootstrap intervals.", color=c["muted"], fontsize=10, ha="left", va="top")
+    handles = [plt.Line2D([], [], color=c["model"], marker="o", lw=2.5, ms=9, label="Model (public data)"),
+               plt.Line2D([], [], color=c["assessor"], marker="s", lw=2.5, ms=9, label="City Assessor")]
+    leg = fig.legend(handles=handles, loc="upper left", bbox_to_anchor=(0.025, 0.84), ncol=2, frameon=False,
+                     fontsize=10)
+    for txt in leg.get_texts():
+        txt.set_color(c["ink"])
+    fig.savefig(path, facecolor=c["bg"], metadata={"Software": None})
+    plt.close(fig)
+
+
+def hero_caption(t: pd.DataFrame) -> str:
+    """One honest sentence per group from the paired intervals."""
+    names = {"all": "all 2025 sales", "low": "low-value neighborhoods", "mid": "mid-value neighborhoods",
+             "high": "high-value neighborhoods"}
+    parts = []
+    for r in t.itertuples():
+        verdict = ("the model is more accurate" if r.diff_hi < 0 else
+                   "the assessor is more accurate" if r.diff_lo > 0 else "no clear difference")
+        parts.append(f"{names[r.group]} {r.diff * 100:+.1f} pts [{r.diff_lo * 100:+.1f}, {r.diff_hi * 100:+.1f}], "
+                     f"{verdict}")
+    return ("Model minus assessor, in points of level-neutral median absolute error: " + "; ".join(parts) +
+            ". Neighborhood value tiers are terciles of each neighborhood's median sale price over the three "
+            "prior years; homes in neighborhoods with too few sales to rate are in the overall group only.")
 
 
 def table(df: pd.DataFrame) -> str:
@@ -548,6 +756,10 @@ def main() -> None:
     a = ap.parse_args()
     h = headline()
     N = collect(h)
+    if not a.sample:
+        t = hero()
+        N.add("hero_caption", None, hero_caption(t), "reports/writeup/hero_mdape_2025.csv")
+        N.add("hero_title", None, HERO_TITLE, "avm.writeup.HERO_TITLE")
     if a.sample:
         tpl = (TEMPLATES / "README_sample.template.md").read_text(encoding="utf-8")
         text, used = render(tpl, N, "README_sample")
